@@ -1,0 +1,41 @@
+section.section.works
+  .container
+    h2.section-title.section-title--black
+      | Мои работы
+    .works__slider
+      .works__img
+        +image('content/work_one.jpg', 'works__img-main')
+        ul.works__img-list
+          li.works__img-item.works__img-item--active
+            +image('content/work_one.jpg', 'works__img-pic')
+          li.works__img-item
+            +image('content/work_two.jpg', 'works__img-pic')
+          li.works__img-item
+            +image('content/work_three.jpg', 'works__img-pic')
+          li.works__img-item
+            +image('content/work_four.jpg', 'works__img-pic')
+      .works__desc
+        ul.works__skill-list
+          li.works__skill-item
+            | HTML
+          li.works__skill-item
+            | CSS
+          li.works__skill-item
+            | Javascript
+        .works__desc-text
+          | 1
+        h3.section-title
+          | Сайт школы образования
+        .section-text
+          p
+            | "Этот парень проходил обучение
+            | веб-разработке не где-то, а в Loftschool!
+            | 4,5 месяца только самых тяжелых испытаний и бессоных ночей!"
+        svg.works__desc-icn
+          use
+        .works__desc-link
+          | Посмотреть сайт
+    button(type='button').slider-next
+      +icon('short-arrow', 'slider-next__icn')
+    button(type='button').slider-prev
+      +icon('short-arrow', 'slider-prev__icn')
