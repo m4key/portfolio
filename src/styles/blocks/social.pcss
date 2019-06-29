@@ -1,8 +1,32 @@
 .social__list{
   display: flex;
   &--header{
-  opacity: 0.4;
+    opacity: 0.4;
   }
+  &--footer{
+    padding-top: 27px;
+    opacity: 0.6;
+  }
+}
+.social__list--footer .social__item{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  opacity: 0.6;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social__list--footer .social__icon{
+  width: 22px;
+  height: 22px;
 }
 .social__item{
   width: 25px;
