@@ -15,20 +15,35 @@
   border:1px solid #fff;
   background: transparent;
   margin-left: 30px;
+  &:hover{
+   border:1px solid #ff9a00;
+   transition:  border .3s;
+  }
+  
   &:first-child{
     margin-left: 0;
   }
+}
+.review__btn:hover .review__btn-prev{
+  fill:#ff9a00;
+  transition:  fill .3s;
+}
+.review__btn:hover .review__btn-next{
+  fill:#ff9a00;
+  transition:  fill .3s;
 }
 .review__btn-prev{
   width: 8px;
   height: 10px;
   fill:#fff;
   transform: rotate(180deg);
+
 }
 .review__btn-next{
   width: 8px;
   height: 10px;
   fill:#fff;  
+ 
 }
 .review__list{
   display: flex;

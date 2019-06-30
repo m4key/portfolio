@@ -29,6 +29,9 @@
   &--active{
     border: 2px solid #f29400;
   }
+  &:hover{
+    filter: saturate(300%);
+  }
 }
 .works__img-main{
   width: 975px;
@@ -54,6 +57,10 @@
   width: 50px;
   height: 50px;
   background-color: #2d3c4e;
+  &:hover{
+   background-color: #ff9a00;
+  transition: background-color .3s;
+  }
 }
 .slider-next__icn{
   width: 8px;
@@ -64,6 +71,7 @@
   width: 8px;
   height: 10px;
   fill:#fff;
+  opacity: 0.4;
   transform: rotate(180deg);
 }
 .works__desc-num{
@@ -111,6 +119,10 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  &:hover{
+    text-decoration: underline; 
+    transition: text-decoration .3s;
+  }
 }
 .works__desc-icn{
   width: 15px;

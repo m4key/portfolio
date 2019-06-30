@@ -9,6 +9,10 @@
   &:first-child{
     margin-left: 0;
   }
+  &:hover {
+  border-bottom: 1px solid #ff9a00;
+  transition: border-bottom .3s;
+}
 }
 .feedback__label-text{
   font-size: 16px;
@@ -64,4 +68,15 @@
   font-weight: bold;
   text-transform: uppercase;
   outline: none;
+  &:hover{
+    background-image: linear-gradient(to right, #ff7f00, #ff9d00);
+    transition:  background-image .3s;
+  }
+}
+.feedback__block:hover .feedback__label-icn{
+  opacity: 1;
+  fill: #ff9a00;
+  transition: fill .3s;
+ 
+  
 }
