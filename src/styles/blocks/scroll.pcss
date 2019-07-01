@@ -14,18 +14,18 @@
 }
 .scroll__text{
   font-size: 18px;
-  color:#fff;
+  color:$text-color;
   font-weight: 600;
   line-height: 1.67;
 }
 
 .scroll__button-svg{
   height: 100%;
-  fill:#fff;
+  fill:$text-color;
+  transition:  fill .3s;
+  transition: transform .3s;
   &:hover{
-    fill:#ff9a00;
+    fill:$orange;
     transform: scale(1.2);
-    transition:  fill .3s;
-    transition: transform .3s;
   }
 }

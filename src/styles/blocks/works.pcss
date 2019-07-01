@@ -1,5 +1,5 @@
 .works{
-  background-color:#fff;
+  background-color:$text-color;
   min-height:1086px;
 }
 .works__wrap{
@@ -27,7 +27,7 @@
   width: 178px;
   height: 100px;
   &--active{
-    border: 2px solid #f29400;
+    border: 2px solid $orange;
   }
   &:hover{
     filter: saturate(300%);
@@ -56,27 +56,27 @@
 .slider__btn{
   width: 50px;
   height: 50px;
-  background-color: #2d3c4e;
+  background-color: $dark-blue;
   &:hover{
-   background-color: #ff9a00;
+   background-color: $orange;
   transition: background-color .3s;
   }
 }
 .slider-next__icn{
   width: 8px;
   height: 10px;
-  fill:#fff;
+  fill:$text-color;
 }
 .slider-prev__icn{
   width: 8px;
   height: 10px;
-  fill:#fff;
+  fill:$text-color;
   opacity: 0.4;
   transform: rotate(180deg);
 }
 .works__desc-num{
   z-index: 0;
-  color: #f0f0f0;
+  color: $light-grey;
   margin-left: -55px;
   position: relative;
   font-size: 400px;
@@ -90,12 +90,12 @@
   display: flex;
 }
 .works__skill-item{
-  background-color: #f2f5f9;
+  background-color: $skill-item-bg-color;
   margin-left: 15px;
   padding: 17px 22px 12px 20px;
   font-size: 15px;
   font-weight: 400;
-  color: #3d4143;
+  color:$dark-grey;
   border-radius: 25px;
 }
 .works__desc-content{
@@ -107,13 +107,13 @@
   width: 70%;
 }
 .works__desc-text{
-  color: #2b3948;
+  color: $dark-blue;
   font-size: 16px;
   font-weight: 400;
 }
 .works__desc-link{
   font-size: 18px;
-  color:#4b6fd7;
+  color:$links-color;
   font-weight: bold;
   display: flex;
   flex-direction: row-reverse;
@@ -127,6 +127,6 @@
 .works__desc-icn{
   width: 15px;
   height: 15px;
-  fill:#4b6fd7;
+  fill:$links-color;
   margin-right: 20px;
 }

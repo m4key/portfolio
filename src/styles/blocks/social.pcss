@@ -2,6 +2,7 @@
   display: flex;
   &--header{
     opacity: 0.6;
+    transition:  opacity .3s;
   }
   &--footer{
     padding-top: 27px;
@@ -11,13 +12,12 @@
 .social__list--header .social__item:hover {
   opacity: 1;
   border:none;
-  transition:  opacity .3s;
 }
 
 .social__list--footer .social__item{
   width: 50px;
   height: 50px;
-  border: 1px solid #fff;
+  border: 1px solid $text-color;
   opacity: 0.6;
   border-radius: 50%;
   display: -webkit-box;
@@ -39,11 +39,11 @@
   height: 25px;
   margin-left: 40px;
   opacity: 0.4;
+  transition: border .6s;
+  transition: opacity .1s;
   &:hover{
     opacity: 1;
-    border: 1px solid #ff9a00;
-    transition: border .6s;
-    transition: opacity .1s;
+    border: 1px solid $orange;
   }
   &:first-child{
     margin-left: 0;
@@ -51,9 +51,7 @@
 }
 .social__item:hover .social__icon{
   opacity: 1;
-  fill: #ff9a00;
-  transition: fill .6s;
-  transition: opacity .1s;
+  fill: $orange;
 }
 
 .social__link{
@@ -63,9 +61,10 @@
 .social__icon{
   width: 100%;
   height: 100%;
-  fill:#fff;
+  fill:$text-color;
+  transition: fill .6s;
+  transition: opacity .1s;
   &:hover{
-    fill: #ff9a00;
-    transition:  fill .3s;
+    fill: $orange;
   }
 }

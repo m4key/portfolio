@@ -2,21 +2,21 @@
   display: flex;
 }
 .feedback__block{
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $text-color;
   margin-left: 51px;
   width: 408px;
   position: relative;
+  transition: border-bottom .3s;
   &:first-child{
     margin-left: 0;
   }
   &:hover {
-  border-bottom: 1px solid #ff9a00;
-  transition: border-bottom .3s;
+  border-bottom: 1px solid $orange;
 }
 }
 .feedback__label-text{
   font-size: 16px;
-  color:#fff;
+  color:$text-color;
   opacity: 0.3;
   font-weight: 600;
   text-align: left;
@@ -25,7 +25,7 @@
 }
 .feedback__name{
   overflow: visible;
-  color:#fff;
+  color:$text-color;
   background: transparent;
   border: none;
   outline: none;
@@ -40,19 +40,23 @@
     line-height: 2;
   }
   &::placeholder{
-    color:#fff;
+    color:$text-color;
+  }
+  &:focus{
+    color:$orange
   }
 }
 .feedback__textarea{
   margin-top: 41px;
 }
 .feedback__label-icn{
-  fill:#fff;
+  fill:$text-color;
   width: 30px;
   height: 30px;
   opacity: 0.3;
   position: absolute;
   bottom: 10px;
+  transition: fill .5s;
   &--textarea{
     bottom: 50px;
   }
@@ -64,19 +68,16 @@
   height: 80px;
   background-image: linear-gradient(to right, #ea7400, #f29400);
   font-size: 18px;
-  color:#fff;
+  color:$text-color;
   font-weight: bold;
   text-transform: uppercase;
   outline: none;
+  transition:  background-image .3s;
   &:hover{
     background-image: linear-gradient(to right, #ff7f00, #ff9d00);
-    transition:  background-image .3s;
   }
 }
 .feedback__block:hover .feedback__label-icn{
   opacity: 1;
-  fill: #ff9a00;
-  transition: fill .3s;
- 
-  
+  fill: $orange;
 }

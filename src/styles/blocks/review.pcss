@@ -12,12 +12,12 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border:1px solid #fff;
+  border:1px solid $text-color;
   background: transparent;
   margin-left: 30px;
+  transition:  border .5s;
   &:hover{
-   border:1px solid #ff9a00;
-   transition:  border .3s;
+   border:1px solid $orange;
   }
   
   &:first-child{
@@ -25,25 +25,23 @@
   }
 }
 .review__btn:hover .review__btn-prev{
-  fill:#ff9a00;
-  transition:  fill .3s;
+  fill:$orange;
 }
 .review__btn:hover .review__btn-next{
-  fill:#ff9a00;
-  transition:  fill .3s;
+  fill:$orange;
 }
 .review__btn-prev{
   width: 8px;
   height: 10px;
-  fill:#fff;
+  fill:$text-color;
   transform: rotate(180deg);
-
+  transition:  fill .3s;
 }
 .review__btn-next{
   width: 8px;
   height: 10px;
-  fill:#fff;  
- 
+  fill:$text-color;  
+  transition:  fill .3s;
 }
 .review__list{
   display: flex;
@@ -59,7 +57,7 @@
 .review__svg-quote{
   width: 75px;
   height: 63px;
-  fill:#fff;
+  fill:$text-color;
   opacity: 0.1;
   flex-shrink: 0;
   margin-right: 30px;
@@ -71,7 +69,7 @@
   opacity: 0.5;
   font-weight: 600;
   line-height: 1.88;
-  color:#fff;
+  color:$text-color;
 }
 .review__author{
   display: flex;
@@ -98,13 +96,13 @@
 
 .author__title{
   font-size: 16px;
-  color:#fff;
+  color:$text-color;
   font-weight: bold;
 }
 .author__text{
   font-size: 16px;
   opacity: 0.3;
-  color:#fff;
+  color:$text-color;
   font-weight: 600;
   margin-top: 15px;
 }
