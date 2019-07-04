@@ -20,28 +20,43 @@
   opacity: 0.4;
   font-weight: 600;
   line-height: 1.67;
-  width: 165px;
-  height: 48px;
+  width: 12%;
+  @include desktop{
+    width: 16%;
+  }
   @include tablets{
+    width: 30%;
     font-size: 16px;
     text-align: center;
   }
+  @include phones{
+    width: 50%;
+  }
+  @include phones-small{
+    width: 100%;
+  }
 }
 .portfolio__title{
-  width: 411px;
-  height: 112px;
+  width: 30%;
   font-size: 72px;
   font-weight: 800;
   line-height: 0.83;
   padding-left: 60px;
+  @include desktop{
+    width: 34%;
+  }
   @include tablets{
     padding-left: 0;
     margin-top: 30px;
     font-size: 48px;
+    width: 50%;
   }
   @include phones{
     margin-top: 19px;
     font-size: 36px;
     line-height: 1.33;
+  }
+  @include phones-small{
+    width: 100%;
   }
 }

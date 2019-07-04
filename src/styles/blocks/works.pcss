@@ -44,6 +44,7 @@
 }
 .works__slider{
   display: flex;
+  width: 100%;
   @include tablets{
     flex-direction: column;
   }
@@ -52,11 +53,14 @@
   position: relative;
   flex-shrink: 0;
   z-index: 5;
-  width: 975px;
+  width: 66%;
   height: 549px;
   @include desktop{
-    width: 627px;
-    height: 353px;
+    width: 66%;
+    height: auto;
+  }
+  @include tablets{
+    width: 92.5%;
   }
   @include phones{
     width: 100%;
@@ -67,10 +71,10 @@
   position: absolute;
   display: flex;
   bottom: 60px;
-  left: 263px;
+  right: 0;
   @include desktop{
     bottom: 30px;
-    left: 93px;
+    right: 0;
   }
   @include phones{
     display: none;
@@ -102,21 +106,23 @@
 .works__desc{
   flex-shrink: 0;
   display: flex;
+  width: 33%;
+  @include tablets{
+    width: 100%;
+  }
 }
 .slider__button{
   position: absolute;
   display: flex;
   flex-direction: column;
   z-index: 10;
+  right: -50px;
   bottom: 60px;
-  left: 975px;
   @include desktop{
     bottom: 30px;
-    left: 627px;
   }
   @include phones{
     bottom: 0;
-    left: initial;
     right: 0;
   }
 }
@@ -144,28 +150,28 @@
 .works__desc-num{
   z-index: 0;
   color: $light-grey;
-  left: 910px;
+  left: 61.5%;
+  bottom: 80px;
   position: absolute;
   font-size: 400px;
   font-weight: 800;
   line-height: 473px;
   @include desktop{
     font-size: 300px;
-    left: 568px;
-    bottom: 52px;
+    bottom: 12px;
   }
   @include tablets{
-    bottom: 324px;
+    bottom: 326px;
+    left: 85.5%;
   }
   @include phones{
     display: none;
   }
 }
 .works__desc-info{
-  width: 35%;
   margin-left: 160px;
   @include desktop{
-    margin-left: 110px;
+    margin-left: 126px;
   }
   @include tablets{
     width: 100%;
@@ -201,7 +207,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 75%;
   @include tablets{
     margin-top: 28px;
     height: 176px;
