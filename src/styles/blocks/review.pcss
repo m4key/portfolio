@@ -1,12 +1,29 @@
 .review__wrap{
   position: relative;
   margin-top: 150px;
+  @include tablets{
+    margin-top: 131px;
+  }
+  @include phones{
+    margin-top: 97px;
+  }
 }
-
+.review__title{
+  @include phones{
+    text-align: center;
+  }
+}
 .review__slider-controls{
   position: absolute;
   top: 0;
   left:460px;
+  @include phones{
+    left: 40%;
+    top: 20%;
+  }
+  @include phones-small{
+     left: 30%;
+  }
 }
 .review__btn{
   width: 50px;
@@ -46,12 +63,28 @@
 .review__list{
   display: flex;
   margin-top: 100px;
+  @include tablets{
+    margin-top: 72px;
+  }
 }
 .review__item{
   width:30%;
   margin-left: 75px;
   &:first-child{
     margin-left: 0;
+  }
+  @include desktop{
+    width: 40%;
+  }
+  @include tablets{
+    width: 50%;
+  }
+  @include phones{
+    margin-top: 33px;
+    width: 100%;
+    &:nth-child(2){
+      display: none;
+    }
   }
 }
 .review__svg-quote{
@@ -61,6 +94,15 @@
   opacity: 0.1;
   flex-shrink: 0;
   margin-right: 30px;
+  @include desktop{
+    width: 69px;
+    height: 58px;
+  }
+  @include tablets{
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+  }
 }
 .review__text{
   display: flex;
@@ -70,12 +112,21 @@
   font-weight: 600;
   line-height: 1.88;
   color:$text-color;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .review__author{
   display: flex;
   margin-top: 36px;
   margin-left: 104px;
   align-items: center;
+  @include tablets{
+    margin-left: 36px;
+  }
+  @include phones{
+    margin-top: 30px;
+  }
 }
 .review__photo{
   width: 75px;
@@ -92,6 +143,9 @@
 }
 .review__writer{
   margin-left: 30px;
+  @include tablets{
+    margin-left: 21px;
+  }
 }
 
 .author__title{
@@ -105,4 +159,7 @@
   color:$text-color;
   font-weight: 600;
   margin-top: 15px;
+  @include tablets{
+    font-size: 14px;
+  }
 }

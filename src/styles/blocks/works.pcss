@@ -1,27 +1,80 @@
 .works{
   background-color:$text-color;
-  min-height:1086px;
+  height:1086px;
+  @include desktop{
+    height: 788px;
+  }
+  @include tablets{
+    height: 981px;
+  }
+  @include phones-small{
+    height: 903px;
+  }
+
+}
+.works .container{
+  @include phones{
+    width: 100%;
+  }
 }
 .works__wrap{
   margin-top: 203px;
+  @include desktop{
+    margin-top: 152px;
+  }
+  @include tablets{
+    margin-top: 124px;
+  }
+  @include phones{
+    margin-top: 99px;
+  }
 }
 .slider__wrap{
   margin-top: 92px;
   position: relative;
+  @include desktop{
+    margin-top: 62px;
+  }
+  @include tablets{
+    margin-top: 54px;
+  }
+  @include phones{
+    margin-top: 30px;
+  }
 }
 .works__slider{
   display: flex;
+  @include tablets{
+    flex-direction: column;
+  }
 }
 .works__img{
   position: relative;
   flex-shrink: 0;
   z-index: 5;
+  width: 975px;
+  height: 549px;
+  @include desktop{
+    width: 627px;
+    height: 353px;
+  }
+  @include phones{
+    width: 100%;
+    height: auto;
+  }
 }
 .works__img-list{
   position: absolute;
   display: flex;
   bottom: 60px;
   left: 263px;
+  @include desktop{
+    bottom: 30px;
+    left: 93px;
+  }
+  @include phones{
+    display: none;
+  }
 }
 .works__img-item{
   width: 178px;
@@ -32,10 +85,15 @@
   &:hover{
     filter: saturate(300%);
   }
+  @include desktop{
+    &:nth-child(4){
+      display: none;
+    }
+  }
 }
 .works__img-main{
-  width: 975px;
-  height: 549px;
+  width: 100%;
+  height: 100%;
 }
 .works__img-pic{
   width: 178px;
@@ -52,6 +110,15 @@
   z-index: 10;
   bottom: 60px;
   left: 975px;
+  @include desktop{
+    bottom: 30px;
+    left: 627px;
+  }
+  @include phones{
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
 }
 .slider__btn{
   width: 50px;
@@ -77,17 +144,40 @@
 .works__desc-num{
   z-index: 0;
   color: $light-grey;
-  margin-left: -55px;
-  position: relative;
+  left: 910px;
+  position: absolute;
   font-size: 400px;
   font-weight: 800;
   line-height: 473px;
+  @include desktop{
+    font-size: 300px;
+    left: 568px;
+    bottom: 52px;
+  }
+  @include tablets{
+    bottom: 324px;
+  }
+  @include phones{
+    display: none;
+  }
 }
 .works__desc-info{
-  width: 34%;
+  width: 35%;
+  margin-left: 160px;
+  @include desktop{
+    margin-left: 110px;
+  }
+  @include tablets{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .works__skill-list{
   display: flex;
+  @include tablets{
+    margin-top: 61px;
+    justify-content: center
+  }
 }
 .works__skill-item{
   background-color: $skill-item-bg-color;
@@ -97,6 +187,13 @@
   font-weight: 400;
   color:$dark-grey;
   border-radius: 25px;
+  opacity: 0.7;
+  @include phones{
+    font-size: 13px;
+  }
+  &:first-child{
+    margin-left: 0;
+  }
 }
 .works__desc-content{
   margin-top: 50px;
@@ -104,12 +201,44 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
+  @include tablets{
+    margin-top: 28px;
+    height: 176px;
+    width: 100%;
+    align-items: center;
+  }
+  @include phones{
+    text-align: left;
+    align-items: baseline;
+    margin-left: 30px;
+    width: 80%;
+  }
+}
+.works__desc-title{
+  @include phones-small{
+    text-align: left;
+  }
 }
 .works__desc-text{
   color: $dark-blue;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
+  line-height: 1.88;
+  opacity: 0.7;
+  @include tablets{
+    font-size: 14px;
+    text-align: center;
+    width: 65%;
+  }
+  @include phones{
+    text-align: left;
+    line-height: 1.77;
+    padding-top: 21px;
+  }
+  @include phones-small{
+    width: 100%;
+  }
 }
 .works__desc-link{
   font-size: 18px;
@@ -122,6 +251,13 @@
   &:hover{
     text-decoration: underline; 
     transition: text-decoration .3s;
+  }
+  @include tablets{
+    justify-content: center;
+  }
+  @include phones{
+    font-size: 14px;
+    margin-top: 38px;
   }
 }
 .works__desc-icn{

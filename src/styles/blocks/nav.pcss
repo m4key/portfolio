@@ -2,10 +2,43 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  @include tablets{
+    flex-wrap: wrap;
+  }
+  @include phones{
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 50px;
+    width: 50%;
+  }
+  @include phones-small{
+    width: 70%;
+  }
 }
 .nav__item{
   padding-left: 60px;
   white-space: nowrap;
+  @include tablets{
+    padding-left: 67px;
+    &:nth-child(5){
+      padding-left: 0;
+      padding-top: 30px;
+    }
+    &:nth-child(6){
+      padding-top: 30px;
+    }
+  }
+  @include phones{
+    padding-left: 0;
+    padding-bottom: 30px;
+    &:nth-child(5){
+      padding-top: 0px;
+    }
+    &:nth-child(2n){
+      padding-left: 86px;
+      padding-top: 0;
+    }
+  }
   &:first-child{
     padding-left: 0;
   }
@@ -16,6 +49,9 @@
   color: $text-color;
   text-decoration: none;
   transition: color .3s;
+  @include tablets{
+    font-size: 14px;
+  }
   &:hover{
     color:$orange;
   }

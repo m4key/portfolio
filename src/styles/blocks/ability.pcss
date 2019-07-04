@@ -1,6 +1,13 @@
 .ability__wrap{
   margin-left: 126px;
   margin-top: 96px;
+  @include desktop{
+    margin-left: 91px;
+  }
+  @include tablets{
+    margin-left: 0;
+    margin-top: 60px;
+  }
 }
 .ability__list{
   display: flex;
@@ -11,6 +18,9 @@
   display: flex;
   flex-direction: column;
   margin-top: 58px;
+  @include phones{
+    align-items: center;
+  }
   &:first-child{
     margin-top: 0;
   }
@@ -19,11 +29,22 @@
   font-size: 24px;
   font-weight: bold;
   color:$text-color;
+  @include tablets{
+    font-size: 18px;
+  }
 }
 .talent__img{
   width: 150px;
   height: 150px;
   transform: rotate(180deg);
+  @include desktop{
+    width: 134px;
+    height: 134px;
+  }
+  @include tablets{
+    width: 114px;
+    height: 114px;
+  }
 }
 .talent__title{
   position: absolute;
@@ -41,7 +62,11 @@
   text-align: center;
   justify-content: center;
   max-width: 90px;
-  word-break: break-all;
+  word-break: break-word;
+  @include tablets{
+    font-size: 16px;
+    min-width: 81px;
+  }
 }
 .talent__svg-base{
   stroke-width: 3px;
@@ -59,13 +84,31 @@
 
 .talent__list{
   display: flex;
+  @include phones{
+    align-items: center;
+    width: 55%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @include phones-small{
+    width: 80%;
+  }
 }
 .talent__item{
   position: relative;
   margin-left: 68px;
   margin-top: 30px;
-  width: 150px;
   &:first-child{
     margin-left: 0;
+  }
+  @include desktop{
+    margin-left: 40px;
+  }
+  @include tablets{
+    margin-top: 35px;
+    margin-left: 0;
+  }
+  @include phones{
+    margin-top: 27px;
   }
 }

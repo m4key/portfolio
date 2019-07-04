@@ -1,0 +1,98 @@
+.hamburger-menu-link{
+  display: none;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  align-items: center;
+  z-index: 10;
+  @include tablets{
+    display: flex;
+    position: absolute;
+    top: 78px;
+    right: 41px
+  }
+} 
+.hamburger-menu-link__button{
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  &:after, &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  &::after{
+    bottom: 0;
+  }
+  &::before{
+    top: 0;
+  }
+}
+
+.hamburger-menu-link--active .hamburger-menu-link__button{
+  background-color: transparent;
+}
+.hamburger-menu-link--active .hamburger-menu-link__button:before {
+  transform: rotate(-45deg);
+  transition: transform .3s;
+  top: 9px;
+}
+.hamburger-menu-link--active .hamburger-menu-link__button:after {
+  transform: rotate(45deg);
+  transition: transform .3s;
+  bottom: 9px;
+}
+
+
+.popup-menu{
+  position: absolute;
+  left: -99999px;
+  right: 0;
+  background: rgba(47,50,52,.95);
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity .3s;
+  text-align: center;
+}
+
+.popup-menu--active{
+  display: flex;
+  opacity: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.popup-menu__item{
+  &:after {
+		content: "";
+		display: block;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: white;
+		margin: 15px auto;
+	}
+	&:last-child:after {
+		display: none;
+	}
+}
+.popup-menu__link{
+  display: inline-block;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: Ubuntu;
+  border-bottom: 2px solid transparent; 
+  transition: .4s;
+}

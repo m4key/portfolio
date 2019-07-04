@@ -2,12 +2,29 @@
   background: url('../images/content/bg-autumn.jpg') center center / cover no-repeat;
   min-height:1375px;
   position: relative;
+  @include desktop{
+    background: url('../images/content/bg-autumn-desktop.jpg') center center / cover no-repeat;
+  }
+  @include tablets{
+    min-height: 1065px;
+  }
+
   &:after{
     content:url('../images/content/foliage-one.png');
     position: absolute;
-    bottom: 80%;
+    bottom: 81%;
     right: 0;
     z-index: 10;
+    @include desktop{
+      right: -125px;
+    }
+    @include tablets{
+      right: -237px;
+      bottom: 79%;
+    }
+    @include phones{
+      display: none;
+    }
   }
 
 }

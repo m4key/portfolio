@@ -7,8 +7,26 @@
 }
 .header__nav{
   margin-left: 290px;
+  @include desktop{
+    margin-left: 91px;
+  }
+  @include tablets{
+    display: none;
+  }
 }
 
 .header__social{
   margin-left: 241px;
+  @include desktop{
+    margin-left: 90px;
+  }
+  @include tablets{
+    margin-left: 361px;
+  }
+  @include phones{
+    display: none;
+  }
+}
+.header__hamburger{
+  margin-left: 91px;
 }

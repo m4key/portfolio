@@ -1,8 +1,32 @@
+.about{
+  @include desktop{
+    height: 650px;
+  }
+  @include tablets{
+    height: 466px;
+  }
+  @include phones{
+    height: 874px;
+  }
+}
 .about__wrap{
   display: flex;
   margin-top: 240px;
   min-height: 328px;
   justify-content: center;
+  @include desktop{
+    margin-top: 674px;
+    margin-bottom: 205px;
+    justify-content:initial;
+  }
+  @include tablets{
+    margin-top: 725px;
+    margin-bottom: 149px;
+  }
+  @include phones{
+    margin-top: 290px;
+    flex-direction: column;
+  }
 }
 .about__me{
   display: flex;
@@ -10,12 +34,23 @@
   justify-content: center;
   align-items: center;
   width: 400px;
+  @include desktop{
+    align-items: initial;
+  }
+  @include phones{
+    align-items: center;
+    width: 100%;
+  }
 }
 .about__avatar{
   width: 200px;
   height: 200px;
   border-radius:50%;
   overflow: hidden;
+  @include tablets{
+    width: 170px;
+    height: 170px;
+  }
 }
 .about__avatar-pic{
   display: block;
@@ -37,6 +72,9 @@
   line-height: 1.88;
   color:$text-color;
   flex: 1;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .about__reply{
   font-size: 16px;
@@ -44,9 +82,18 @@
   line-height: 1.88;
   color:$text-color;
   flex: 1;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .about__desc{
   padding-top: 80px;
+  @include tablets{
+    padding-top: 57px;
+  }
+  @include phones{
+    padding-top: 31px;
+  }
 }
 .about__desc-title{
   margin-top: 20px;
@@ -54,6 +101,9 @@
   font-size: 30px;
   font-weight: bold;
   color:$text-color;
+  @include phones-small{
+    width: 50%;
+  }
 }
 .about__desc-text{
   font-size: 16px;
@@ -61,12 +111,26 @@
   font-weight: 600;
   line-height: 1.88;
   color:$text-color;
+  @include tablets{
+    font-size: 14px;
+  }
+  @include phones{
+    width: 60%;
+  }
 }
 .about__content{
   display: flex;
   flex-direction: column;
-  width: 528px;
+  width: 544px;
   padding-left: 50px;
+  @include desktop{
+    padding-left: 0;
+    width: 100%;
+  }
+  @include phones{
+    padding-top: 51px;
+  }
+
 }
 .about__info{
   width: 528px;
@@ -93,6 +157,20 @@
     line-height: 1;
     transform: rotate(10deg);
     left: -50px;
+    @include phones-small{
+      width: 100%;
+      left: -40px;
+    }
+  }
+  @include tablets{
+    padding-top: 46px;
+    font-size: 14px;
+  }
+  @include phones{
+    width: 60%;
+  }
+  @include phones-small{
+    width: 100%;
   }
 
 }

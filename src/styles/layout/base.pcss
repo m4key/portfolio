@@ -1,8 +1,14 @@
 html {
   @include desktop {
-    font-size: 15px;
+    font-size: 16px;
   }
   @include tablets {
+    font-size: 15px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
+   @include phones-small{
     font-size: 14px;
   }
 }
@@ -33,7 +39,12 @@ body {
   // width: 1490px;
   display: flex;
   flex-direction: column;
-
+  @include desktop{
+    max-width: 1080px;
+  }
+  @include tablets{
+    max-width: 689px;
+  }
   @include phones {
     width: 85%;
   }

@@ -4,6 +4,15 @@
   justify-content: center;
   margin-top: 330px;
   flex-direction: row-reverse;
+  @include desktop{
+    margin-top: 279px;
+  }
+  @include tablets{
+    flex-direction: column-reverse;
+    margin-top: 134px;
+    align-items: center;
+    text-align: center;
+  }
 }
 .portfolio__subtitle{
   font-size: 18px;
@@ -13,6 +22,10 @@
   line-height: 1.67;
   width: 165px;
   height: 48px;
+  @include tablets{
+    font-size: 16px;
+    text-align: center;
+  }
 }
 .portfolio__title{
   width: 411px;
@@ -21,4 +34,14 @@
   font-weight: 800;
   line-height: 0.83;
   padding-left: 60px;
+  @include tablets{
+    padding-left: 0;
+    margin-top: 30px;
+    font-size: 48px;
+  }
+  @include phones{
+    margin-top: 19px;
+    font-size: 36px;
+    line-height: 1.33;
+  }
 }

@@ -1,0 +1,10 @@
+a.hamburger-menu-link(href="#")
+    .hamburger-menu-link__button
+    .popup-menu
+      .popup-menu__container
+        nav.popup-menu__navigation
+          ul.popup-menu__list
+            -var menu=['Главная','Обо мне','Навыки','Работы','Отзывы','Связаться'];
+            each item in menu
+              li.popup-menu__item
+                a(href="#").popup-menu__link #{item}

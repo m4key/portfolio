@@ -1,5 +1,26 @@
+.feedback__form{
+  width: 60%;
+  @include desktop{
+    width: 80%;
+  }
+  @include tablets{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .feedback__row{
   display: flex;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    flex-wrap: wrap;
+  }
+  @include phones-small{
+    justify-content: center;
+  }
 }
 .feedback__block{
   border-bottom: 1px solid $text-color;
@@ -7,12 +28,23 @@
   width: 408px;
   position: relative;
   transition: border-bottom .3s;
+  width: 50%;
+  @include tablets{
+    margin-left: 20px;
+  }
+  @include phones{
+    width: 100%;
+    margin-left: 0;
+  }
+  @include phones-small{
+    width: 85%;
+  }
   &:first-child{
     margin-left: 0;
   }
   &:hover {
   border-bottom: 1px solid $orange;
-}
+  }
 }
 .feedback__label-text{
   font-size: 16px;
@@ -22,6 +54,14 @@
   text-align: left;
   padding-bottom: 30px;
   padding-left: 45px;
+  @include tablets{ 
+    font-size: 14px;
+    padding-bottom: 28px;
+  }
+  @include phones{
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
 }
 .feedback__name{
   overflow: visible;
@@ -30,12 +70,15 @@
   border: none;
   outline: none;
   padding-left: 45px;
-  padding-bottom: 15px;
-  width: 370px;
+  padding-bottom: 15px; 
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
+  @include tablets{
+    font-size: 14px;
+  }
   &--textarea{
-    width: 863px;
+    width: 100%;
     resize: none;
     line-height: 2;
   }
@@ -48,6 +91,13 @@
 }
 .feedback__textarea{
   margin-top: 41px;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    margin-top: 0;
+    width: 85%;
+  }
 }
 .feedback__label-icn{
   fill:$text-color;
@@ -73,6 +123,14 @@
   text-transform: uppercase;
   outline: none;
   transition:  background-image .3s;
+  @include tablets{
+    margin-top: 31px;
+  }
+  @include phones{
+    width: 259px;
+    height: 60px;
+    font-size: 16px;
+  }
   &:hover{
     background-image: linear-gradient(to right, #ff7f00, #ff9d00);
   }

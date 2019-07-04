@@ -3,4 +3,12 @@
   url('../images/content/bg-numbers.png') bottom / cover repeat;
   background-size:100%;
   min-height:1722px;
+  @include desktop{
+    height:1339px;
+    background:url('../images/content/bg-train.jpg') top / cover no-repeat, 
+    url('../images/content/bg-numbers-desktop.png') bottom / cover no-repeat;
+  }
+  @include tablets{
+    height: 1097px;
+  }
 }

@@ -7,6 +7,9 @@
   &--footer{
     padding-top: 27px;
     opacity: 0.8;
+    @include tablets{
+      padding-top: 19px;
+    }
   }
 }
 .social__list--header .social__item:hover {
@@ -41,6 +44,10 @@
   opacity: 0.4;
   transition: border .6s;
   transition: opacity .1s;
+  @include phones{
+    width: 20px;
+    height: 20px;
+  }
   &:hover{
     opacity: 1;
     border: 1px solid $orange;
