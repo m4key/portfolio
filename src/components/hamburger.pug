@@ -8,3 +8,6 @@ a.hamburger-menu-link(href="#")
             each item in menu
               li.popup-menu__item
                 a(href="#").popup-menu__link #{item}
+        .popup__social
+          include social 
+          +social('hamburger')
