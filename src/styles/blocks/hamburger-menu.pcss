@@ -11,6 +11,7 @@
     top: 77px;
     right: 41px
   }
+  
 } 
 .hamburger-menu-link__button{
   height: 4px;
@@ -25,6 +26,9 @@
     width: 100%;
     background-color: #fff;
     border-radius: 4px;
+    &:hover{
+    background-color: $orange;
+    }
   }
   &::after{
     bottom: 0;
@@ -41,18 +45,12 @@
     background-color: #2b3948;
     transition: transform .3s;
     top: 9px;
-    &:hover{
-      background-color: $orange;
-    }
   }
   &::after{
     transform: rotate(45deg);
     background-color: #2b3948;
     transition: transform .3s;
     bottom: 9px;
-    &:hover{
-      background-color: $orange;
-    }
   }
 }
 .header__social .hamburger-menu-link--active {
@@ -65,7 +63,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(#000 ,.8);
 }
 
 .popup-menu--active{
