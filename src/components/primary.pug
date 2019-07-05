@@ -1,4 +1,13 @@
 section.section.primary
+  .parallax
+    .parallax__layer(data-speed="0.08")
+      +image('content/parallax_one.png', 'parallax__image')
+    .parallax__layer(data-speed="0.13")
+      +image('content/parallax_two.png', 'parallax__image')
+    .parallax__layer(data-speed="0.15")
+      +image('content/parallax_three.png', 'parallax__image')
+    .parallax__layer(data-speed="0.2")
+      +image('content/parallax_four.png', 'parallax__image')
   .container
     .header__wrap
       include header
@@ -12,5 +21,4 @@ section.section.primary
     .scroll
       .scroll__text Скролл
       button.scroll__button
-        +icon('scroll', 'scroll__button-svg')
-    include about 
+        +icon('scroll', 'scroll__button-svg') 
