@@ -1,0 +1,99 @@
+.about__wrap{
+  display: flex;
+  margin-top: 240px;
+  min-height: 328px;
+  justify-content: center;
+}
+.about__me{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.about__avatar{
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+  overflow: hidden;
+}
+.about__avatar-pic{
+  display: block;
+  max-width: 100%;
+  max-height: inherit;
+  object-fit: cover;
+}
+.about__list{
+  width: 280px;
+}
+.about__item{
+  display: flex;
+  justify-content: space-between;
+}
+.about__question{
+  font-size: 16px;
+  opacity: 0.15;
+  font-weight: 600px;
+  line-height: 1.88;
+  color:$text-color;
+  flex: 1;
+}
+.about__reply{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.88;
+  color:$text-color;
+  flex: 1;
+}
+.about__desc{
+  padding-top: 80px;
+}
+.about__desc-title{
+  margin-top: 20px;
+  margin-bottom: 38px;
+  font-size: 30px;
+  font-weight: bold;
+  color:$text-color;
+}
+.about__desc-text{
+  font-size: 16px;
+  opacity: 0.5;
+  font-weight: 600;
+  line-height: 1.88;
+  color:$text-color;
+}
+.about__content{
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+  padding-left: 50px;
+}
+.about__info{
+  width: 528px;
+}
+.about__info-text{
+  font-size: 16px;
+  opacity: 0.5;
+  line-height: 1.88;
+  color:$text-color;
+  font-style: italic;
+  font-weight: normal;
+  position: relative;
+  padding-top: 90px;
+
+  &:before{
+    content: '*';
+    position: absolute;
+    font-style: normal;
+    width: 22px;
+    height: 22px;
+    font-size: 48px;
+    color:$red;
+    opacity: 0.3;
+    line-height: 1;
+    transform: rotate(10deg);
+    left: -50px;
+  }
+
+}
+

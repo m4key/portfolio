@@ -1,0 +1,45 @@
+section.section.works
+  .container
+    .works__wrap
+      h2.section-title.section-title--black
+        | Мои работы
+      .slider__wrap
+        .works__slider
+          .works__img
+            +image('content/work_one.jpg', 'works__img-main')
+            ul.works__img-list
+              li.works__img-item.works__img-item--active
+                +image('content/work_one.jpg', 'works__img-pic')
+              li.works__img-item
+                +image('content/work_two.jpg', 'works__img-pic')
+              li.works__img-item
+                +image('content/work_three.jpg', 'works__img-pic')
+              li.works__img-item
+                +image('content/work_four.jpg', 'works__img-pic')
+            .slider__button
+              button.slider__btn.slider__btn-next(type='button')
+                +icon('short-arrow', 'slider-next__icn')
+              button.slider__btn.slider__btn-prev
+                +icon('short-arrow', 'slider-prev__icn')
+          .works__desc
+            .works__desc-num
+              | 1
+            .works__desc-info
+              ul.works__skill-list
+                li.works__skill-item
+                  | HTML
+                li.works__skill-item
+                  | CSS
+                li.works__skill-item
+                  | Javascript
+              .works__desc-content
+                h3.section-title.section-title--black.section-title--size
+                  | Сайт школы образования
+                .works__desc-text
+                  p
+                    | Этот парень проходил обучение
+                    | веб-разработке не где-то, а в Loftschool!
+                    | 4,5 месяца только самых тяжелых испытаний и бессоных ночей!
+                a.works__desc-link Посмотреть сайт
+                  +icon('link', 'works__desc-icn')
+                |
