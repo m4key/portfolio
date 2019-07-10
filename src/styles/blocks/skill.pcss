@@ -1,7 +1,6 @@
 .skill {
   background: url('../images/content/bg-skills.png') center center / cover no-repeat;
   height: 1021px;
-  overflow: hidden;
   &:after{
     content:"";
     background: url('../images/content/hands.png') no-repeat;
@@ -67,23 +66,16 @@
 .skill__desc-text{
   width: 65%;
   margin-top: 59px;
-  font-size: 16px;
-  opacity: 0.5;
-  font-weight: 600;
-  line-height: 1.88;
-  color:$text-color;
   @include desktop{
     width: 80%;
   }
   @include tablets{
     width: 65%;
     margin-top: 31px;
-    font-size: 14px;
   }
   @include phones{
     width: 80%;
     text-align: left;
-    line-height: 1.71;
   }
   @include phones-small{
     width: 100%;

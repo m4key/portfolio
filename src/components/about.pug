@@ -1,9 +1,9 @@
 section.section.about
   .container
     .about__wrap
-      .about__me
+      .about__master
         .about__avatar
-          +image('content/user.jpg', 'about__avatar-pic')
+          +image('content/user.jpg', 'about__avatar-pic', 'Аватар Макейкина Александра')
         .about__desc
           ul.about__list
             -var data=[{question:'Проживаю', reply:'Москва'}, {question:'Возраст', reply:'26'}, {question:'Родился', reply:'6 января 1993'}];
@@ -15,15 +15,16 @@ section.section.about
                   | #{item.reply}
       .about__content
         .about__info
-          .about__desc-text
+          .about__desc-subtitle
             | Привет, меня зовут
           h2.section-title.about__desc-title
             | Макейкин Александр
-          .about__desc-text
+          .about__desc-text.section-text
             p
               | Я занимаюсь разработкой современных сайтов и приложений.
               | Мне нравится делать интересные и современные проекты.
-        .about__info-text
-          | Этот сайт я сделал в рамках обучения в Школе онлайн образования
-          | Loftschool. Чуть позже я освежу в нем свой контент. А пока
-          | посмотрите, как тут все классно и красиво!
+        .about__info-text.section-text.section-text--italic
+          p
+            | Этот сайт я сделал в рамках обучения в Школе онлайн образования
+            | Loftschool. Чуть позже я освежу в нем свой контент. А пока
+            | посмотрите, как тут все классно и красиво!

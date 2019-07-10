@@ -14,28 +14,31 @@
     display: none;
   }
 }
+.scroll:hover .scroll__button-svg{
+  fill: $orange;
+  transform: scale(1.2);
+}
+.scroll:hover .scroll__text{
+  color: $orange;
+}
 .scroll__button{
   width: 19px;
   height: 30px;
   background-color: transparent;
   border: 0;
   outline: 0;
-  
+  transition:  all .3s;
 }
 .scroll__text{
   font-size: 18px;
   color:$text-color;
   font-weight: 600;
   line-height: 1.67;
+
 }
 
 .scroll__button-svg{
   height: 100%;
   fill:$text-color;
-  transition:  fill .3s;
-  transition: transform .3s;
-  &:hover{
-    fill:$orange;
-    transform: scale(1.2);
-  }
+  transition:  all .3s;
 }

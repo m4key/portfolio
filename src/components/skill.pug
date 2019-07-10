@@ -1,12 +1,14 @@
 section.section.skill
   .container
     .skill__desc
-      h3.section-title.section-title--size.skill__desc-title
+      h3.section-title.section-title--small.skill__desc-title
         | Чем я могу быть полезен вам
-      .skill__desc-text
+      .skill__desc-text.section-text
         p
           | Этот сайт я сделал в рамках обучения в Школе онлайн образования
           | Loftschool. Чуть позже я освежу в нем свой контент. А пока
           | посмотрите, как тут все классно и красиво!
-      include ability
-      
+      .ability
+        #ability-container
+          include ability
+    

@@ -1,4 +1,4 @@
-.hamburger-menu-link{
+.hamburger-link{
   display: none;
   width: 22px;
   height: 22px;
@@ -13,7 +13,7 @@
   }
   
 } 
-.hamburger-menu-link__button{
+.hamburger-link__button{
   height: 4px;
   width: 100%;
   background-color: #fff;
@@ -38,7 +38,7 @@
   }
 }
 
-.hamburger-menu-link--active .hamburger-menu-link__button{
+.hamburger-link--active .hamburger-link__button{
   background-color: transparent;
   &::before{
     transform: rotate(-45deg);
@@ -53,7 +53,7 @@
     bottom: 9px;
   }
 }
-.header__social .hamburger-menu-link--active {
+.header__social .hamburger-link--active {
   display: none;
 }
 .popup-menu{
@@ -63,12 +63,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateX(100%);
+  transition: all .5s;
 }
 
 .popup-menu--active{
   display: flex;
   opacity: 1;
   z-index: 55;
+  transform: translateX(0);
+  transition: all .5s;
 }
 .popup-menu__container{
   position: absolute;
@@ -82,7 +86,7 @@
   padding-right: 5%;
   z-index: 50;
   display: block;
-  transition: transform .5s,-webkit-transform .5s;
+  transition: all .5s;
   @include phones{
     width: 100%;
   }

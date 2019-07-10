@@ -10,8 +10,7 @@ let hamburger = options => {
 	let _openMenu = e => {
 		e.preventDefault();
 		menu.classList.toggle("popup-menu--active");
-		button.classList.toggle("hamburger-menu-link--active");
-    menu.style.transform = 'translateX(0)';
+		button.classList.toggle("hamburger-link--active");
     document.body.classList.toggle('active-popup');
 		about.classList.toggle('disable');
 		subtitle.classList.toggle('disable');
@@ -22,8 +21,7 @@ let hamburger = options => {
 		e.preventDefault();
 		if (e.target.className === "popup-menu__link") {
 			menu.classList.remove("popup-menu--active");
-			button.classList.remove("hamburger-menu-link--active");
-      menu.style.transform = 'translateX(100%)';
+			button.classList.remove("hamburger-link--active");
       document.body.classList.remove('active-popup');
 			about.classList.remove('disable');
 			subtitle.classList.remove('disable');
@@ -42,6 +40,6 @@ let hamburger = options => {
 };
 
 hamburger({
-	button: ".hamburger-menu-link",
+	button: ".hamburger-link",
 	menu: ".popup-menu"
 }).init();

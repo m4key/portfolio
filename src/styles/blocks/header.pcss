@@ -11,8 +11,14 @@
 }
 .header__nav{
   margin-left: 19%;
+  @include desktop-large{
+    margin-left: 15%;
+  }
   @include desktop{
     margin-left: 8%;
+  }
+   @include laptop{
+    margin-left: 4%;
   }
   @include tablets{
     display: none;
@@ -21,8 +27,14 @@
 
 .header__social{
   margin-left: 16%;
+  @include desktop-large{
+    margin-left: 12%;
+  }
   @include desktop{
     margin-left: 8%;
+  }
+  @include laptop{
+    margin-left: 4%;
   }
   @include tablets{
     margin-left: 53%;
