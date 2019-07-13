@@ -1,0 +1,112 @@
+.hamburger-link{
+  display: none;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  align-items: center;
+  z-index: 70;
+  @include tablets{
+    display: flex;
+    position: absolute;
+    top: 77px;
+    right: 41px
+  }
+  
+} 
+.hamburger-link__button{
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  &:after, &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    &:hover{
+    background-color: $orange;
+    }
+  }
+  &::after{
+    bottom: 0;
+  }
+  &::before{
+    top: 0;
+  }
+}
+
+.hamburger-link--active .hamburger-link__button{
+  background-color: transparent;
+  &::before{
+    transform: rotate(-45deg);
+    background-color: #2b3948;
+    transition: transform .3s;
+    top: 9px;
+  }
+  &::after{
+    transform: rotate(45deg);
+    background-color: #2b3948;
+    transition: transform .3s;
+    bottom: 9px;
+  }
+}
+.header__social .hamburger-link--active {
+  display: none;
+}
+.popup-menu{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all .5s;
+}
+
+.popup-menu--active{
+  display: flex;
+  opacity: 1;
+  z-index: 55;
+  transform: translateX(0);
+  transition: all .5s;
+}
+.popup-menu__container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 40%;
+  height: 100%;
+  padding-top:40% ;
+  padding-left: 10%;
+  padding-right: 5%;
+  z-index: 50;
+  display: block;
+  transition: all .5s;
+  @include phones{
+    width: 100%;
+  }
+  @include phones-small{
+    min-height: 970px;
+  }
+}
+.popup-menu__link{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.67;
+  color: #2b3948;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; 
+  transition: .4s;
+  &:hover{
+    color: $orange;
+  }
+}
+.popup__social{
+  margin-top: 60px;
+}

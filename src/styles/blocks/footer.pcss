@@ -1,0 +1,125 @@
+.footer{
+  padding: 70px 0;
+  color: $text-color;
+  background-color: $bg-footer-color;
+  @include tablets{
+    padding: 65px 0;
+  }
+}
+.footer__wrapper{
+  display: flex;
+   @include phones{
+    flex-direction: column;
+  }
+}
+.footer__main{
+  display: flex;
+  @include desktop{
+    flex-direction: column;
+  }
+}
+
+.footer__year{
+  color: $footer-year;
+  font-size: 48px;
+  font-weight: 600;
+  opacity: 0.5;
+  white-space: pre;
+}
+.footer__info{
+  margin-left: 60px;
+  width: 141px;
+  @include desktop{
+    margin-left: 0;
+  }
+  @include tablets{
+    margin-top: 21px;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
+
+.footer__name{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+.footer__subtitle{
+  opacity: 0.15;
+  padding-top: 34px;
+  line-height: 1.88;
+  font-size: 16px;
+  @include tablets{
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  @include phones{
+    width: 40%;
+  }
+  @include phones-small{
+    width: 40%;
+  }
+
+}
+.footer__content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12%;
+  line-height: 1.88;
+  @include tablets{
+    margin-left: 77px;
+  }
+  @include phones{
+    margin-left: 0;
+  }
+}
+.footer__text{
+  opacity: 0.3;
+  padding-top: 70px;
+  font-size: 16px;
+  @include tablets{
+    padding-top: 61px;
+    font-size: 14px;
+  }
+  @include phones{
+    padding-top: 50px;
+  }
+}
+.footer__blockquote{
+  font-size: 16px;
+  opacity: 0.3;
+  padding-top: 70px;
+  margin: 0;
+  @include tablets{
+    padding-top: 61px;
+    font-size: 14px;
+  }
+}
+.footer__author{
+  font-style: italic;
+  font-size: 16px;
+  padding-top: 35px;
+  @include tablets{
+    padding-top: 18px;
+  }
+}
+
+.footer__block{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 70%;
+  }
+  @include phones-small{
+    width: 95%;
+  }
+}
+.footer__block-nav{
+  width: 100%;
+}

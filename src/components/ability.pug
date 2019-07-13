@@ -1,0 +1,27 @@
+script(type="text/x-template")#ability-list
+  ul.ability__list
+    li.ability__item(v-for="talent in talents" :key="talent.abilityGroup")    
+      item(
+        :talent ="talent"
+      )
+
+script(type="text/x-template")#ability-item
+  .ability__row
+    h3.ability__title {{talent.abilityGroup}}
+    ul.talent__list
+      li.talent__item(v-for="(talentPercent, talentName) in talent.ability")
+        talent(
+          :talentName="talentName",
+          :talentPercent="talentPercent"
+        )
+
+script(type="text/x-template")#talent
+  .talent__img(ref="talent-block")
+    svg(viewBox="0 0 100 100" preserveAspectRatio="none").talent__svg
+      circle(cx="50" cy="50" r="45").talent__svg-base
+      circle(cx="50" cy="50" r="45" ref="color-circle" stroke="url(#gradient)" transform="rotate(180 50 50)").talent__svg-progress
+      defs
+        linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
+          stop(offset="0%" stop-color="#f29400")
+          stop(offset="100%" stop-color="#ea7400")
+    .talent__title {{talentName}} 

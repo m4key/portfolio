@@ -1,0 +1,145 @@
+.review__slider-controls{
+  position: absolute;
+  top: 0;
+  left:460px;
+  @include phones{
+    left: 40%;
+    top: 20%;
+  }
+  @include phones-small{
+     left: 30%;
+  }
+}
+.review__btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border:1px solid $text-color;
+  background: transparent;
+  margin-left: 30px;
+  transition:  border .5s;
+  &:hover{
+   border:1px solid $orange;
+  }
+  
+  &:first-child{
+    margin-left: 0;
+  }
+}
+.review__btn:hover .review__btn-prev{
+  fill:$orange;
+}
+.review__btn:hover .review__btn-next{
+  fill:$orange;
+}
+.review__btn-prev{
+  width: 8px;
+  height: 10px;
+  fill:$text-color;
+  transform: rotate(180deg);
+  transition:  fill .3s;
+}
+.review__btn-next{
+  width: 8px;
+  height: 10px;
+  fill:$text-color;  
+  transition:  fill .3s;
+}
+.review__list{
+  display: flex;
+  margin-top: 100px;
+  @include tablets{
+    margin-top: 72px;
+  }
+}
+.reviews-slider__item{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-left: 94px;
+  margin-top: 97px;
+  &:first-child{
+    margin-left: 0;
+  }
+  @include tablets{
+    margin-top: 61px;
+    margin-left: 56px;
+  }
+  @include phones{
+    margin-top: 97px;
+    width: 100%;
+    &:nth-child(2){
+      display: none;
+    }
+  }
+}
+.review__svg-quote{
+  width: 75px;
+  height: 63px;
+  fill:$text-color;
+  opacity: 0.1;
+  flex-shrink: 0;
+  margin-right: 30px;
+  @include desktop{
+    width: 69px;
+    height: 58px;
+  }
+  @include tablets{
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+  }
+}
+.review__text{
+  display: flex;
+  height: 103px;
+}
+.review__author{
+  display: flex;
+  margin-top: 36px;
+  margin-left: 104px;
+  align-items: center;
+  @include tablets{
+    margin-left: 36px;
+  }
+  @include phones{
+    margin-top: 30px;
+  }
+}
+.review__photo{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.review__photo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:top;
+}
+.review__writer{
+  margin-left: 30px;
+  @include tablets{
+    margin-left: 21px;
+  }
+}
+
+.author__title{
+  font-size: 16px;
+  color:$text-color;
+  font-weight: bold;
+}
+.author__text{
+  font-size: 16px;
+  opacity: 0.3;
+  color:$text-color;
+  font-weight: 600;
+  margin-top: 15px;
+  @include tablets{
+    font-size: 14px;
+  }
+}

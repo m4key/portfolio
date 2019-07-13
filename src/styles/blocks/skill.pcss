@@ -1,0 +1,84 @@
+.skill {
+  background: url('../images/content/bg-skills.png') center center / cover no-repeat;
+  height: 1021px;
+  &:after{
+    content:"";
+    background: url('../images/content/hands.png') no-repeat;
+    position: absolute;
+    top: 129px;
+    z-index: 10;
+    width: 662px;
+    height: 983px;
+    @include desktop{
+      top: 405px;
+      left: -78px;
+      width: 450px;
+      height: 677px;
+      background-size:cover;
+    }
+    @include tablets{
+      width: 333px;
+      height: 481px;
+      transform: rotate(-90deg);
+      top: 662px;
+      left: 220px;
+    }
+    @include phones{
+      width: 267px;
+      height: 384px;
+      top: 986px;
+      left: 140px;
+    }
+    @include phones-small{
+      left: 2.5rem;
+    }
+  }
+  @include tablets{
+    height: 1069px;
+  }
+  @include phones{
+    height: 1312px;
+  }
+}
+.skill__desc{
+  margin-top: 10%;
+  margin-left: 36%;
+  @include desktop{
+    margin-left: 338px;
+  }
+  @include tablets{
+    margin-left: 0;
+    margin-top: 117px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include phones{
+    margin-top: 102px;
+    align-items: flex-start;
+  }
+}
+.skill__desc-title{
+  text-align: left;
+}
+.skill__desc-text{
+  width: 65%;
+  margin-top: 59px;
+  @include desktop{
+    width: 80%;
+  }
+  @include tablets{
+    width: 65%;
+    margin-top: 31px;
+  }
+  @include phones{
+    width: 80%;
+    text-align: left;
+  }
+  @include phones-small{
+    width: 100%;
+  }
+  
+}
