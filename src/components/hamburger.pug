@@ -1,0 +1,13 @@
+a.hamburger-link(href="#")
+  .hamburger-link__button
+  .popup-menu
+    .popup-menu__container
+      nav.popup-menu__navigation
+        ul.popup-menu__list
+          -var menu=['Главная','Обо мне','Навыки','Работы','Отзывы','Связаться'];
+          each item in menu
+            li.popup-menu__item
+              a.popup-menu__link #{item}
+      .popup__social
+        include social 
+        +social('hamburger')

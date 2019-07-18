@@ -12,7 +12,10 @@
   "bg-footer-color":"#1b1f22",
   "footer-year":"#75787a",
   "bp-desktop-hd": "1800px",
+  "bp-desktop-large": "1366px",
   "bp-desktop": "1200px",
+  "bp-laptop": "1024px",
   "bp-tablets": "768px",
-  "bp-phones": "480px"
+  "bp-phones": "480px",
+  "bp-phones-small":"320px"
 }

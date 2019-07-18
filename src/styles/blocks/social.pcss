@@ -7,13 +7,25 @@
   &--footer{
     padding-top: 27px;
     opacity: 0.8;
+    @include tablets{
+      padding-top: 19px;
+    }
   }
 }
 .social__list--header .social__item:hover {
   opacity: 1;
   border:none;
 }
-
+.social__list--hamburger .social__icon{
+  fill:#2b3948;
+  transition: fill .4s;
+}
+.social__list--hamburger .social__item{
+  opacity: 1;
+  &:hover{
+    border: none;
+  }
+}
 .social__list--footer .social__item{
   width: 50px;
   height: 50px;
@@ -23,11 +35,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .social__list--footer .social__icon{
@@ -39,8 +47,11 @@
   height: 25px;
   margin-left: 40px;
   opacity: 0.4;
-  transition: border .6s;
-  transition: opacity .1s;
+  transition: all .5s;
+  @include phones{
+    width: 20px;
+    height: 20px;
+  }
   &:hover{
     opacity: 1;
     border: 1px solid $orange;
@@ -62,8 +73,7 @@
   width: 100%;
   height: 100%;
   fill:$text-color;
-  transition: fill .6s;
-  transition: opacity .1s;
+  transition: all .5s;
   &:hover{
     fill: $orange;
   }

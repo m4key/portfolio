@@ -1,8 +1,14 @@
 html {
   @include desktop {
-    font-size: 15px;
+    font-size: 16px;
   }
   @include tablets {
+    font-size: 15px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
+   @include phones-small{
     font-size: 14px;
   }
 }
@@ -19,7 +25,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
 }
-
+.active-popup{
+  overflow: hidden;
+}
+.disable{
+  display: none;
+}
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -33,10 +44,16 @@ body {
   // width: 1490px;
   display: flex;
   flex-direction: column;
-
+  @include desktop{
+    max-width: 1080px;
+  }
+  @include tablets{
+    max-width: 689px;
+  }
   @include phones {
     width: 85%;
   }
+  
 }
 .section{
    //height: 100vh;
@@ -44,9 +61,92 @@ body {
   height: 100%;
   position: relative;
 }
+.section-title{
+  font-size: 36px;
+  font-weight: bold;
+  color:$text-color;
+  &--black{
+    color:$black;
+    @include phones{
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  &--big{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 0.83;
+    @include tablets{
+      font-size: 48px;
+    }
+    @include phones{
+    font-size: 36px;
+    line-height: 1.33;
+  }
+  }
+  &--small{
+    font-size: 30px;
+  }
+  @include tablets{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 24px;
+  }
+  
+}
+.section-text{
+  font-size: 16px;
+  opacity: 0.5;
+  font-weight: 600;
+  line-height: 1.88;
+  color:$text-color;
+  @include tablets{
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  &--italic{
+    font-style: italic;
+    font-weight: normal;
+  }
+  &--black{
+    opacity: 0.7;
+    color: $dark-blue;
+  }
+}
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
+}
+.maincontent__bg-autumn{
+  background: url('../images/content/bg-autumn.jpg') center center / cover no-repeat;
+  min-height:1375px;
+  position: relative;
+  @include desktop{
+    background: url('../images/content/bg-autumn-desktop.jpg') center center / cover no-repeat;
+  }
+  @include tablets{
+    min-height: 1065px;
+  }
+
+  &:after{
+    content:url('../images/content/foliage-one.png');
+    position: absolute;
+    bottom: 81%;
+    right: 0;
+    z-index: 10;
+    @include desktop{
+      right: -125px;
+    }
+    @include tablets{
+      right: -237px;
+      bottom: 79%;
+    }
+    @include phones{
+      display: none;
+    }
+  }
+
 }
 
 button {
@@ -92,4 +192,8 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+circle{
+  fill:transparent;
 }

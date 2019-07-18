@@ -1,0 +1,20 @@
+[
+  {
+    "abilityGroup": "Frontend",
+    "ability": {
+      "HTML5": 80,
+      "CSS3": 70,
+      "Javascript": 25,
+      "Jquery и Vue.js": 10
+    }
+  },
+  {
+    "abilityGroup": "Workflow",
+    "ability": {
+      "GIT": 40,
+      "Terminal": 50,
+      "Gulp": 30,
+      "Webpack": 30
+    }
+  }
+]

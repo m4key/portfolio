@@ -3,19 +3,4 @@ section.section.feedback
     .feedback__wrap
       h3.section-title.feedback__title Связаться со мной
       .feedback-form__wrap
-        form.feedback__form
-          .feedback__row
-            label.feedback__block
-              .feedback__label-text Введите ваше имя
-              +icon('avatar', 'feedback__label-icn')
-              input(type='text' name='name' placeholder='Макейкин Александр').feedback__name 
-            label.feedback__block
-              .feedback__label-text Введите ваш email
-              +icon('envelope', 'feedback__label-icn')
-              input(type='email' name='email' placeholder='amakeykin@yandex.ru').feedback__name 
-          .feedback__textarea
-            label.feedback__block
-              .feedback__label-text Сообщение к письму
-              +icon('chat', 'feedback__label-icn feedback__label-icn--textarea')
-              textarea.feedback__name.feedback__name--textarea(name="textarea", cols="30", rows="2" placeholder="Требуется ваша помощь в создании сайта.                                                                         Интересуют сроки и цена вопроса")
-          button.feedback__btn(type='submit') Отправить
+        include form

@@ -1,132 +1,31 @@
 .works{
   background-color:$text-color;
-  min-height:1086px;
+  height:1086px;
+  @include desktop{
+    height: 788px;
+  }
+  @include tablets{
+    height: 981px;
+  }
+  @include phones-small{
+    height: 903px;
+  }
+
+}
+.works .container{
+  @include phones{
+    width: 100%;
+  }
 }
 .works__wrap{
   margin-top: 203px;
-}
-.slider__wrap{
-  margin-top: 92px;
-  position: relative;
-}
-.works__slider{
-  display: flex;
-}
-.works__img{
-  position: relative;
-  flex-shrink: 0;
-  z-index: 5;
-}
-.works__img-list{
-  position: absolute;
-  display: flex;
-  bottom: 60px;
-  left: 263px;
-}
-.works__img-item{
-  width: 178px;
-  height: 100px;
-  &--active{
-    border: 2px solid $orange;
+  @include desktop{
+    margin-top: 152px;
   }
-  &:hover{
-    filter: saturate(300%);
+  @include tablets{
+    margin-top: 124px;
   }
-}
-.works__img-main{
-  width: 975px;
-  height: 549px;
-}
-.works__img-pic{
-  width: 178px;
-  height: 100px;
-}
-.works__desc{
-  flex-shrink: 0;
-  display: flex;
-}
-.slider__button{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  bottom: 60px;
-  left: 975px;
-}
-.slider__btn{
-  width: 50px;
-  height: 50px;
-  background-color: $dark-blue;
-  &:hover{
-   background-color: $orange;
-  transition: background-color .3s;
+  @include phones{
+    margin-top: 99px;
   }
-}
-.slider-next__icn{
-  width: 8px;
-  height: 10px;
-  fill:$text-color;
-}
-.slider-prev__icn{
-  width: 8px;
-  height: 10px;
-  fill:$text-color;
-  opacity: 0.4;
-  transform: rotate(180deg);
-}
-.works__desc-num{
-  z-index: 0;
-  color: $light-grey;
-  margin-left: -55px;
-  position: relative;
-  font-size: 400px;
-  font-weight: 800;
-  line-height: 473px;
-}
-.works__desc-info{
-  width: 34%;
-}
-.works__skill-list{
-  display: flex;
-}
-.works__skill-item{
-  background-color: $skill-item-bg-color;
-  margin-left: 15px;
-  padding: 17px 22px 12px 20px;
-  font-size: 15px;
-  font-weight: 400;
-  color:$dark-grey;
-  border-radius: 25px;
-}
-.works__desc-content{
-  margin-top: 50px;
-  height: 295px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 70%;
-}
-.works__desc-text{
-  color: $dark-blue;
-  font-size: 16px;
-  font-weight: 400;
-}
-.works__desc-link{
-  font-size: 18px;
-  color:$links-color;
-  font-weight: bold;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  &:hover{
-    text-decoration: underline; 
-    transition: text-decoration .3s;
-  }
-}
-.works__desc-icn{
-  width: 15px;
-  height: 15px;
-  fill:$links-color;
-  margin-right: 20px;
 }

@@ -1,25 +1,87 @@
+.about{
+  position: relative;
+  background: url('../images/content/bg-numbers.png') 0 100% no-repeat;
+  z-index: 25; 
+  min-height: 542px;
+  background-size: 100% 65%;
+  @include desktop{
+     background: url('../images/content/bg-numbers-desktop.png') 0 100% no-repeat;
+  }
+  @include tablets{
+     background: url('../images/content/bg-numbers-tablets.png') 0 100% no-repeat;
+  }
+  @include phones-small{
+     background: url('../images/content/bg-numbers-phones.png') 0 100% no-repeat;
+  }
+  &::after{
+    content: "";
+    z-index: 21;
+    position: absolute;
+    bottom: 60%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg,#1b1f22 57%,rgba(27,31,34,.7) 85%,rgba(27,31,34,0));
+    @include desktop-large{
+      bottom: 99%;
+      background-image: linear-gradient(0deg,#1b1f22 67%,rgba(27,31,34,.7) 90%,rgba(27,31,34,0));
+    }
+    @include laptop{
+      bottom: 45%;
+    }
+  }
+  @include desktop-large{
+  background-size: 100% 100%;
+  }
+  @include desktop{
+    min-height: 542px;
+  }
+  @include tablets{
+    min-height: 466px;
+  }
+  @include phones{
+    min-height: 874px;
+    background-size: 100% 73%;
+  }
+}
 .about__wrap{
+  z-index: 30;
   display: flex;
-  margin-top: 240px;
   min-height: 328px;
   justify-content: center;
+  @include desktop{
+    width: 100%;
+    align-items: center;
+  }
+  @include phones{
+    flex-direction: column;
+  }
 }
-.about__me{
+.about__master{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 33%;
+  @include desktop{
+    align-items: initial;
+  }
+  @include phones{
+    align-items: center;
+    width: 100%;
+  }
 }
 .about__avatar{
   width: 200px;
   height: 200px;
   border-radius:50%;
   overflow: hidden;
+  @include tablets{
+    width: 170px;
+    height: 170px;
+  }
 }
 .about__avatar-pic{
   display: block;
-  max-width: 100%;
   max-height: inherit;
   object-fit: cover;
 }
@@ -33,10 +95,13 @@
 .about__question{
   font-size: 16px;
   opacity: 0.15;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 1.88;
   color:$text-color;
   flex: 1;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .about__reply{
   font-size: 16px;
@@ -44,40 +109,62 @@
   line-height: 1.88;
   color:$text-color;
   flex: 1;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .about__desc{
   padding-top: 80px;
+  @include tablets{
+    padding-top: 57px;
+  }
+  @include phones{
+    padding-top: 31px;
+  }
+}
+.about__desc-subtitle{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.88;
+  opacity: 0.5;
+  @include tablets{
+    font-size: 14px;
+    line-height: 2.14;
+  }
 }
 .about__desc-title{
   margin-top: 20px;
   margin-bottom: 38px;
-  font-size: 30px;
-  font-weight: bold;
-  color:$text-color;
+  @include phones-small{
+    width: 50%;
+  }
 }
 .about__desc-text{
-  font-size: 16px;
-  opacity: 0.5;
-  font-weight: 600;
-  line-height: 1.88;
-  color:$text-color;
+  @include phones{
+    width: 70%;
+  }
 }
 .about__content{
   display: flex;
   flex-direction: column;
-  width: 528px;
+  width: 40%;
   padding-left: 50px;
-}
-.about__info{
-  width: 528px;
+  @include desktop{
+    padding-left: 0;
+    width: 50%;
+  }
+  @include tablets{
+    padding-left: 90px;
+    width: 100%;
+  }
+  @include phones{
+    padding-top: 51px;
+  }
+  @include phones-small{
+    padding-left: 0; 
+  }
 }
 .about__info-text{
-  font-size: 16px;
-  opacity: 0.5;
-  line-height: 1.88;
-  color:$text-color;
-  font-style: italic;
-  font-weight: normal;
   position: relative;
   padding-top: 90px;
 
@@ -93,6 +180,18 @@
     line-height: 1;
     transform: rotate(10deg);
     left: -50px;
+    @include phones-small{
+      left: -40px;
+    }
+  }
+  @include tablets{
+    padding-top: 46px;
+  }
+  @include phones{
+    width: 70%;
+  }
+  @include phones-small{
+    width: 80%;
   }
 
 }

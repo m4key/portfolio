@@ -1,14 +1,45 @@
 .header__wrap{
+  z-index: 10;
   margin-top: 64px;
 }
 .header {
   display: flex;
   align-items:center;
 }
+.header__logo{
+  z-index: 70;
+}
 .header__nav{
-  margin-left: 290px;
+  margin-left: 19%;
+  @include desktop-large{
+    margin-left: 15%;
+  }
+  @include desktop{
+    margin-left: 8%;
+  }
+   @include laptop{
+    margin-left: 4%;
+  }
+  @include tablets{
+    display: none;
+  }
 }
 
 .header__social{
-  margin-left: 241px;
+  margin-left: 16%;
+  @include desktop-large{
+    margin-left: 12%;
+  }
+  @include desktop{
+    margin-left: 8%;
+  }
+  @include laptop{
+    margin-left: 4%;
+  }
+  @include tablets{
+    margin-left: 53%;
+  }
+  @include phones{
+    display: none;
+  }
 }
