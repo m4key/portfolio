@@ -4,7 +4,19 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "./scripts/skills";
+import "./scripts/works";
 import "./scripts/reviews";
 import "./scripts/parallax";
 import "./scripts/hamburger-menu";
-import "./scripts/works";
+
+
+import Validate from "./scripts/form";
+
+const form=document.querySelector('.j-form');
+
+if (form){
+  const validate = new Validate({
+    element: '.j-form'
+  });
+  validate.init();
+}

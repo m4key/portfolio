@@ -1,80 +1,94 @@
-.social__list{
+.social__list {
   display: flex;
-  &--header{
+
+  &--header {
     opacity: 0.6;
-    transition:  opacity .3s;
+    transition: opacity 0.3s;
   }
-  &--footer{
+
+  &--foote {
     padding-top: 27px;
     opacity: 0.8;
-    @include tablets{
+
+    @include tablets {
       padding-top: 19px;
     }
   }
 }
+
 .social__list--header .social__item:hover {
   opacity: 1;
-  border:none;
+  border: none;
 }
-.social__list--hamburger .social__icon{
-  fill:#2b3948;
-  transition: fill .4s;
+
+.social__list--hamburger .social__icon {
+  fill: #2b3948;
+  transition: fill 0.4s;
 }
-.social__list--hamburger .social__item{
+
+.social__list--hamburger .social__item {
   opacity: 1;
-  &:hover{
+
+  &:hover {
     border: none;
   }
 }
-.social__list--footer .social__item{
+
+.social__list--footer .social__item {
   width: 50px;
   height: 50px;
   border: 1px solid $text-color;
   opacity: 0.6;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social__list--footer .social__icon{
+
+.social__list--footer .social__icon {
   width: 100%;
   height: 100%;
 }
-.social__item{
+
+.social__item {
   width: 25px;
   height: 25px;
   margin-left: 40px;
   opacity: 0.4;
-  transition: all .5s;
-  @include phones{
+  transition: all 0.5s;
+
+  @include phones {
     width: 20px;
     height: 20px;
   }
-  &:hover{
+
+  &:hover {
     opacity: 1;
     border: 1px solid $orange;
   }
-  &:first-child{
+
+  &:first-child {
     margin-left: 0;
   }
 }
-.social__item:hover .social__icon{
+
+.social__item:hover .social__icon {
   opacity: 1;
   fill: $orange;
 }
 
-.social__link{
+.social__link {
   width: 22px;
   height: 22px;
 }
-.social__icon{
+
+.social__icon {
   width: 100%;
   height: 100%;
-  fill:$text-color;
-  transition: all .5s;
-  &:hover{
+  fill: $text-color;
+  transition: all 0.5s;
+
+  &:hover {
     fill: $orange;
   }
 }

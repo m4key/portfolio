@@ -1,198 +1,240 @@
-.about{
+.about {
   position: relative;
-  background: url('../images/content/bg-numbers.png') 0 100% no-repeat;
-  z-index: 25; 
+  background: url("../images/content/bg-numbers.png") 0 100% no-repeat;
+  z-index: 25;
   min-height: 542px;
   background-size: 100% 65%;
-  @include desktop{
-     background: url('../images/content/bg-numbers-desktop.png') 0 100% no-repeat;
+
+  @include desktop {
+    background: url("../images/content/bg-numbers-desktop.png") 0 100% no-repeat;
   }
-  @include tablets{
-     background: url('../images/content/bg-numbers-tablets.png') 0 100% no-repeat;
+
+  @include tablets {
+    background: url("../images/content/bg-numbers-tablets.png") 0 100% no-repeat;
   }
-  @include phones-small{
-     background: url('../images/content/bg-numbers-phones.png') 0 100% no-repeat;
+
+  @include phones-small {
+    background: url("../images/content/bg-numbers-phones.png") 0 100% no-repeat;
   }
-  &::after{
+
+  &::after {
     content: "";
     z-index: 21;
     position: absolute;
     bottom: 60%;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(0deg,#1b1f22 57%,rgba(27,31,34,.7) 85%,rgba(27,31,34,0));
-    @include desktop-large{
+    background-image: linear-gradient(0deg,#1b1f22 57%,rgba(27,31,34,0.7) 85%,rgba(27,31,34,0));
+
+    @include desktop-large {
       bottom: 99%;
-      background-image: linear-gradient(0deg,#1b1f22 67%,rgba(27,31,34,.7) 90%,rgba(27,31,34,0));
+      background-image: linear-gradient(0deg,#1b1f22 67%,rgba(27,31,34,0.7) 90%,rgba(27,31,34,0));
     }
-    @include laptop{
+
+    @include laptop {
       bottom: 45%;
     }
   }
-  @include desktop-large{
-  background-size: 100% 100%;
+
+  @include desktop-large {
+    background-size: 100% 100%;
   }
-  @include desktop{
+
+  @include desktop {
     min-height: 542px;
   }
-  @include tablets{
+
+  @include tablets {
     min-height: 466px;
   }
-  @include phones{
+
+  @include phones {
     min-height: 874px;
     background-size: 100% 73%;
   }
 }
-.about__wrap{
+
+.about__wrap {
   z-index: 30;
   display: flex;
   min-height: 328px;
   justify-content: center;
-  @include desktop{
+
+  @include desktop {
     width: 100%;
     align-items: center;
   }
-  @include phones{
+
+  @include phones {
     flex-direction: column;
   }
 }
-.about__master{
+
+.about__master {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 33%;
-  @include desktop{
+
+  @include desktop {
     align-items: initial;
   }
-  @include phones{
+
+  @include phones {
     align-items: center;
     width: 100%;
   }
 }
-.about__avatar{
+
+.about__avatar {
   width: 200px;
   height: 200px;
-  border-radius:50%;
+  border-radius: 50%;
   overflow: hidden;
-  @include tablets{
+
+  @include tablets {
     width: 170px;
     height: 170px;
   }
 }
-.about__avatar-pic{
+
+.about__avatar-pic {
   display: block;
   max-height: inherit;
   object-fit: cover;
 }
-.about__list{
+
+.about__list {
   width: 280px;
 }
-.about__item{
+
+.about__item {
   display: flex;
   justify-content: space-between;
 }
-.about__question{
+
+.about__question {
   font-size: 16px;
   opacity: 0.15;
   font-weight: 600;
   line-height: 1.88;
-  color:$text-color;
+  color: $text-color;
   flex: 1;
-  @include tablets{
+
+  @include tablets {
     font-size: 14px;
   }
 }
-.about__reply{
+.about__reply {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.88;
-  color:$text-color;
+  color: $text-color;
   flex: 1;
-  @include tablets{
+
+  @include tablets {
     font-size: 14px;
   }
 }
-.about__desc{
+
+.about__desc {
   padding-top: 80px;
-  @include tablets{
+
+  @include tablets {
     padding-top: 57px;
   }
-  @include phones{
+
+  @include phones {
     padding-top: 31px;
   }
 }
-.about__desc-subtitle{
+
+.about__desc-subtitle {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.88;
   opacity: 0.5;
-  @include tablets{
+
+  @include tablets {
     font-size: 14px;
     line-height: 2.14;
   }
 }
-.about__desc-title{
+
+.about__desc-title {
   margin-top: 20px;
   margin-bottom: 38px;
-  @include phones-small{
+
+  @include phones-small {
     width: 50%;
   }
 }
-.about__desc-text{
-  @include phones{
+
+.about__desc-text {
+  @include phones {
     width: 70%;
   }
 }
-.about__content{
+
+.about__content {
   display: flex;
   flex-direction: column;
   width: 40%;
   padding-left: 50px;
-  @include desktop{
+
+  @include desktop {
     padding-left: 0;
     width: 50%;
   }
-  @include tablets{
+
+  @include tablets {
     padding-left: 90px;
     width: 100%;
   }
-  @include phones{
+
+  @include phones {
     padding-top: 51px;
   }
-  @include phones-small{
-    padding-left: 0; 
+
+  @include phones-small {
+    padding-left: 0;
   }
+  
 }
-.about__info-text{
+
+.about__info-text {
   position: relative;
   padding-top: 90px;
 
-  &:before{
-    content: '*';
+  &::before {
+    content: "*";
     position: absolute;
     font-style: normal;
     width: 22px;
     height: 22px;
     font-size: 48px;
-    color:$red;
+    color: $red;
     opacity: 0.3;
     line-height: 1;
     transform: rotate(10deg);
     left: -50px;
-    @include phones-small{
+
+    @include phones-small {
       left: -40px;
     }
   }
-  @include tablets{
+
+  @include tablets {
     padding-top: 46px;
   }
-  @include phones{
+
+  @include phones {
     width: 70%;
   }
-  @include phones-small{
+
+  @include phones-small {
     width: 80%;
   }
-
 }
 

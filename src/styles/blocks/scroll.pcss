@@ -1,44 +1,51 @@
-.scroll{
+.scroll {
   z-index: 25;
   display: flex;
   margin: 0 auto;
   margin-top: 254px;
   cursor: pointer;
-  @include desktopHd{
+
+  @include desktopHd {
     margin-top: 318px;
   }
-  @include desktop{
+
+  @include desktop {
     margin-top: 234px;
   }
-  @include tablets{
+
+  @include tablets {
     display: none;
   }
 }
-.scroll:hover .scroll__button-svg{
+
+.scroll:hover .scroll__button-svg {
   fill: $orange;
   transform: scale(1.2);
 }
-.scroll:hover .scroll__text{
-  color: $orange;
-}
-.scroll__button{
+
+.scroll__button {
   width: 19px;
   height: 30px;
   background-color: transparent;
   border: 0;
   outline: 0;
-  transition:  all .3s;
+  transition: all 0.3s;
 }
-.scroll__text{
+
+.scroll__text {
   font-size: 18px;
-  color:$text-color;
+  color: $text-color;
   font-weight: 600;
   line-height: 1.67;
-
+  transition: all 0.3s;
 }
 
-.scroll__button-svg{
+.scroll:hover .scroll__text {
+  color: $orange;
+}
+
+.scroll__button-svg {
   height: 100%;
-  fill:$text-color;
-  transition:  all .3s;
+  fill: $text-color;
+  transition: all 0.3s;
 }

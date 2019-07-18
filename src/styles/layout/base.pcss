@@ -2,35 +2,42 @@ html {
   @include desktop {
     font-size: 16px;
   }
+
   @include tablets {
     font-size: 15px;
   }
-  @include phones{
+
+  @include phones {
     font-size: 14px;
   }
-   @include phones-small{
+
+  @include phones-small {
     font-size: 14px;
   }
 }
+
 body,
 html {
   height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
 }
-.active-popup{
+
+.active-popup {
   overflow: hidden;
 }
-.disable{
+
+.disable {
   display: none;
 }
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -41,112 +48,130 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
   display: flex;
   flex-direction: column;
-  @include desktop{
+
+  @include desktop {
     max-width: 1080px;
   }
-  @include tablets{
+
+  @include tablets {
     max-width: 689px;
   }
+
   @include phones {
     width: 85%;
   }
   
 }
-.section{
-   //height: 100vh;
-  //min-height: 650px;
+
+.section {
   height: 100%;
   position: relative;
 }
-.section-title{
+
+.section-title {
   font-size: 36px;
   font-weight: bold;
-  color:$text-color;
-  &--black{
-    color:$black;
-    @include phones{
+  color: $text-color;
+
+  &--black {
+    color: $black;
+
+    @include phones {
       text-align: center;
       font-size: 24px;
     }
   }
-  &--big{
+
+  &--big {
     font-size: 72px;
     font-weight: 800;
     line-height: 0.83;
-    @include tablets{
+
+    @include tablets {
       font-size: 48px;
     }
-    @include phones{
-    font-size: 36px;
-    line-height: 1.33;
-  }
-  }
-  &--small{
-    font-size: 30px;
-  }
-  @include tablets{
-    font-size: 30px;
-  }
-  @include phones{
-    font-size: 24px;
+
+    @include phones {
+      font-size: 36px;
+      line-height: 1.33;
+    }
   }
   
+  &--small {
+    font-size: 30px;
+  }
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 24px;
+  }
 }
-.section-text{
+.section-text {
   font-size: 16px;
   opacity: 0.5;
   font-weight: 600;
   line-height: 1.88;
-  color:$text-color;
-  @include tablets{
+  color: $text-color;
+
+  @include tablets {
     font-size: 14px;
     line-height: 1.71;
   }
-  &--italic{
+
+  &--italic {
     font-style: italic;
     font-weight: normal;
   }
-  &--black{
+
+  &--black {
     opacity: 0.7;
     color: $dark-blue;
   }
 }
+
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
 }
-.maincontent__bg-autumn{
-  background: url('../images/content/bg-autumn.jpg') center center / cover no-repeat;
-  min-height:1375px;
+
+.maincontent__bg-autumn {
+  background: url("../images/content/bg-autumn.jpg") center center / cover no-repeat;
+  min-height: 1375px;
   position: relative;
-  @include desktop{
-    background: url('../images/content/bg-autumn-desktop.jpg') center center / cover no-repeat;
+
+  @include desktop {
+    background: url("../images/content/bg-autumn-desktop.jpg") center center / cover no-repeat;
   }
-  @include tablets{
+
+  @include tablets {
     min-height: 1065px;
   }
 
-  &:after{
-    content:url('../images/content/foliage-one.png');
+  &::after {
+    content: url("../images/content/foliage-one.png");
     position: absolute;
     bottom: 81%;
     right: 0;
     z-index: 10;
-    @include desktop{
+
+    @include desktop {
       right: -125px;
     }
-    @include tablets{
+
+    @include tablets {
       right: -237px;
       bottom: 79%;
     }
-    @include phones{
+
+    @include phones {
       display: none;
     }
   }
-
 }
 
 button {
@@ -194,6 +219,6 @@ img {
   max-height: 100%;
 }
 
-circle{
-  fill:transparent;
+circle {
+  fill: transparent;
 }

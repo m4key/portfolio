@@ -2,22 +2,27 @@
   position: relative;
   overflow: hidden;
   min-height: 1504px;
-  @include desktop{
+
+  @include desktop {
     min-height: 1515px;
   }
-  @include laptop{
-    background: url('../images/content/bg-train.jpg') center center / cover no-repeat;
+
+  @include laptop {
+    background: url("../images/content/bg-train.jpg") center center / cover no-repeat;
   }
-  @include tablets{
+
+  @include tablets {
     min-height: 1338px;
-    background: url('../images/content/bg-train-tablets.jpg') center center / cover no-repeat;
+    background: url("../images/content/bg-train-tablets.jpg") center center / cover no-repeat;
   }
-  @include phones{
+
+  @include phones {
     min-height: 1306px;
   }
-  @include phones-small{
+
+  @include phones-small {
     min-height: 1018px;
-    background: url('../images/content/bg-train-phones.jpg') center center / cover no-repeat;
+    background: url("../images/content/bg-train-phones.jpg") center center / cover no-repeat;
   }
 
 }
