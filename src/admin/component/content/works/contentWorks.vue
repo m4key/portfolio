@@ -1,63 +1,76 @@
 <template lang="pug">
-	.works
-		.works__wrap
-			.works__title Блок «Работы»
-			form.works__form
-				.works__form-title Редактирование работы
-				.works__form-content
-					.works__form-photo
-						.works__form-photo-text Перетащите или загрузите для загрузки изображения
-						button(type="button").works__form-photo-load Загрузить
-					button(type="button").works__form-change Изменить превью
-					.works__form-info
-						label.works__form-label 
-							.works__form-label-title Название
-							input(type="text").works__form-input
-						label.works__form-label 
-							.works__form-label-title Ссылка
-							input(type="text").works__form-input
-						label.works__form-label 
-							.works__form-label-title Описание
-							textarea(name="description", cols="30", rows="10").works__form-textarea
-						label.works__form-label 
-							.works__form-label-title Добавление тэга
-							input(type="text").works__form-input
-						ul.works__form-item
-							li.works__form-list
-								.works__form-list-title HTML5
-								button(type="button").works__form-list-delete
-							li.works__form-list
-								.works__form-list-title CSS3
-								button(type="button").works__form-list-delete
-							li.works__form-list
-								.works__form-list-title JavaScript
-								button(type="button").works__form-list-delete
-						.works__from-btns
-							button(type="button").works__from-btns-decline Отмена
-							button(type="button").works__from-btns-save Сохранить
-			ul.works__project-item
-				li.works__project-add-list
-					button(type="button").works__project-add-btn +
-					.works__project-add-title Добавить работу
-				li.works__project-list
-					img(src="~images/content/work_one.jpg").works__project-photo
-					.works__project-desc
-						.works__project-title Сайт школы образования
-						.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-						a.works__project-link http://loftschool.ru
-						.works__project-buttons
-							button(type="button").works__project-edit Править
-							button(type="button").works__project-delete Удалить
-				li.works__project-list
-					img(src="~images/content/work_two.jpg").works__project-photo
-					.works__project-desc
-						.works__project-title Сайт школы образования
-						.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-						a.works__project-link http://loftschool.ru
-						.works__project-buttons
-							button(type="button").works__project-edit Править
-							button(type="button").works__project-delete Удалить
+	.maincontent
+		admin-header
+		admin-nav
+		.works
+			.container.works__container
+				.works__title Блок «Работы»
+				form.works__form
+					.works__form-title Редактирование работы
+					.works__form-content
+						.works__form-photo
+							.works__form-photo-text Перетащите или загрузите для загрузки изображения
+							button(type="button").works__form-photo-load Загрузить
+						button(type="button").works__form-change Изменить превью
+						.works__form-info
+							label.works__form-label 
+								.works__form-label-title Название
+								input(type="text").works__form-input
+							label.works__form-label 
+								.works__form-label-title Ссылка
+								input(type="text").works__form-input
+							label.works__form-label 
+								.works__form-label-title Описание
+								textarea(name="description", cols="30", rows="10").works__form-textarea
+							label.works__form-label 
+								.works__form-label-title Добавление тэга
+								input(type="text").works__form-input
+							ul.works__form-item
+								li.works__form-list
+									.works__form-list-title HTML5
+									button(type="button").works__form-list-delete
+								li.works__form-list
+									.works__form-list-title CSS3
+									button(type="button").works__form-list-delete
+								li.works__form-list
+									.works__form-list-title JavaScript
+									button(type="button").works__form-list-delete
+							.works__from-btns
+								button(type="button").works__from-btns-decline Отмена
+								button(type="button").works__from-btns-save Сохранить
+				ul.works__project-item
+					li.works__project-add-list
+						button(type="button").works__project-add-btn +
+						.works__project-add-title Добавить работу
+					li.works__project-list
+						img(src="~images/content/work_one.jpg").works__project-photo
+						.works__project-desc
+							.works__project-title Сайт школы образования
+							.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+							a.works__project-link http://loftschool.ru
+							.works__project-buttons
+								button(type="button").works__project-edit Править
+								button(type="button").works__project-delete Удалить
+					li.works__project-list
+						img(src="~images/content/work_two.jpg").works__project-photo
+						.works__project-desc
+							.works__project-title Сайт школы образования
+							.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+							a.works__project-link http://loftschool.ru
+							.works__project-buttons
+								button(type="button").works__project-edit Править
+								button(type="button").works__project-delete Удалить
 </template>
+<script>
+	import adminHeader from "../../header/adminHeader";
+	import adminNav from "../../nav/adminNav";
+	export default {
+		components: {
+			adminHeader,
+			adminNav
+		}
+	}
+</script>
 <style lang="postcss" scoped>
 	@import "normalize.css";
 	@import url('../../../../styles/mixins');
@@ -69,6 +82,8 @@
 
 	.works {
 		grid-area: works;
+		background-color: rgba(255, 255, 255, 0.9);
+		background: url("../../../../images/content/admin-bg.jpg");
 	}
 
 	.works__title {
@@ -110,6 +125,7 @@
 		@include phones {
 			padding: 0;
 			padding-top: 30px;
+			justify-items: center;
 		}
 	}
 
@@ -318,6 +334,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 20px;
+		margin-bottom: 30px;
 
 		@include tablets {
 			grid-template-columns: 1fr 1fr;

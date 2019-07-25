@@ -9,7 +9,7 @@
 	import adminHeader from "./header/adminHeader";
 	import adminNav from "./nav/adminNav";
 	import adminContent from "./content/adminContent";
-	import adminAuth from "./auth/adminAuth";
+	import adminAuth from "./login/login";
 	export default {
 		components: {
 			adminHeader,

@@ -1,17 +1,55 @@
 <template lang="pug">
-	.auth
-		.auth__wrap
-			.auth__title Авторизация
-			.auth__row 
-				label.auth__label
-					.auth__label-title Логин
-					input.auth__input
-			.auth__row.auth__row-pass 
-				label.auth__label
-					.auth__label-title Пароль
-					input.auth__input
-			button.auth__button Отправить
+	.login
+		.login__content
+			form.login__form(@submit.prevent="login")
+				.login__title Авторизация
+				.login__row 
+					label.login__label
+						.login__label-title
+						input.login__input(
+							title="Логин"
+							icon="user"
+							v-model="user.name"
+						)
+				.login__row.login__row-pass 
+					label.login__label
+						.login__label-title
+						input.login__input(
+							title="Пароль"
+							icon="key"
+							type="password"
+							v-model="user.password"
+						)
+				button(type="submit").login__button Отправить
 </template>
+<script>
+import $axios from "@/requests";
+export default {
+	 data() {
+    return {
+      user: {
+        name: "m4key032019",
+        password: "m4key"
+      }
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        const {
+          data: { token }
+        } = await $axios.post("/login", this.user);
+        localStorage.setItem("token", token);
+        $axios.defaults.headers["Authorization"] = `Bearer ${token}`;
+        this.$router.replace("/");
+      } catch (error) {
+        //error handling
+      }
+    }
+  }
+};
+</script>
+
 <style lang="postcss" scoped>
 	@import "normalize.css";
 	@import url('../../../styles/mixins');
@@ -21,11 +59,11 @@
   	border: none;
 	}
 	
-	.auth {
+	.login {
 		grid-area: auth;
 	}
 
-	.auth__wrap {
+	.login__form {
 		padding: 75px;
 		width: 563px;
 		height: 517px;
@@ -54,7 +92,7 @@
 		}
 	}
 
-	.auth__title {
+	.login__title {
 		font-size: 36px;
 		font-weight: 600;
 		color: #414c63;
@@ -65,7 +103,7 @@
 		}
 	}
 
-	.auth__row {
+	.login__row {
 		width: 100%;
 		padding-left: 40px;
 		margin-top: 30px;
@@ -80,19 +118,19 @@
 							) left no-repeat;
 	}
 
-	.auth__label-title {
+	.login__label-title {
 		font-size: 16px;
 		font-weight: 600;
 		color: rgba(65, 76, 99, 0.3);
 	}
 
-	.auth__input {
+	.login__input {
 		height: 50px;
 		width: 100%;
 		outline: none;
 	}
 
-	.auth__row-pass {
+	.login__row-pass {
 		background: svg-load(
 								"avatar.svg",
 								fill=rgba(#414c63, 1),
@@ -101,7 +139,7 @@
 							) left no-repeat;
 	}
 
-	.auth__button {
+	.login__button {
 		width: 347px;
 		height: 80px;
 		margin-top: 40px;

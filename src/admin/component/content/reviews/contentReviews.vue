@@ -1,54 +1,67 @@
 <template lang="pug">
-	.reviews
-		.reviews__wrap
-			.reviews__title Блок «Отзывы»
-			form.reviews__form
-				.reviews__form-title Новый отзыв
-				.reviews__form-content
-					.reviews__form-photo
-						.reviews__form-avatar
-						button(type="button").reviews__form-avatar-add Добавить фото
-					label.reviews__form-label
-						.reviews__form-label-title Имя автора
-						input(type="text").reviews__form-input
-					label.reviews__form-label
-						.reviews__form-label-title Титул автора
-						input(type="text").reviews__form-input
-					label.reviews__form-desc
-						.reviews__form-label-title Отзыв
-						textarea(name="review").reviews__form-textarea
-						.reviews__form-btns
-							button(type="button").reviews__form-cancel Отмена
-							button(type="button").reviews__form-save Сохранить
-			ul.reviews__feedback-item
-				li.reviews__feedback-add-list
-					button(type="button").reviews__feedback-add-btn +
-					.reviews__feedback-add-title Добавить отзыв
-				li.reviews__feedback-list
-					.reviews__feedback-row
-						.reviews__feedback-avatar
-							img(src="~images/content/avatar-two.png", alt="Аватар пользователя").reviews__feedback-avatar-pic
-						.reviews__feedback-info
-							.reviews__feedback-title Владимир Сабанцев
-							.reviews__feedback-subtitle Преподаватель
-					.reviews__feedback-desc
-						p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-					.reviews__feedback-controls
-						button(type="button").reviews__feedback-edit Править
-						button(type="button").reviews__feedback-delete Удалить
-				li.reviews__feedback-list
-					.reviews__feedback-row
-						.reviews__feedback-avatar
-							img(src="~images/content/avatar-one.png", alt="Аватар пользователя").reviews__feedback-avatar-pic
-						.reviews__feedback-info
-							.reviews__feedback-title Ковальчук Дмитрий
-							.reviews__feedback-subtitle Основатель LoftSchool
-					.reviews__feedback-desc
-						p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-					.reviews__feedback-controls
-						button(type="button").reviews__feedback-edit Править
-						button(type="button").reviews__feedback-delete Удалить
+	.maincontent
+		admin-header
+		admin-nav
+		.reviews
+			.container.reviews__container
+				.reviews__title Блок «Отзывы»
+				form.reviews__form
+					.reviews__form-title Новый отзыв
+					.reviews__form-content
+						.reviews__form-photo
+							.reviews__form-avatar
+							button(type="button").reviews__form-avatar-add Добавить фото
+						label.reviews__form-label
+							.reviews__form-label-title Имя автора
+							input(type="text").reviews__form-input
+						label.reviews__form-label
+							.reviews__form-label-title Титул автора
+							input(type="text").reviews__form-input
+						label.reviews__form-desc
+							.reviews__form-label-title Отзыв
+							textarea(name="review").reviews__form-textarea
+							.reviews__form-btns
+								button(type="button").reviews__form-cancel Отмена
+								button(type="button").reviews__form-save Сохранить
+				ul.reviews__feedback-item
+					li.reviews__feedback-add-list
+						button(type="button").reviews__feedback-add-btn +
+						.reviews__feedback-add-title Добавить отзыв
+					li.reviews__feedback-list
+						.reviews__feedback-row
+							.reviews__feedback-avatar
+								img(src="~images/content/avatar-two.png", alt="Аватар пользователя").reviews__feedback-avatar-pic
+							.reviews__feedback-info
+								.reviews__feedback-title Владимир Сабанцев
+								.reviews__feedback-subtitle Преподаватель
+						.reviews__feedback-desc
+							p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+						.reviews__feedback-controls
+							button(type="button").reviews__feedback-edit Править
+							button(type="button").reviews__feedback-delete Удалить
+					li.reviews__feedback-list
+						.reviews__feedback-row
+							.reviews__feedback-avatar
+								img(src="~images/content/avatar-one.png", alt="Аватар пользователя").reviews__feedback-avatar-pic
+							.reviews__feedback-info
+								.reviews__feedback-title Ковальчук Дмитрий
+								.reviews__feedback-subtitle Основатель LoftSchool
+						.reviews__feedback-desc
+							p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+						.reviews__feedback-controls
+							button(type="button").reviews__feedback-edit Править
+							button(type="button").reviews__feedback-delete Удалить
 </template>
+<script>
+	import adminHeader from "../../header/adminHeader";
+	import adminNav from "../../nav/adminNav";
+	export default {
+		components: {
+			adminHeader,
+			adminNav
+		}
+	}
+</script>
 <style lang="postcss" scoped>
 	@import "normalize.css";
 	@import url('../../../../styles/mixins');
@@ -60,6 +73,8 @@
 	
 	.reviews {
 		grid-area: reviews;
+		background-color: rgba(255, 255, 255, 0.9);
+		background: url("../../../../images/content/admin-bg.jpg");
 	}
 
 	.reviews__title {
@@ -250,6 +265,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 20px;
+		margin-bottom: 30px;
 
 		@include tablets {
 			grid-template-columns: 1fr 1fr;

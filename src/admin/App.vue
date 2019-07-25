@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    admin
+    router-view
 </template>
 
 <script>
@@ -27,8 +27,6 @@ import admin from "./component/admin"
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.9);
-  background: url("./../images/content/admin-bg.jpg");
   grid-area: content;
 }
 

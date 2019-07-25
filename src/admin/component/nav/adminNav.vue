@@ -4,11 +4,17 @@
       .container.nav__container
         ul.nav__item 
           li.nav__list
-            a(href="#").nav__link Обо мне
-          li.nav__list.nav__list--active
-            a(href="#").nav__link Работы
+            router-link(
+              to="/"
+            ).nav__link Обо мне
           li.nav__list
-            a(href="#").nav__link Отзывы
+            router-link(
+              to="/works"
+            ).nav__link Работы
+          li.nav__list
+             router-link(
+              to="/reviews"
+            ).nav__link Отзывы
 </template>
 <style lang="postcss" scoped>
 	@import "normalize.css";
@@ -32,7 +38,7 @@
 
   .nav {
     grid-area: nav;
-    height: 100%;
+    height: 77px;
   }
 
   .nav__container {
@@ -82,6 +88,25 @@
         position: absolute;
         top: 41px;
         left: -50%;
+
+        @include phones {
+          width: 98px;
+          height: 3px;
+          left: -35%;
+        }
+      }
+    }
+    &:hover{
+      color: #383bcf;
+
+      &::before {
+        content: "";
+        width: 117px;
+        height: 3px;
+        border-bottom: solid 3px #383bcf;
+        position: absolute;
+        top: 41px;
+        left: -44%;
 
         @include phones {
           width: 98px;

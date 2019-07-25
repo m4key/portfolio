@@ -19,14 +19,15 @@
 
 	.header {
 		grid-area: header;
-		height: 100%;
+		height: 80px;
 		background-image: linear-gradient(to right, #3e3e59, #454573);
 	}
 
 	.header__container {
-		display: flex;
+		display: flex;		
 		flex-direction: row;
 		align-items: center;
+		height: 100%;
 	}
 	
 	.user {
@@ -39,6 +40,7 @@
 		height: 44px;
 		overflow: hidden;
 		border-radius: 50%;
+		flex-shrink: 0;
 	}
 
 	.user__avatar-pic {
@@ -67,10 +69,13 @@
 	}
 
 	.header__exit {
-		margin-left: 520px;
+		margin-left: 63%;
 		justify-content: flex-end;
 		opacity: 0.7;
 		font-size: 16px;
+		@include tablets{
+			margin-left: 18%;
+		}
 	}
 
 </style>
