@@ -1,5 +1,5 @@
 export default {
-	namespased: true,
+	namespaced: true,
   state: {
 		skills: []
 	},
@@ -22,9 +22,9 @@ export default {
 	actions: {
 		async addSkill({commit}, newSkill) {
 			try {
-				const {data: skill} = await this.$axios.post("/skills", newSkill);
-				
-				commit("ADD_SKILL", skill);
+				const response = await this.$axios.post("/skills", newSkill);
+				commit("ADD_SKILL", response.data);
+				return response;
 			} catch (error) {
 				throw new Error(
 					error.response.data.error || error.response.data.message
@@ -43,7 +43,7 @@ export default {
 		async editSkill({commit}, skill) {
 			try {
 				const response = await this.$axios.post(`/skills/${skill.id}`, skill);
-				commit("EDIT_SKILL", skill);
+				commit("EDIT_SKILL", response.data.skill);
 				return response
 			} catch (error) {
 				// ошибка

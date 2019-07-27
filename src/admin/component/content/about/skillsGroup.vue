@@ -1,10 +1,13 @@
 <template lang="pug">
 	form.about__skills-form
 		.about__skills-add-wrap
-			input(type="text" ).about__skills-group-name
-			.about__skills-btns
-				button(type="button").about__skills-btn-accept
-				button(type="button").about__skills-btn-cancel
+			input(type="text" :value="category.category").about__skills-group-name
+			.about__skills-btns(v-if="editModeOn===false")
+				button(type="button" @click="editModeOn = true").about__skills-item-edit
+				button(type="button" @click="removeExistedCategory").about__skills-item-delete
+			.about__skills-btns(v-else)
+				button(type="button" @click="editCurrentCategory").about__skills-btn-accept
+				button(type="button" @click="editModeOn = false").about__skills-btn-cancel
 		ul.about__skills-item
 			skills-item(
 				v-for="skill in skills"
@@ -21,7 +24,8 @@ import {mapActions} from "vuex";
 export default {
 	props: {
 		category: Object,
-		skills: Array
+		skills: Array,
+		title: String
 	},
 	data() {
 		return {
@@ -30,7 +34,9 @@ export default {
 				percent: "",
 				category: this.category.id
 			},
-			formIsBlocked: false
+			formIsBlocked: false,
+			editModeOn: false,
+			editedCategory: {...this.category}
 		}
 	},
 	components: {
@@ -38,6 +44,7 @@ export default {
 	},
 	methods: {
 		...mapActions("skills", ["addSkill"]),
+		...mapActions("categories", ["removeCategory", "editCategory"]),
 		async addNewSkill() {
 			this.formIsBlocked = true;
 			try {
@@ -48,6 +55,21 @@ export default {
 				alert(error.message);
 			} finally{
 				this.formIsBlocked = false;
+			}
+		},
+		async removeExistedCategory() {
+			try {
+				await this.removeCategory(this.category.id);
+			} catch (error) {
+				//Ошибка
+			}
+		},
+		async editCurrentCategory() {
+			try {
+				await this.editCategory(this.editedCategory);
+				this.editModeOn = false;
+			} catch (error) {
+				//Ошибка
 			}
 		}
 	}
@@ -61,7 +83,12 @@ export default {
 	input {
   	border: none;
 	}
-
+	.blocked{
+		opacity: 0.5;
+  	filter: grayscale(100%);
+  	pointer-events: none;
+  	user-select: none;
+	}
 	.about__skills-form {
 		width: 100%;
 		padding: 10px 25px 25px;
@@ -87,7 +114,30 @@ export default {
 				border-bottom: 1px solid #000;
 			}
 	}
-
+	.about__skills-item-edit {
+			width: 20px;
+			height: 20px;
+			margin-left: 10px;
+			background: svg-load(
+							"pencil.svg",
+							fill=rgba(#414c63, 1),
+							opacity=0.5,
+							width=16px,
+							height=15px
+						) center no-repeat;
+	}
+	.about__skills-item-delete {
+		width: 20px;
+		height: 20px;
+		margin-left: 10px;
+		background: svg-load(
+						"trash.svg",
+						fill=rgba(#414c63, 1),
+						opacity=0.5,
+						width=16px,
+						height=15px
+					) center no-repeat;
+	}
 	.about__skills-btn-accept {
 		width: 20px;
 		height: 20px;

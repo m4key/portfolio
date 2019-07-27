@@ -4,71 +4,122 @@
 		admin-nav
 		.works
 			.container.works__container
-				.works__title Блок «Работы»
-				form.works__form
+				h2.works__title Блок «Работы»
+				form.works__form(v-if="showAddingForm")
 					.works__form-title Редактирование работы
 					.works__form-content
 						.works__form-photo
 							.works__form-photo-text Перетащите или загрузите для загрузки изображения
-							button(type="button").works__form-photo-load Загрузить
-						button(type="button").works__form-change Изменить превью
+							button(type="file").works__form-photo-load Загрузить
+							button(type="file").works__form-change Изменить превью
 						.works__form-info
 							label.works__form-label 
 								.works__form-label-title Название
-								input(type="text").works__form-input
+								input(type="text" v-model="workTitle").works__form-input
 							label.works__form-label 
 								.works__form-label-title Ссылка
-								input(type="text").works__form-input
+								input(type="text" v-model="workLink").works__form-input
 							label.works__form-label 
 								.works__form-label-title Описание
-								textarea(name="description", cols="30", rows="10").works__form-textarea
+								textarea(name="description", cols="30", rows="10" v-model="workDesc").works__form-textarea
 							label.works__form-label 
 								.works__form-label-title Добавление тэга
-								input(type="text").works__form-input
-							ul.works__form-item
-								li.works__form-list
-									.works__form-list-title HTML5
-									button(type="button").works__form-list-delete
-								li.works__form-list
-									.works__form-list-title CSS3
-									button(type="button").works__form-list-delete
-								li.works__form-list
-									.works__form-list-title JavaScript
-									button(type="button").works__form-list-delete
+								input(type="text" v-model="workTechs").works__form-input
+							worksAddTags
 							.works__from-btns
-								button(type="button").works__from-btns-decline Отмена
-								button(type="button").works__from-btns-save Сохранить
+								button(type="button" @click="showAddingForm = false"
+						v-if="showAddingForm === true").works__from-btns-decline Отмена
+								button(type="button" @click="addWork").works__from-btns-save Сохранить
 				ul.works__project-item
-					li.works__project-add-list
-						button(type="button").works__project-add-btn +
-						.works__project-add-title Добавить работу
-					li.works__project-list
-						img(src="~images/content/work_one.jpg").works__project-photo
-						.works__project-desc
-							.works__project-title Сайт школы образования
-							.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-							a.works__project-link http://loftschool.ru
-							.works__project-buttons
-								button(type="button").works__project-edit Править
-								button(type="button").works__project-delete Удалить
-					li.works__project-list
-						img(src="~images/content/work_two.jpg").works__project-photo
-						.works__project-desc
-							.works__project-title Сайт школы образования
-							.works__project-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-							a.works__project-link http://loftschool.ru
-							.works__project-buttons
-								button(type="button").works__project-edit Править
-								button(type="button").works__project-delete Удалить
+					worksAdd
+					worksItem
+
 </template>
 <script>
+	import { mapState, mapActions } from "vuex";
 	import adminHeader from "../../header/adminHeader";
 	import adminNav from "../../nav/adminNav";
 	export default {
-		components: {
-			adminHeader,
-			adminNav
+		props: {
+		category: Object,
+		works: Array,
+		title: String,
+		link: String,
+		description: String,
+		techs: String			
+	},
+	components: {
+		adminHeader,
+		adminNav,
+		worksAdd: () => import("./worksAdd.vue"),
+		worksAddTags: () => import("./worksAddTags.vue"),
+		worksItem: () => import("./worksItem.vue")
+	},
+	data() {
+		return {
+			work:{
+				photo:"",
+				title: "",
+				link: "",
+				description: "",
+				techs: "",
+			},
+			workPhoto: "",
+			workTitle: "",
+			workLink: "",
+			workDesc: "",
+			workTechs: "",
+			showAddingForm: true
 		}
+	},
+	computed: {
+		...mapState("categories", {
+		categories: state => state.categories
+		}),
+		...mapState("works", {
+			works: state => state.works
+		})
+	},
+	methods: {
+		...mapActions("categories", ["fetchCategories"]),
+		...mapActions("works", ["addWork"]),
+		...mapActions("categories", ["addWorkProject"]),
+		filterWorksByCategoryId(categoryId) {
+		return this.works.filter(work => work.category === categoryId);
+		},
+		async addNewWork() {
+			try {
+				await this.addWork(this.work);
+				this.work.photo = "";
+				this.work.title = "";
+				this.work.link = "";
+				this.work.description = "";
+				this.work.techs = "";
+			} catch (error) {
+				alert(error.message)
+			}
+		},
+			...mapActions("categories", ["addNewSkillGroup"]),
+		async addWorkGroup() {
+			try {
+				await this.addNewWorkGroup(this.workPhoto, this.workTitle, this.workLink, this.workDesc, this.workTechs);
+				this.workPhoto ="";
+				this.workTitle ="";
+				this.workLink ="";
+				this.workDesc ="";
+				this.workTechs ="";
+			} catch (error) {
+				alert(error.message)
+			}
+		},
+		async	created() {
+			try {
+				await this.fetchWorks();
+			} catch (error) {
+
+			}
+		}
+	}
 	}
 </script>
 <style lang="postcss" scoped>
@@ -243,54 +294,7 @@
 		resize: none;
 		outline: none;
 	}
-
-	.works__form-item {
-		width: 100%;
-		margin-top: 20px;
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	.works__form-list {
-		padding: 5px 10px;
-		margin-left: 10px;
-		border-radius: 15px;
-		background-color: #f4f4f4;
-		display: flex;
-		align-items: center;
-
-			&:first-child {
-				margin-left: 0;
-			}
-
-		@include phones {
-			padding: 1px;
-			font-size: 11px;
-		}
-	}
-
-	.works__form-list-title {
-		font-size: 13px;
-		font-weight: 600;
-		opacity: 0.5;
-		color: #414c63;
-		@include phones {
-			font-size: 8px;
-		}
-	}
-
-	.works__form-list-delete {
-		margin-left: 5px;
-		width: 11px;
-		height: 11px;
-		background: svg-load(
-						"cross.svg",
-						fill=rgba(#414c63, 1),
-						width=11px,
-						height=11px
-					) center no-repeat;
-	}
-
+	
 	.works__from-btns {
 		width: 100%;
 		margin-top: 40px;
@@ -343,162 +347,6 @@
 		@include phones {
 			grid-template-columns: 1fr;
 			margin-top: 10px;
-		}
-	}
-
-	.works__project-add-list {
-		width: 100%;
-		min-height: 300px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-image: linear-gradient(to right, #006aed, #3f35cb);
-
-		@include phones {
-			min-height: 111px;
-			flex-direction: row;
-		}
-	}
-
-	.works__project-add-btn {
-		background-image: linear-gradient(to right, #006aed 0%, #3f35cb 100%);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 150px;
-		height: 150px;
-		color: #fff;
-		font-size: 72px;
-		font-weight: 300;
-		border: 2px solid #ffffff;
-		border-radius: 50%;
-
-		@include phones {
-			width: 50px;
-			height: 50px;
-			font-size: 24px;
-		}
-	}
-
-	.works__project-add-title {
-		margin-top: 20px;
-		color: #fff;
-		font-size: 18px;
-		line-height: 1.67;
-		font-weight: bold;
-
-		@include phones {
-			margin-top: 0;
-			margin-left: 21px;
-		}
-	}
-
-	.works__project-list {
-		min-height: 550px;
-		background-color: #fff;
-		box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
-	}
-
-	.works__project-photo {
-		width: 100%;
-		object-fit: cover;
-		max-height: 220px;
-	}
-
-	.works__project-desc {
-		padding: 20px;
-	}
-
-	.works__project-title {
-		margin-top: 30px;
-		font-size: 18px;
-		font-weight: 700;  
-		color: #414c63;
-	}
-
-	.works__project-text {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 1.88;
-		color: rgba(65, 76, 99, 0.7);
-
-		@include phones {
-			font-size: 14px;
-		}
-	}
-
-	.works__project-link {
-		color: #383bcf;
-		font-size: 16px;
-		font-weight: 600;
-
-		@include phones {
-			font-size: 14px;
-		}
-	}
-
-	.works__project-buttons {
-		width: 100%;
-		margin-top: 40px;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.works__project-edit {
-		position: relative;
-		background-color: transparent;
-		color: rgba(65, 76, 99, 0.5);
-		font-size: 16px;
-		font-weight: 600;
-
-		&::after {
-			content: "";
-			position: absolute;
-			margin-left: 10px;
-			width: 18px;
-			height: 18px;
-			background: svg-load(
-							"pencil.svg",
-							fill=rgba(#383bcf, 1),
-							width=17px,
-							height=17px
-						) center no-repeat;
-		}
-
-		@include phones {
-			font-size: 14px;
-		}
-	}
-
-	.works__project-delete {
-		position: relative;
-		background: transparent;
-		margin-right: 18px;
-		color: rgba(65, 76, 99, 0.5);
-		font-size: 16px;
-		font-weight: 600;
-
-		&::after {
-			content: "";
-			position: absolute;
-			margin-left: 10px;
-			width: 14px;
-			height: 14px;
-			background: svg-load(
-						"cross.svg",
-						fill=rgba(#bf2929, 1),
-						width=14px,
-						height=14px,
-						opacity=1;
-					) center no-repeat;
-		}
-
-		@include phones {
-			font-size: 14px;
 		}
 	}
 

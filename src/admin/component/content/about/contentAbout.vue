@@ -5,25 +5,23 @@
 		.about
 			.container.about__container
 				.about__append
-					.about__title {{category.category}}
+					h2.about__title Блок «Обо мне»
 					.about__add
 						button(type="button"
 						@click="showAddingForm = true"
-						v-if="showAddingForm === false").about__add-btn +
-						.about__add-title Добавить группу
+						v-if="showAddingForm === false").about__add-btn Добавить группу
 				.about__skills
-					.container.mobile_container
-						ul.about_skills-list
-							li.about__skills-item(v-if="showAddingForm")
-								skillsAdd
-							li.about__skills-item(
-								v-for="category in categories"
-								:key="category.id"
+					ul.about__skills-list
+						li.about__skills-item(v-if="showAddingForm")
+							skillsAdd
+						li.about__skills-item(
+							v-for="category in categories"
+							:key="category.id"
+						)
+							skillsGroup(
+								:category="category"
+								:skills="filterSkillsByCategoryId(category.id)"
 							)
-								skillsGroup(
-									:category="category"
-									:skills="filterSkillsByCategoryId(category.id)"
-								)
 </template>
 <script>
 import adminHeader from "../../header/adminHeader";
@@ -52,21 +50,22 @@ export default {
 	},
 	methods: {
 		...mapActions("categories", ["fetchCategories"]),
-		...mapActions('skills', ['fetchSkills']),
+		...mapActions("skills", ["fetchSkills"]),
 		filterSkillsByCategoryId(categoryId) {
-			return this.skills.filter( skill => skill.category === categoryId);
+			return this.skills.filter(skill => skill.category === categoryId);
 		}
 	},
 	async	created() {
 		try {
 			await this.fetchCategories();
-		} catch (error) {//Ошибка
+		} catch (error) {
+			alert('Произошла ошибка при загрузке категорий') 
 		}
 		try {
 			await this.fetchSkills();
-		} catch (error) {//Ошибка
+		} catch (error) {
+			alert('Произошла ошибка при загрузке скиллов') 
 		}
-
 	}
 }
 </script>
@@ -123,16 +122,20 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.about__add-title {
 		margin-left: 13px;
 		font-size: 16px;
 		font-weight: 600;
 		color: #383bcf;
+		position: relative;
+		&:after { 
+			content: "+";
+			color: $text-color;
+			position: absolute;
+			top:50%;
+		}
 	}
 
-	.about__skills {
+	.about__skills-list {
 		padding-top: 60px;
 		width: 100%;
 		display: grid;

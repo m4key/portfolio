@@ -1,7 +1,7 @@
 <template lang="pug">
 	li(v-if="editModeOn===false").about__skills-list
-		.about__skills-item-skill {{skill.title}}
-		.about__skills-item-value {{skill.percent}}
+		input(type="text" :value="skill.title").about__skills-item-skill 
+		input(type="text" :value="skill.percent").about__skills-item-value 
 		.about__skills-item-btns-wrap
 			button(type="button" @click="editModeOn = true").about__skills-item-edit
 			button(type="button" @click="removeExistedSkill").about__skills-item-delete
@@ -9,7 +9,7 @@
 		input(type="text" v-model="editedSkill.title").about__skills-item-skill 
 		input(type="text" v-model="editedSkill.percent").about__skills-item-value 
 		.about__skills-item-btns-wrap
-			button(type="button" @click="editcurrentSkill").about__skills-item-accept
+			button(type="button" @click="editCurrentSkill").about__skills-item-accept
 			button(type="button" @click="editModeOn = false").about__skills-item-cancel
 </template>
 <script>
@@ -25,7 +25,7 @@ export default {
 		}
 	},
 	methods: {			
-		...mapActions('skills', ["removeSkill", "editSkill"]),
+		...mapActions("skills", ["removeSkill", "editSkill"]),
 		async	removeExistedSkill() {
 			try {
 				await this.removeSkill(this.skill.id);
