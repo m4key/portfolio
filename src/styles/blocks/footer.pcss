@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
   padding: 70px 0;
   color: $text-color;
@@ -20,17 +21,41 @@
   display: flex;
 
   @include desktop {
+=======
+.footer{
+  padding: 70px 0;
+  color: $text-color;
+  background-color: $bg-footer-color;
+  @include tablets{
+    padding: 65px 0;
+  }
+}
+.footer__wrapper{
+  display: flex;
+   @include phones{
+    flex-direction: column;
+  }
+}
+.footer__main{
+  display: flex;
+  @include desktop{
+>>>>>>> master
     flex-direction: column;
   }
 }
 
+<<<<<<< HEAD
 .footer__year {
+=======
+.footer__year{
+>>>>>>> master
   color: $footer-year;
   font-size: 48px;
   font-weight: 600;
   opacity: 0.5;
   white-space: pre;
 }
+<<<<<<< HEAD
 
 .footer__info {
   margin-left: 60px;
@@ -45,22 +70,43 @@
   }
 
   @include phones {
+=======
+.footer__info{
+  margin-left: 60px;
+  width: 141px;
+  @include desktop{
+    margin-left: 0;
+  }
+  @include tablets{
+    margin-top: 21px;
+  }
+  @include phones{
+>>>>>>> master
     width: 100%;
   }
 }
 
+<<<<<<< HEAD
 .footer__name {
+=======
+.footer__name{
+>>>>>>> master
   font-size: 18px;
   font-weight: bold;
   line-height: 1.67;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 
 .footer__subtitle {
+=======
+.footer__subtitle{
+>>>>>>> master
   opacity: 0.15;
   padding-top: 34px;
   line-height: 1.88;
   font-size: 16px;
+<<<<<<< HEAD
 
   @include tablets {
     font-size: 14px;
@@ -72,20 +118,35 @@
   }
 
   @include phones-small {
+=======
+  @include tablets{
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  @include phones{
+    width: 40%;
+  }
+  @include phones-small{
+>>>>>>> master
     width: 40%;
   }
 
 }
+<<<<<<< HEAD
 
 .footer__socials {
   margin-top: 30px;
 }
 
 .footer__content {
+=======
+.footer__content{
+>>>>>>> master
   display: flex;
   flex-wrap: wrap;
   margin-left: 12%;
   line-height: 1.88;
+<<<<<<< HEAD
 
   @include tablets {
     margin-left: 77px;
@@ -116,16 +177,43 @@
 }
 
 .footer__blockquote {
+=======
+  @include tablets{
+    margin-left: 77px;
+  }
+  @include phones{
+    margin-left: 0;
+  }
+}
+.footer__text{
+  opacity: 0.3;
+  padding-top: 70px;
+  font-size: 16px;
+  @include tablets{
+    padding-top: 61px;
+    font-size: 14px;
+  }
+  @include phones{
+    padding-top: 50px;
+  }
+}
+.footer__blockquote{
+>>>>>>> master
   font-size: 16px;
   opacity: 0.3;
   padding-top: 70px;
   margin: 0;
+<<<<<<< HEAD
 
   @include tablets {
+=======
+  @include tablets{
+>>>>>>> master
     padding-top: 61px;
     font-size: 14px;
   }
 }
+<<<<<<< HEAD
 
 .footer__author {
   font-style: italic;
@@ -133,10 +221,18 @@
   padding-top: 35px;
 
   @include tablets {
+=======
+.footer__author{
+  font-style: italic;
+  font-size: 16px;
+  padding-top: 35px;
+  @include tablets{
+>>>>>>> master
     padding-top: 18px;
   }
 }
 
+<<<<<<< HEAD
 .footer__block {
   display: flex;
   flex-direction: column;
@@ -157,5 +253,22 @@
 }
 
 .footer__block-nav {
+=======
+.footer__block{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 70%;
+  }
+  @include phones-small{
+    width: 95%;
+  }
+}
+.footer__block-nav{
+>>>>>>> master
   width: 100%;
 }

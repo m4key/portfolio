@@ -1,8 +1,15 @@
 mixin social(mod)
   .social
     ul(class='social__list social__list--' + mod)
+<<<<<<< HEAD
       - var social=[{name:'instagram', href:'https://www.instagram.com/m4kkey/', title:'instagram'}, {name:'vk', href:'https://vk.com/id11282873', title:'vk'}, {name:'github', href:'https://github.com/m4key', title:'github'}];
       each item in social
         li.social__item
           a(href=item.href).social__link 
+=======
+      - var social=[{name:'instagram', href:'https://www.instagram.com/m4kkey/'}, {name:'vk', href:'https://vk.com/id11282873'}, {name:'github', href:'https://github.com/m4key'}];
+      each item in social
+        li.social__item
+          a(href=item.href).social__link
+>>>>>>> master
             +icon(`${item.name}`, 'social__icon')

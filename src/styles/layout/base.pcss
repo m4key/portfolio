@@ -2,6 +2,7 @@ html {
   @include desktop {
     font-size: 16px;
   }
+<<<<<<< HEAD
 
   @include tablets {
     font-size: 15px;
@@ -16,19 +17,36 @@ html {
   }
 }
 
+=======
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
+   @include phones-small{
+    font-size: 14px;
+  }
+}
+>>>>>>> master
 body,
 html {
   height: 100%;
 }
 
 body {
+<<<<<<< HEAD
   font-family: "Open Sans", Helvetica, sans-serif;
+=======
+  font-family: 'Open Sans', Helvetica, sans-serif;
+>>>>>>> master
   font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
 }
+<<<<<<< HEAD
 
 .active-popup {
   overflow: hidden;
@@ -38,6 +56,14 @@ body {
   display: none;
 }
 
+=======
+.active-popup{
+  overflow: hidden;
+}
+.disable{
+  display: none;
+}
+>>>>>>> master
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -48,6 +74,7 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
 
@@ -59,11 +86,23 @@ body {
     max-width: 689px;
   }
 
+=======
+  // width: 1490px;
+  display: flex;
+  flex-direction: column;
+  @include desktop{
+    max-width: 1080px;
+  }
+  @include tablets{
+    max-width: 689px;
+  }
+>>>>>>> master
   @include phones {
     width: 85%;
   }
   
 }
+<<<<<<< HEAD
 
 .section {
   height: 100%;
@@ -79,10 +118,26 @@ body {
     color: $black;
 
     @include phones {
+=======
+.section{
+   //height: 100vh;
+  //min-height: 650px;
+  height: 100%;
+  position: relative;
+}
+.section-title{
+  font-size: 36px;
+  font-weight: bold;
+  color:$text-color;
+  &--black{
+    color:$black;
+    @include phones{
+>>>>>>> master
       text-align: center;
       font-size: 24px;
     }
   }
+<<<<<<< HEAD
 
   &--big {
     font-size: 72px;
@@ -112,10 +167,37 @@ body {
   }
 }
 .section-text {
+=======
+  &--big{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 0.83;
+    @include tablets{
+      font-size: 48px;
+    }
+    @include phones{
+    font-size: 36px;
+    line-height: 1.33;
+  }
+  }
+  &--small{
+    font-size: 30px;
+  }
+  @include tablets{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 24px;
+  }
+  
+}
+.section-text{
+>>>>>>> master
   font-size: 16px;
   opacity: 0.5;
   font-weight: 600;
   line-height: 1.88;
+<<<<<<< HEAD
   color: $text-color;
   
   @include small-desktops{
@@ -132,15 +214,31 @@ body {
   }
 
   &--black {
+=======
+  color:$text-color;
+  @include tablets{
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  &--italic{
+    font-style: italic;
+    font-weight: normal;
+  }
+  &--black{
+>>>>>>> master
     opacity: 0.7;
     color: $dark-blue;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
 }
+<<<<<<< HEAD
 
 .maincontent__bg-autumn {
   background: url("~images/content/bg-autumn.jpg") center center / cover no-repeat;
@@ -157,10 +255,26 @@ body {
 
   &::after {
     content: url("~images/content/foliage-one.png");
+=======
+.maincontent__bg-autumn{
+  background: url('../images/content/bg-autumn.jpg') center center / cover no-repeat;
+  min-height:1375px;
+  position: relative;
+  @include desktop{
+    background: url('../images/content/bg-autumn-desktop.jpg') center center / cover no-repeat;
+  }
+  @include tablets{
+    min-height: 1065px;
+  }
+
+  &:after{
+    content:url('../images/content/foliage-one.png');
+>>>>>>> master
     position: absolute;
     bottom: 81%;
     right: 0;
     z-index: 10;
+<<<<<<< HEAD
 
     @include desktop {
       right: -125px;
@@ -182,6 +296,22 @@ body {
   pointer-events: none;
   user-select: none;
 }
+=======
+    @include desktop{
+      right: -125px;
+    }
+    @include tablets{
+      right: -237px;
+      bottom: 79%;
+    }
+    @include phones{
+      display: none;
+    }
+  }
+
+}
+
+>>>>>>> master
 button {
   border: 0;
   cursor: pointer;
@@ -212,6 +342,13 @@ p {
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+button[type="button"] {
+  cursor: pointer;
+}
+
+>>>>>>> master
 a {
   color: inherit;
   cursor: pointer;
@@ -223,6 +360,11 @@ img {
   max-height: 100%;
 }
 
+<<<<<<< HEAD
 circle {
   fill: transparent;
+=======
+circle{
+  fill:transparent;
+>>>>>>> master
 }

@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 .hamburger-link {
+=======
+.hamburger-link{
+>>>>>>> master
   display: none;
   width: 22px;
   height: 22px;
   cursor: pointer;
   align-items: center;
   z-index: 70;
+<<<<<<< HEAD
 
   @include tablets {
     display: flex;
@@ -16,20 +21,37 @@
 }
 
 .hamburger-link__button {
+=======
+  @include tablets{
+    display: flex;
+    position: absolute;
+    top: 77px;
+    right: 41px
+  }
+  
+} 
+.hamburger-link__button{
+>>>>>>> master
   height: 4px;
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
+<<<<<<< HEAD
 
   &::after,
   &::before {
     content: "";
+=======
+  &:after, &::before{
+    content: '';
+>>>>>>> master
     display: block;
     position: absolute;
     height: 4px;
     width: 100%;
     background-color: #fff;
     border-radius: 4px;
+<<<<<<< HEAD
     
     &:hover {
       background-color: $orange;
@@ -41,10 +63,21 @@
   }
 
   &::before {
+=======
+    &:hover{
+    background-color: $orange;
+    }
+  }
+  &::after{
+    bottom: 0;
+  }
+  &::before{
+>>>>>>> master
     top: 0;
   }
 }
 
+<<<<<<< HEAD
 .hamburger-link--active .hamburger-link__button {
   background-color: transparent;
 
@@ -68,6 +101,27 @@
 }
 
 .popup-menu {
+=======
+.hamburger-link--active .hamburger-link__button{
+  background-color: transparent;
+  &::before{
+    transform: rotate(-45deg);
+    background-color: #2b3948;
+    transition: transform .3s;
+    top: 9px;
+  }
+  &::after{
+    transform: rotate(45deg);
+    background-color: #2b3948;
+    transition: transform .3s;
+    bottom: 9px;
+  }
+}
+.header__social .hamburger-link--active {
+  display: none;
+}
+.popup-menu{
+>>>>>>> master
   display: none;
   width: 100%;
   height: 100%;
@@ -75,29 +129,47 @@
   top: 0;
   left: 0;
   transform: translateX(100%);
+<<<<<<< HEAD
   transition: all 0.5s;
 }
 
 .popup-menu--active {
+=======
+  transition: all .5s;
+}
+
+.popup-menu--active{
+>>>>>>> master
   display: flex;
   opacity: 1;
   z-index: 55;
   transform: translateX(0);
+<<<<<<< HEAD
   transition: all 0.5s;
 }
 
 .popup-menu__container {
+=======
+  transition: all .5s;
+}
+.popup-menu__container{
+>>>>>>> master
   position: absolute;
   right: 0;
   top: 0;
   background-color: #fff;
   width: 40%;
   height: 100%;
+<<<<<<< HEAD
   padding-top: 40%;
+=======
+  padding-top:40% ;
+>>>>>>> master
   padding-left: 10%;
   padding-right: 5%;
   z-index: 50;
   display: block;
+<<<<<<< HEAD
   transition: all 0.5s;
 
   @include phones {
@@ -110,12 +182,24 @@
 }
 
 .popup-menu__link {
+=======
+  transition: all .5s;
+  @include phones{
+    width: 100%;
+  }
+  @include phones-small{
+    min-height: 970px;
+  }
+}
+.popup-menu__link{
+>>>>>>> master
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
   line-height: 2.67;
   color: #2b3948;
   text-decoration: none;
+<<<<<<< HEAD
   border-bottom: 2px solid transparent;
   transition: 0.4s;
 
@@ -125,5 +209,14 @@
 }
 
 .popup__social {
+=======
+  border-bottom: 2px solid transparent; 
+  transition: .4s;
+  &:hover{
+    color: $orange;
+  }
+}
+.popup__social{
+>>>>>>> master
   margin-top: 60px;
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header__wrap {
   z-index: 10;
   margin-top: 64px;
@@ -30,10 +31,36 @@
   }
 
   @include tablets {
+=======
+.header__wrap{
+  z-index: 10;
+  margin-top: 64px;
+}
+.header {
+  display: flex;
+  align-items:center;
+}
+.header__logo{
+  z-index: 70;
+}
+.header__nav{
+  margin-left: 19%;
+  @include desktop-large{
+    margin-left: 15%;
+  }
+  @include desktop{
+    margin-left: 8%;
+  }
+   @include laptop{
+    margin-left: 4%;
+  }
+  @include tablets{
+>>>>>>> master
     display: none;
   }
 }
 
+<<<<<<< HEAD
 .header__social {
   margin-left: 16%;
   width: 15%;
@@ -63,6 +90,23 @@
   }
 
   @include phones {
+=======
+.header__social{
+  margin-left: 16%;
+  @include desktop-large{
+    margin-left: 12%;
+  }
+  @include desktop{
+    margin-left: 8%;
+  }
+  @include laptop{
+    margin-left: 4%;
+  }
+  @include tablets{
+    margin-left: 53%;
+  }
+  @include phones{
+>>>>>>> master
     display: none;
   }
 }

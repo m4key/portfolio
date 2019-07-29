@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 script(type="text/x-template")#slider-container
   .slider
     .slider__wrap
@@ -65,3 +66,45 @@ script(type="text/x-template")#slider-tags
     li.slider__skill-item(v-for="tag in tags")
       .tag {{tag}}
 
+=======
+.slider
+  .slider__wrap
+    .slider__img
+      +image('content/work_one.jpg', 'slider__img-main', 'Главная картинка слайдера')
+      ul.slider__img-list
+        li.slider__img-item.slider__img-item--active
+          +image('content/work_one.jpg', 'slider__img-pic', 'Картинка слайдера')
+        li.slider__img-item
+          +image('content/work_two.jpg', 'slider__img-pic', 'Картинка слайдера')
+        li.slider__img-item
+          +image('content/work_three.jpg', 'slider__img-pic', 'Картинка слайдера')
+        li.slider__img-item
+          +image('content/work_four.jpg', 'slider__img-pic', 'Картинка слайдера')
+      .slider__button
+        button.slider__btn.slider__btn-next(type='button')
+          +icon('short-arrow', 'slider-next__icn')
+        button.slider__btn.slider__btn-prev
+          +icon('short-arrow', 'slider-prev__icn')
+    .slider__desc
+      .slider__desc-num
+        | 1
+      .slider__desc-info
+        ul.slider__skill-list
+          li.slider__skill-item
+            | HTML
+          li.slider__skill-item
+            | CSS
+          li.slider__skill-item
+            | Javascript
+        .slider__desc-content
+          h3.section-title.section-title--black.section-title--small.slider__desc-title
+            | Сайт школы образования
+          .slider__desc-text.section-text.section-text--black
+            p
+              | Этот парень проходил обучение
+              | веб-разработке не где-то, а в Loftschool!
+              | 4,5 месяца только самых тяжелых испытаний и бессоных ночей!
+          a.slider__desc-link Посмотреть сайт
+            +icon('link', 'slider__desc-icn')
+          |
+>>>>>>> master

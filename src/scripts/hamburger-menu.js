@@ -1,4 +1,5 @@
 /* Hamburger menu */
+<<<<<<< HEAD
 const hamburger = options => {
 	const button = document.querySelector(options.button);
 	const menu = document.querySelector(options.menu);
@@ -8,6 +9,17 @@ const hamburger = options => {
 	const title=document.querySelector(".portfolio__title");
 
 	const _openMenu = e => {
+=======
+let hamburger = options => {
+	let button = document.querySelector(options.button);
+	let menu = document.querySelector(options.menu);
+  let list = document.querySelector(".popup-menu__list");
+	let about=document.querySelector(".about");
+	let subtitle=document.querySelector(".portfolio__subtitle");
+	let title=document.querySelector(".portfolio__title");
+
+	let _openMenu = e => {
+>>>>>>> master
 		e.preventDefault();
 		menu.classList.toggle("popup-menu--active");
 		button.classList.toggle("hamburger-link--active");
@@ -17,7 +29,11 @@ const hamburger = options => {
 		title.classList.toggle('disable');
 	};
 
+<<<<<<< HEAD
 	const _closeMenu = e => {
+=======
+	let _closeMenu = e => {
+>>>>>>> master
 		e.preventDefault();
 		if (e.target.className === "popup-menu__link") {
 			menu.classList.remove("popup-menu--active");
@@ -29,7 +45,11 @@ const hamburger = options => {
 		}
 	};
 
+<<<<<<< HEAD
 	const addListeners = () => {
+=======
+	let addListeners = () => {
+>>>>>>> master
 		button.addEventListener("click", _openMenu);
 		list.addEventListener("click", _closeMenu);
 	};

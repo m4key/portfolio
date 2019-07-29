@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .portfolio {
   z-index: 50;
   display: flex;
@@ -31,12 +32,43 @@
 }
 
 .portfolio__subtitle {
+=======
+.portfolio{
+  z-index: 50;
+  display: flex;
+  color:$text-color;
+  justify-content: center;
+  margin-top: 442px;
+  flex-direction: row-reverse;
+  @include desktopHd{
+    margin-top: 298px;;
+  }
+  @include desktop{
+    margin-top: 215px;
+  }
+  @include laptop{
+    margin-top: 391px;
+  }
+
+  @include tablets{
+    flex-direction: column-reverse;
+    margin-top: 86px;
+    align-items: center;
+    text-align: center; 
+  }
+  @include phones{
+    margin-top: 8.375rem;
+  }
+}
+.portfolio__subtitle{
+>>>>>>> master
   font-size: 18px;
   text-align: right;
   opacity: 0.4;
   font-weight: 600;
   line-height: 1.67;
   width: 12%;
+<<<<<<< HEAD
 
   @include desktop {
     width: 16%;
@@ -51,10 +83,20 @@
   }
 
   @include tablets {
+=======
+  @include desktop{
+    width: 16%;
+  }
+  @include laptop{
+   width: 17%;
+  }
+  @include tablets{
+>>>>>>> master
     width: 30%;
     font-size: 16px;
     text-align: center;
   }
+<<<<<<< HEAD
 
   @include landscape-phones{
     width: 50%;
@@ -82,10 +124,27 @@
   }
 
   @include tablets {
+=======
+  @include phones{
+    width: 50%;
+  }
+  @include phones-small{
+    width: 100%;
+  }
+}
+.portfolio__title{
+  width: 30%;
+  padding-left: 60px;
+  @include desktop{
+    width: 34%;
+  }
+  @include tablets{
+>>>>>>> master
     padding-left: 0;
     margin-top: 30px;
     width: 50%;
   }
+<<<<<<< HEAD
   
   @include landscape-phones{
     width: 50%;
@@ -96,6 +155,12 @@
   }
   
   @include phones-small {
+=======
+  @include phones{
+    margin-top: 19px;    
+  }
+  @include phones-small{
+>>>>>>> master
     width: 100%;
   }
 }

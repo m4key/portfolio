@@ -6,9 +6,15 @@ script(type="text/x-template")#reviews-template
           :review="review"
         )
     .review__slider-controls
+<<<<<<< HEAD
       button(type="button" @click="previous()" :class="{reviewBtnOff: buttonIndex === 0}").review__btn
         +icon('short-arrow', 'review__btn-prev')
       button(type="button" @click="next()" :class="{reviewBtnOff: buttonIndex === buttonClick}").review__btn
+=======
+      button(type="button" @click="previous()").review__btn
+        +icon('short-arrow', 'review__btn-prev')
+      button(type="button" @click="next()").review__btn
+>>>>>>> master
         +icon('short-arrow', 'review__btn-next')
 
 script(type="text/x-template")#review

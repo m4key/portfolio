@@ -1,4 +1,5 @@
 <template lang="pug">
+<<<<<<< HEAD
   div
     router-view
 </template>
@@ -31,3 +32,7 @@ import admin from "./component/admin"
 }
 
 </style>
+=======
+  h1 Welcome to the Vue App
+</template>
+>>>>>>> master

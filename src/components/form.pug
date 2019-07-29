@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 form.feedback__form.j-form(action="#")
   .feedback__row
     label.feedback__block.j-name.j-block
@@ -20,3 +21,21 @@ form.feedback__form.j-form(action="#")
       .feedback__block-svg
         +icon('chat', 'feedback__label-icn feedback__label-icn--textarea')
   button.feedback__btn.j-submit-btn(type='submit') Отправить
+=======
+form.feedback__form
+  .feedback__row
+    label.feedback__block
+      .feedback__label-text Введите ваше имя
+      +icon('avatar', 'feedback__label-icn')
+      input(type='text' name='name' placeholder='Макейкин Александр').feedback__name 
+    label.feedback__block
+      .feedback__label-text Введите ваш email
+      +icon('envelope', 'feedback__label-icn')
+      input(type='email' name='email' placeholder='amakeykin@yandex.ru').feedback__name 
+  .feedback__textarea
+    label.feedback__block
+      .feedback__label-text Сообщение к письму
+      +icon('chat', 'feedback__label-icn feedback__label-icn--textarea')
+      textarea.feedback__name.feedback__name--textarea(name="textarea", cols="30", rows="3" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
+  button.feedback__btn(type='submit') Отправить
+>>>>>>> master

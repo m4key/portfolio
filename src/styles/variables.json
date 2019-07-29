@@ -15,11 +15,16 @@
   "bp-desktop-large": "1366px",
   "bp-desktop": "1200px",
   "bp-laptop": "1024px",
+<<<<<<< HEAD
   "bp-small-desktops":"992px",
   "bp-portrait-tablets":"769px",
   "bp-tablets": "768px",
   "bp-landscape-phones": "767px",
   "bp-phones": "480px",
   "bp-portrait-phones": "481px",
+=======
+  "bp-tablets": "768px",
+  "bp-phones": "480px",
+>>>>>>> master
   "bp-phones-small":"320px"
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .feedback__form {
   width: 60%;
 
@@ -6,12 +7,21 @@
   }
 
   @include tablets {
+=======
+.feedback__form{
+  width: 60%;
+  @include desktop{
+    width: 80%;
+  }
+  @include tablets{
+>>>>>>> master
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+<<<<<<< HEAD
 
 .feedback__row {
   display: flex;
@@ -57,11 +67,53 @@
 .feedback__label-text {
   font-size: 16px;
   color: $text-color;
+=======
+.feedback__row{
+  display: flex;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    flex-wrap: wrap;
+  }
+  @include phones-small{
+    justify-content: center;
+  }
+}
+.feedback__block{
+  border-bottom: 1px solid $text-color;
+  margin-left: 51px;
+  width: 408px;
+  position: relative;
+  transition: border-bottom .3s;
+  width: 50%;
+  @include tablets{
+    margin-left: 20px;
+  }
+  @include phones{
+    width: 100%;
+    margin-left: 0;
+  }
+  @include phones-small{
+    width: 85%;
+  }
+  &:first-child{
+    margin-left: 0;
+  }
+  &:hover {
+  border-bottom: 1px solid $orange;
+  }
+}
+.feedback__label-text{
+  font-size: 16px;
+  color:$text-color;
+>>>>>>> master
   opacity: 0.3;
   font-weight: 600;
   text-align: left;
   padding-bottom: 30px;
   padding-left: 45px;
+<<<<<<< HEAD
 
   @include tablets {
     font-size: 14px;
@@ -69,10 +121,18 @@
   }
 
   @include phones {
+=======
+  @include tablets{ 
+    font-size: 14px;
+    padding-bottom: 28px;
+  }
+  @include phones{
+>>>>>>> master
     padding-bottom: 20px;
     padding-top: 30px;
   }
 }
+<<<<<<< HEAD
 
 .feedback__name {
   overflow: visible;
@@ -93,10 +153,29 @@
   }
 
   &--textarea {
+=======
+.feedback__name{
+  overflow: visible;
+  color:$text-color;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 45px;
+  padding-bottom: 15px; 
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all .5s;
+  @include tablets{
+    font-size: 14px;
+  }
+  &--textarea{
+>>>>>>> master
     width: 100%;
     resize: none;
     line-height: 2;
   }
+<<<<<<< HEAD
 
   &::placeholder {
     color: $text-color;
@@ -116,18 +195,39 @@
   }
 
   @include phones {
+=======
+  &::placeholder{
+    color:$text-color;
+  }
+  &:focus{
+    color:$orange
+  }
+}
+.feedback__textarea{
+  margin-top: 41px;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+>>>>>>> master
     margin-top: 0;
     width: 100%;
   }
 }
+<<<<<<< HEAD
 
 .feedback__label-icn {
   fill: $text-color;
+=======
+.feedback__label-icn{
+  fill:$text-color;
+>>>>>>> master
   width: 30px;
   height: 30px;
   opacity: 0.3;
   position: absolute;
   bottom: 10px;
+<<<<<<< HEAD
   transition: all 0.5s;
 
   &--textarea {
@@ -141,11 +241,22 @@
 }
 
 .feedback__btn {
+=======
+  transition: fill .5s;
+  transition: all .5s;
+  &--textarea{
+    bottom: 50px;
+  }
+}
+
+.feedback__btn{
+>>>>>>> master
   margin-top: 60px;
   width: 347px;
   height: 80px;
   background-image: linear-gradient(to right, #ea7400, #f29400);
   font-size: 18px;
+<<<<<<< HEAD
   color: $text-color;
   font-weight: bold;
   text-transform: uppercase;
@@ -157,10 +268,22 @@
   }
 
   @include phones {
+=======
+  color:$text-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  transition: all .5s;
+  @include tablets{
+    margin-top: 31px;
+  }
+  @include phones{
+>>>>>>> master
     width: 259px;
     height: 60px;
     font-size: 16px;
   }
+<<<<<<< HEAD
 
   &:hover {
     background-image: linear-gradient(to right, #ff7f00, #ff9d00);
@@ -183,4 +306,13 @@
 
 .has-error {
   display: flex;
+=======
+  &:hover{
+    background-image: linear-gradient(to right, #ff7f00, #ff9d00);
+  }
+}
+.feedback__block:hover .feedback__label-icn{
+  opacity: 1;
+  fill: $orange;
+>>>>>>> master
 }
