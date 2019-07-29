@@ -91,6 +91,10 @@
     margin-left: 77px;
   }
 
+  @include small-desktops{
+    margin-left: 8%;
+  }
+
   @include phones {
     margin-left: 0;
   }
@@ -136,8 +140,9 @@
 .footer__block {
   display: flex;
   flex-direction: column;
-  width: 50%;
-
+  width: 45%;
+  margin-right: 20px;
+  
   @include tablets {
     width: 100%;
   }

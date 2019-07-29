@@ -2,17 +2,23 @@
   .admin-nav
     nav.nav
       .container.nav__container
-        ul.nav__item 
-          li.nav__list
+        ul.nav__list 
+          li.nav__item
             router-link(
+              tag="button"
+              class="nav__link"
               to="/"
             ).nav__link Обо мне
-          li.nav__list
+          li.nav__item
             router-link(
+              tag="button"
+              class="nav__link"
               to="/works"
             ).nav__link Работы
-          li.nav__list
-             router-link(
+          li.nav__item
+            router-link(
+              tag="button"
+              class="nav__link"
               to="/reviews"
             ).nav__link Отзывы
 </template>
@@ -46,17 +52,14 @@
     height: 100%;
   }
 
-  .nav__item {
+  .nav__list {
     grid-area: navigation;
     display: flex;
-    font-size: 16px;
-    font-weight: 600;
     height: 100%;
     margin-left: 29px;
     text-align: center;
     align-items: center;
     justify-items: start;
-    color: #414c63;
 
     @include phones {
       margin-left: 0;
@@ -64,10 +67,11 @@
     }
   }
 
-  .nav__list {
+  .nav__item {
     margin-left: 58px;
     justify-content: center;
     position: relative;
+    white-space: nowrap;
 
     &:first-child {
       margin-left: 0;
@@ -87,15 +91,16 @@
         border-bottom: solid 3px #383bcf;
         position: absolute;
         top: 41px;
-        left: -50%;
+        left: -25%;
 
         @include phones {
           width: 98px;
           height: 3px;
-          left: -35%;
+          left: -15%;
         }
       }
     }
+
     &:hover{
       color: #383bcf;
 
@@ -106,12 +111,12 @@
         border-bottom: solid 3px #383bcf;
         position: absolute;
         top: 41px;
-        left: -44%;
+        left: -25%;
 
         @include phones {
           width: 98px;
           height: 3px;
-          left: -35%;
+          left: -15%;
         }
       }
     }
@@ -119,5 +124,14 @@
 
   .nav__link {
     text-decoration: none;
+    background: transparent;
+    font-size: 16px;
+    color: #414c63;
+    font-weight: 600;
+
+    &:hover{
+      color: #383bcf;
+    }
+
   }
 </style>

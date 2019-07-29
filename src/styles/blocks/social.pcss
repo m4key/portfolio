@@ -6,7 +6,7 @@
     transition: opacity 0.3s;
   }
 
-  &--foote {
+  &--footer {
     padding-top: 27px;
     opacity: 0.8;
 
@@ -18,36 +18,45 @@
 
 .social__list--header .social__item:hover {
   opacity: 1;
-  border: none;
+  border: transparent;
 }
 
 .social__list--hamburger .social__icon {
   fill: #2b3948;
   transition: fill 0.4s;
+  border: transparent;
 }
 
 .social__list--hamburger .social__item {
   opacity: 1;
 
   &:hover {
-    border: none;
+    border: transparent;
   }
 }
-
-.social__list--footer .social__item {
+.social__list--footer .social__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  width: 50px;
+  height: 50px;
+}
+.social__list--footer .social__link {
   width: 50px;
   height: 50px;
   border: 1px solid $text-color;
   opacity: 0.6;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.5s;
 }
 
 .social__list--footer .social__icon {
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 25px;
+  transform: translate(50%, 50%);
+  
 }
 
 .social__item {
@@ -56,6 +65,15 @@
   margin-left: 40px;
   opacity: 0.4;
   transition: all 0.5s;
+  flex-shrink: 0;
+
+  @include small-desktops{
+    margin-left: 1.5rem;
+  }
+
+  @include landscape-phones{
+    margin-left: 24px;
+  }
 
   @include phones {
     width: 20px;
@@ -64,7 +82,6 @@
 
   &:hover {
     opacity: 1;
-    border: 1px solid $orange;
   }
 
   &:first-child {
@@ -72,10 +89,6 @@
   }
 }
 
-.social__item:hover .social__icon {
-  opacity: 1;
-  fill: $orange;
-}
 
 .social__link {
   width: 22px;
@@ -91,4 +104,11 @@
   &:hover {
     fill: $orange;
   }
+}
+
+.social__list--footer .social__link:hover{
+  border: 1px solid $orange;
+}
+.social__item:hover .social__icon {
+  fill: $orange;
 }

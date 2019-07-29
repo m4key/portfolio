@@ -2,6 +2,15 @@
   position: absolute;
   top: 0;
   left: 460px;
+  z-index: 20;
+
+  @include small-desktops{
+    left: 428px;
+  }
+
+  @include landscape-phones{
+    left: 336px;
+  }
 
   @include phones {
     left: 40%;
@@ -99,9 +108,20 @@
     margin-left: 0;
   }
 
+  @include small-desktops{
+    width: 47%;
+    margin-left: 30px;
+  }
+
   @include tablets {
     margin-top: 61px;
     margin-left: 56px;
+  }
+
+  @include landscape-phones{
+    margin-top: 61px;
+    margin-left: 8px;
+    width: 50%;
   }
 
   @include phones {
@@ -127,6 +147,12 @@
     height: 58px;
   }
 
+  @include small-desktops{
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
   @include tablets {
     width: 30px;
     height: 25px;
@@ -145,8 +171,17 @@
   margin-left: 104px;
   align-items: center;
 
+  @include small-desktops{
+    margin-top: 36px;
+    margin-left: 56px;
+  }
+
   @include tablets {
     margin-left: 36px;
+  }
+
+  @include landscape-phones{
+    margin-top: 116px;
   }
 
   @include phones {

@@ -1,6 +1,6 @@
 nav.nav
   ul.nav__list
-    -var menu=['Главная','Обо мне','Навыки','Работы','Отзывы','Связаться'];
+    -var menu=[{name:'Главная', href:"#primary"}, {name:'Обо мне', href:"#about"}, {name:'Навыки', href:"#skill"}, {name:'Работы', href:"#works"}, {name:'Отзывы', href:"#reviews"}, {name:'Связаться', href:"#feedback"}];
     each item in menu
       li.nav__item
-        a(href="#").nav__link #{item}
+        a(href=item.href).nav__link=item.name

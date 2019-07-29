@@ -3,7 +3,7 @@
 		admin-header
 		admin-nav
 		.reviews
-			.container.reviews__container
+			.container.reviews__container.reviews-mobile__container
 				.reviews__title Блок «Отзывы»
 				form.reviews__form
 					.reviews__form-title Новый отзыв
@@ -76,12 +76,22 @@
 		background-color: rgba(255, 255, 255, 0.9);
 		background: url("../../../../images/content/admin-bg.jpg");
 	}
+	
+	.reviews-mobile__container{
+		@include phones{
+			width: 100%;
+		}
+	}
 
 	.reviews__title {
 		padding-top: 60px;
 		font-size: 21px;
 		font-weight: bold;
 		color: #414c63;
+
+		@include phones{
+			padding: 40px 20px 0 20px;
+		}
 	}
 
 	.reviews__form {
@@ -89,6 +99,10 @@
 		margin-top: 60px;
 		box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
 		background-color: #ffffff;
+		
+		@include phones{
+			margin-top: 40px;
+		}
 	}
 
 	.reviews__form-title {
@@ -160,7 +174,7 @@
 		justify-content: center;
 
 		@include tablets {
-			width: 70%;
+			width: 60%;
 		}
 
 		@include phones {
@@ -212,6 +226,14 @@
 		border: 1px solid #000;
 		outline: none;
 		resize: none;
+
+		@include tablets {
+			width: 95%;
+		}
+
+		@include phones {
+			width: 100%;
+		}
 	}
 
 	.reviews__form-btns {
@@ -254,6 +276,10 @@
 		text-transform: uppercase;
 		background-image: linear-gradient(to right, #006aed 0%, #3f35cb 100%);
 
+		@include landscape-phones {
+			width: auto;
+			margin-left: 8px;
+		}
 		@include phones {
 			margin-left: 25px;
 			font-size: 14px;
@@ -342,6 +368,7 @@
 		height: 50px;
 		border-radius: 50%;
 		overflow: hidden;
+		flex-shrink: 0;
 	}
 
 	.reviews__feedback-avatar-pic {

@@ -6,38 +6,46 @@ script(type="text/x-template")#slider-container
         :currentWork="currentWork"
         :currentIndex="currentIndex"
         @slide="handleSlide"
+        @hover="handleHover"
       )
       info(
         :currentWork="currentWork"
       )
 
-
 script(type="text/x-template")#slider-display
   .slider__img(:data-slide="currentIndex + 1")
-    img(:src="currentWork.photo", alt="Главная картинка слайдера").slider__img-main
+    transition(name="slide-fade")
+      img(v-if="show" :src="currentWork.photo", alt="Главная картинка слайдера").slider__img-main
     btns(
-      @slide="direction => $emit('slide', direction)"
+      @slide="handleSlide"
+      :worksLength="works.length"
+      :currentWorkId="currentWork.id"
     )
     thumbs(
       :works="works"
       :currentWork="currentWork"
+      @slide="handleSlide"
+      @hover="handleHover"
     )
 
 script(type="text/x-template")#slider-btns
   .slider__button
-    button(type='button', @click="$emit('slide', 'next')").slider__btn.slider__btn-next
+    button(type='button', @click="$emit('slide', 'next')" :class="{disabled: currentWorkId === worksLength}").slider__btn.slider__btn-next
       +icon('short-arrow', 'slider-next__icn')
-    button(type='button', @click="$emit('slide', 'prev')").slider__btn.slider__btn-prev
+    button(type='button', @click="$emit('slide', 'prev')" :class="{disabled: currentWorkId === 1}").slider__btn.slider__btn-prev
       +icon('short-arrow', 'slider-prev__icn')
 
 script(type="text/x-template")#slider-thumbs
-  ul.slider__img-list
-    li.slider__img-item(
-      v-for="work in works" :key="work.id"
-      :class="{active: work.id === currentWork.id}"
+  .slider__thumbs-content
+    ul.slider__img-list(
+      :style="{transform: `translateX(-${translate}%)`}"
     )
-      button(type="button").slider__img-btn
-        img(:src="work.photo", alt="Картинка слайдера").slider__img-pic
+      li.slider__img-item(
+        v-for="work, index in works" :key="work.id"
+        :class="{active: currentWork.id === work.id}"
+      )
+        button(type="button" @mouseenter="$emit('hover', 'enter')", @mouseleave="$emit('hover', 'leave')", @click.prevent="$emit('slide', index)").slider__img-btn
+          img(:src="work.photo", alt="Картинка слайдера").slider__img-pic
 
 script(type="text/x-template")#slider-info
   .slider__desc

@@ -3,7 +3,7 @@
 		admin-header
 		admin-nav
 		.works
-			.container.works__container
+			.container.works__container.works-mobile__container
 				h2.works__title Блок «Работы»
 				form.works__form(v-if="showAddingForm")
 					.works__form-title Редактирование работы
@@ -136,12 +136,22 @@
 		background-color: rgba(255, 255, 255, 0.9);
 		background: url("../../../../images/content/admin-bg.jpg");
 	}
+	
+	.works-mobile__container{
+		@include phones{
+			width: 100%;
+		}
+	}
 
 	.works__title {
 		font-size: 21px;
 		padding-top: 60px;
 		font-weight: bold;
 		color: #414c63;
+
+		@include phones {
+			padding: 40px 20px 0 20px;
+		}
 	}
 
 	.works__form {
@@ -152,6 +162,10 @@
 		padding: 30px 30px;
 		box-shadow: 4.1px 2.9px 20px 0 rgba(0, 0, 0, 0.07);
 		background-color: #ffffff;
+
+		@include phones {
+			margin-top: 40px;
+		}
 	}
 
 	.works__form-title {
@@ -170,7 +184,7 @@
 		@include tablets {
 			grid-template-columns: 1fr;
 			margin-top: 0;
-			padding: 30px 107px ;
+			padding: 30px 59px;
 		}
 
 		@include phones {
@@ -190,8 +204,12 @@
 		flex-direction: column;
 		align-items: center;
 
+		@include tablets{
+			padding: 70px 68px;
+		}
+
 		@include phones {
-			width: 73%;
+			width: 100%;
 			padding: 10px 20px;
 			height: 156px;
 		}
@@ -256,7 +274,7 @@
 		color: #414c63;
 
 		@include phones {
-			width: 73%;
+			width: 100%;
 		}
 	}
 

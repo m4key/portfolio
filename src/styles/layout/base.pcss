@@ -117,9 +117,12 @@ body {
   font-weight: 600;
   line-height: 1.88;
   color: $text-color;
+  
+  @include small-desktops{
+    font-size: 14px;
+  }
 
   @include tablets {
-    font-size: 14px;
     line-height: 1.71;
   }
 
@@ -207,10 +210,6 @@ h6 {
 p {
   margin: 0;
   padding: 0;
-}
-
-button[type="button"] {
-  cursor: pointer;
 }
 
 a {

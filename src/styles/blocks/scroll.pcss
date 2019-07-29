@@ -1,10 +1,7 @@
 .scroll {
   z-index: 25;
-  display: flex;
   margin: 0 auto;
   margin-top: 254px;
-  cursor: pointer;
-
   @include desktopHd {
     margin-top: 318px;
   }
@@ -18,7 +15,7 @@
   }
 }
 
-.scroll:hover .scroll__button-svg {
+.scroll:hover .scroll__svg-icn {
   fill: $orange;
   transform: scale(1.2);
 }
@@ -26,10 +23,9 @@
 .scroll__button {
   width: 19px;
   height: 30px;
-  background-color: transparent;
-  border: 0;
-  outline: 0;
   transition: all 0.3s;
+  display: flex;
+  text-decoration: none;
 }
 
 .scroll__text {
@@ -44,7 +40,7 @@
   color: $orange;
 }
 
-.scroll__button-svg {
+.scroll__svg-icn {
   height: 100%;
   fill: $text-color;
   transition: all 0.3s;

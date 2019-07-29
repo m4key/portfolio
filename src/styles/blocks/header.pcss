@@ -10,10 +10,12 @@
 
 .header__logo {
   z-index: 70;
+  width: 15%;
 }
 
 .header__nav {
   margin-left: 19%;
+  width: 70%;
 
   @include desktop-large {
     margin-left: 15%;
@@ -34,6 +36,7 @@
 
 .header__social {
   margin-left: 16%;
+  width: 15%;
 
   @include desktop-large {
     margin-left: 12%;
@@ -47,8 +50,16 @@
     margin-left: 4%;
   }
 
+  @include small-desktops{
+    margin-left: 2%;
+  }
+  
   @include tablets {
     margin-left: 53%;
+  }
+
+  @include landscape-phones{
+    margin-left: 46%;
   }
 
   @include phones {

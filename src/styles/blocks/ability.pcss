@@ -1,6 +1,14 @@
 .ability {
   width: 80%;
-  
+
+  @include small-desktops{
+    width: 70%;
+  }
+
+  @include landscape-phones{
+    width: 95%;
+  }
+
   @include phones {
     width: 100%;
   }
@@ -21,9 +29,13 @@
   
   @include tablets {
     width: 100%;
+    align-items: initial;
+  }
+
+  @include landscape-phones{
     align-items: center;
   }
-  
+
   @include phones {
     align-items: center;
   }
@@ -63,6 +75,10 @@
 
   @include tablets {
     margin-top: 10%;
+  }
+
+  @include landscape-phones{
+    margin-left: 2%;
   }
 
   @include phones {

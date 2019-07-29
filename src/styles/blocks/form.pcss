@@ -30,7 +30,6 @@
 }
 
 .feedback__block {
-  border-bottom: 1px solid $text-color;
   margin-left: 51px;
   position: relative;
   transition: border-bottom 0.3s;
@@ -53,9 +52,6 @@
     margin-left: 0;
   }
 
-  &:hover {
-    border-bottom: 1px solid $orange;
-  }
 }
 
 .feedback__label-text {
@@ -82,14 +78,15 @@
   overflow: visible;
   color: $text-color;
   background: transparent;
-  border: none;
-  outline: none;
+  border: transparent;
+  outline: transparent;
   padding-left: 45px;
   padding-bottom: 15px;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
   transition: all 0.5s;
+  border-bottom: 1px solid $text-color;
 
   @include tablets {
     font-size: 14px;
@@ -107,6 +104,7 @@
 
   &:focus {
     color: $orange;
+    border-bottom: 1px solid $orange;
   }
 }
 
@@ -135,7 +133,11 @@
   &--textarea {
     bottom: 50px;
   }
-
+  
+  &:focus {
+    opacity: 1;
+    fill: $orange;
+  }
 }
 
 .feedback__btn {
@@ -147,7 +149,7 @@
   color: $text-color;
   font-weight: bold;
   text-transform: uppercase;
-  outline: none;
+  outline: transparent;
   transition: all 0.5s;
 
   @include tablets {
@@ -165,7 +167,7 @@
   }
 }
 
-.feedback__block:hover .feedback__label-icn {
+.feedback__name:focus~.feedback__block-svg .feedback__label-icn {
   opacity: 1;
   fill: $orange;
 }

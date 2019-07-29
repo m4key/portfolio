@@ -3,14 +3,16 @@
 		header.header
 			.container.header__container
 				.header__user
-					.user
-						.user__avatar
-								img(src="~images/content/user.jpg", alt="Аватар пользователя").user__avatar-pic
-						.user__name Макейкин Александр
+					.header__user-avatar
+						img(src="~images/content/user.jpg", alt="Аватар пользователя").header__user-pic
+				.header__title Макейкин Александр
 				.header__info
 					.header__info-text Панель администрирования
 				.header__exit
-					a(href="#").header__exit-link Выйти
+					router-link(
+						tag="button"
+						to="/login"
+						).header__exit-link Выйти
 </template>
 <style lang="postcss" scoped>
 	@import "normalize.css";
@@ -30,12 +32,13 @@
 		height: 100%;
 	}
 	
-	.user {
+	.header__user {
+		white-space: nowrap;
 		display: flex;
 		align-items: center;
 	}
 
-	.user__avatar {
+	.header__user-avatar {
 		width: 44px;
 		height: 44px;
 		overflow: hidden;
@@ -43,13 +46,13 @@
 		flex-shrink: 0;
 	}
 
-	.user__avatar-pic {
+	.header__user-pic {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
 	}
 
-	.user__name {
+	.header__title {
 		color: #fff;
 		margin-left: 20px;
 		font-size: 18px;
@@ -66,16 +69,18 @@
 	.header__info-text {
 		opacity: 0.5;
 		font-size: 14px;
+		white-space: nowrap;
 	}
 
 	.header__exit {
-		margin-left: 63%;
-		justify-content: flex-end;
-		opacity: 0.7;
-		font-size: 16px;
-		@include tablets{
-			margin-left: 18%;
-		}
+    text-align: right;
+		margin-left: auto;
 	}
-
+	.header__exit-link{
+		background: transparent;
+		font-size: 16px;
+		opacity: 0.7;
+		color: $text-color;
+		text-decoration: underline;
+	}
 </style>

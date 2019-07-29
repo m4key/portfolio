@@ -4,10 +4,10 @@ a.hamburger-link(href="#")
     .popup-menu__container
       nav.popup-menu__navigation
         ul.popup-menu__list
-          -var menu=['Главная','Обо мне','Навыки','Работы','Отзывы','Связаться'];
+          -var menu=[{name:'Главная', href:"#primary"}, {name:'Обо мне', href:"#about"}, {name:'Навыки', href:"#skill"}, {name:'Работы', href:"#works"}, {name:'Отзывы', href:"#reviews"}, {name:'Связаться', href:"#feedback"}];
           each item in menu
             li.popup-menu__item
-              a.popup-menu__link #{item}
+              a(href=item.href).popup-menu__link=item.name
       .popup__social
         include social 
         +social('hamburger')

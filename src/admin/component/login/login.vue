@@ -5,7 +5,7 @@
 				.login__title Авторизация
 				.login__row 
 					label.login__label
-						.login__label-title
+						.login__label-title Логин
 						input.login__input(
 							title="Логин"
 							icon="user"
@@ -13,7 +13,7 @@
 						)
 				.login__row.login__row-pass 
 					label.login__label
-						.login__label-title
+						.login__label-title Пароль
 						input.login__input(
 							title="Пароль"
 							icon="key"
@@ -56,20 +56,31 @@ export default {
 	@import url('../../../styles/layout/base');
 
 	input {
-  	border: none;
+  	border: transparent;
 	}
 	
 	.login {
-		grid-area: auth;
+		background: url("../../../images/content/admin-bg.jpg") center center / cover no-repeat;
+		width: 100%;
+    height: 100%;
+		position: absolute;
 	}
-
+	.login__content{
+		background-color: rgba(45, 60, 78, 0.8);
+		width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
 	.login__form {
 		padding: 75px;
-		width: 563px;
-		height: 517px;
+		max-height: 517px;
 		background-color: #fff;
 		position: relative;
-
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		&::before {
 			content: '';
 			width: 20px;
@@ -86,9 +97,9 @@ export default {
 		}
 
 		@include phones {
-			width: 321px;
-			height: 714px;
-			padding: 174px 30px 150px;
+			width: 100%;
+			min-height: 100%;
+			padding: 78px 30px 38px;
 		}
 	}
 

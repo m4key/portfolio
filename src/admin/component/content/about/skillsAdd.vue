@@ -49,6 +49,7 @@ export default {
 
 	.about__skills-form {
 		width: 100%;
+		min-height: 387px;
 		padding: 10px 25px 25px;
 		box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
 		background-color: #fff;
@@ -61,6 +62,7 @@ export default {
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid #C0C0C0;
+		
 	}
 
 	.about__skills-group-name {
