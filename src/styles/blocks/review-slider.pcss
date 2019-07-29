@@ -1,3 +1,106 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.review__slider-controls {
+  position: absolute;
+  top: 0;
+  left: 460px;
+  z-index: 20;
+
+  @include small-desktops{
+    left: 428px;
+  }
+
+  @include landscape-phones{
+    left: 336px;
+  }
+
+  @include phones {
+    left: 40%;
+    top: 20%;
+  }
+
+  @include phones-small {
+    left: 30%;
+  }
+}
+
+.review__btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $text-color;
+  background: transparent;
+  margin-left: 30px;
+  transition: border 0.5s;
+
+  &:hover {
+    border: 1px solid $orange;
+  }
+  
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.review__btn:hover .review__btn-prev {
+  fill: $orange;
+}
+
+.review__btn:hover .review__btn-next {
+  fill: $orange;
+}
+
+.review__btn-prev {
+  width: 8px;
+  height: 10px;
+  fill: $text-color;
+  transform: rotate(180deg);
+  transition: fill 0.3s;
+}
+
+.review__btn-next {
+  width: 8px;
+  height: 10px;
+  fill: $text-color;
+  transition: fill 0.3s;
+}
+
+.reviewBtnOff {
+  border: 1px solid $dark-grey;
+
+  &:hover {
+    border: 1px solid  $dark-grey;
+  }
+}
+.reviewBtnOff .review__btn-prev {
+  fill: $dark-grey;
+}
+
+.reviewBtnOff:hover .review__btn-prev {
+  fill: $dark-grey;
+}
+
+.reviewBtnOff .review__btn-next {
+  fill: $dark-grey;
+}
+
+.reviewBtnOff:hover .review__btn-next {
+  fill: $dark-grey;
+}
+
+.review__list {
+  display: flex;
+  margin-top: 100px;
+
+  @include tablets {
+    margin-top: 72px;
+  }
+}
+
+.reviews-slider__item {
+=======
+>>>>>>> week_3
 .review__slider-controls{
   position: absolute;
   top: 0;
@@ -53,6 +156,10 @@
   }
 }
 .reviews-slider__item{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -60,6 +167,37 @@
   list-style-type: none;
   margin-left: 94px;
   margin-top: 97px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include small-desktops{
+    width: 47%;
+    margin-left: 30px;
+  }
+
+  @include tablets {
+    margin-top: 61px;
+    margin-left: 56px;
+  }
+
+  @include landscape-phones{
+    margin-top: 61px;
+    margin-left: 8px;
+    width: 50%;
+  }
+
+  @include phones {
+    margin-top: 97px;
+    width: 100%;
+
+    &:nth-child(2) {
+=======
+>>>>>>> week_3
   &:first-child{
     margin-left: 0;
   }
@@ -71,10 +209,40 @@
     margin-top: 97px;
     width: 100%;
     &:nth-child(2){
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
       display: none;
     }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.review__svg-quote {
+  width: 75px;
+  height: 63px;
+  fill: $text-color;
+  opacity: 0.1;
+  flex-shrink: 0;
+  margin-right: 30px;
+
+  @include desktop {
+    width: 69px;
+    height: 58px;
+  }
+
+  @include small-desktops{
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  @include tablets {
+=======
+>>>>>>> week_3
 .review__svg-quote{
   width: 75px;
   height: 63px;
@@ -87,20 +255,65 @@
     height: 58px;
   }
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 30px;
     height: 25px;
     margin-right: 10px;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.review__text {
+  display: flex;
+  height: 103px;
+}
+
+.review__author {
+=======
+>>>>>>> week_3
 .review__text{
   display: flex;
   height: 103px;
 }
 .review__author{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: flex;
   margin-top: 36px;
   margin-left: 104px;
   align-items: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include small-desktops{
+    margin-top: 36px;
+    margin-left: 56px;
+  }
+
+  @include tablets {
+    margin-left: 36px;
+  }
+
+  @include landscape-phones{
+    margin-top: 116px;
+  }
+
+  @include phones {
+    margin-top: 30px;
+  }
+}
+
+.review__photo {
+=======
+>>>>>>> week_3
   @include tablets{
     margin-left: 36px;
   }
@@ -109,12 +322,33 @@
   }
 }
 .review__photo{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   width: 75px;
   height: 75px;
   border-radius: 50%;
   flex-shrink: 0;
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.review__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.review__writer {
+  margin-left: 30px;
+
+  @include tablets {
+=======
+>>>>>>> week_3
 .review__photo-img{
   width: 100%;
   height: 100%;
@@ -124,10 +358,33 @@
 .review__writer{
   margin-left: 30px;
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     margin-left: 21px;
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.author__title {
+  font-size: 16px;
+  color: $text-color;
+  font-weight: bold;
+}
+
+.author__text {
+  font-size: 16px;
+  opacity: 0.3;
+  color: $text-color;
+  font-weight: 600;
+  margin-top: 15px;
+
+  @include tablets {
+=======
+>>>>>>> week_3
 .author__title{
   font-size: 16px;
   color:$text-color;
@@ -140,6 +397,10 @@
   font-weight: 600;
   margin-top: 15px;
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     font-size: 14px;
   }
 }

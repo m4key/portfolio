@@ -1,15 +1,82 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.feedback__form {
+  width: 60%;
+
+  @include desktop {
+    width: 80%;
+  }
+
+  @include tablets {
+=======
+>>>>>>> week_3
 .feedback__form{
   width: 60%;
   @include desktop{
     width: 80%;
   }
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.feedback__row {
+  display: flex;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    flex-wrap: wrap;
+  }
+
+  @include phones-small {
+    justify-content: center;
+  }
+}
+
+.feedback__block {
+  margin-left: 51px;
+  position: relative;
+  transition: border-bottom 0.3s;
+  width: 50%;
+
+  @include tablets {
+    margin-left: 20px;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @include phones-small {
+    width: 85%;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+}
+
+.feedback__label-text {
+  font-size: 16px;
+  color: $text-color;
+=======
+>>>>>>> week_3
 .feedback__row{
   display: flex;
   @include tablets{
@@ -49,20 +116,65 @@
 .feedback__label-text{
   font-size: 16px;
   color:$text-color;
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   opacity: 0.3;
   font-weight: 600;
   text-align: left;
   padding-bottom: 30px;
   padding-left: 45px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include tablets {
+    font-size: 14px;
+    padding-bottom: 28px;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
   @include tablets{ 
     font-size: 14px;
     padding-bottom: 28px;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     padding-bottom: 20px;
     padding-top: 30px;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.feedback__name {
+  overflow: visible;
+  color: $text-color;
+  background: transparent;
+  border: transparent;
+  outline: transparent;
+  padding-left: 45px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.5s;
+  border-bottom: 1px solid $text-color;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  &--textarea {
+=======
+>>>>>>> week_3
 .feedback__name{
   overflow: visible;
   color:$text-color;
@@ -79,10 +191,38 @@
     font-size: 14px;
   }
   &--textarea{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 100%;
     resize: none;
     line-height: 2;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  &::placeholder {
+    color: $text-color;
+  }
+
+  &:focus {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+.feedback__textarea {
+  margin-top: 41px;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
   &::placeholder{
     color:$text-color;
   }
@@ -96,17 +236,50 @@
     width: 100%;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     margin-top: 0;
     width: 100%;
   }
 }
+<<<<<<< HEAD
 .feedback__label-icn{
   fill:$text-color;
+=======
+<<<<<<< HEAD
+
+.feedback__label-icn {
+  fill: $text-color;
+=======
+.feedback__label-icn{
+  fill:$text-color;
+>>>>>>> master
+>>>>>>> week_3
   width: 30px;
   height: 30px;
   opacity: 0.3;
   position: absolute;
   bottom: 10px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  transition: all 0.5s;
+
+  &--textarea {
+    bottom: 50px;
+  }
+  
+  &:focus {
+    opacity: 1;
+    fill: $orange;
+  }
+}
+
+.feedback__btn {
+=======
+>>>>>>> week_3
   transition: fill .5s;
   transition: all .5s;
   &--textarea{
@@ -115,11 +288,31 @@
 }
 
 .feedback__btn{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   margin-top: 60px;
   width: 347px;
   height: 80px;
   background-image: linear-gradient(to right, #ea7400, #f29400);
   font-size: 18px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  color: $text-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: transparent;
+  transition: all 0.5s;
+
+  @include tablets {
+    margin-top: 31px;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
   color:$text-color;
   font-weight: bold;
   text-transform: uppercase;
@@ -129,10 +322,41 @@
     margin-top: 31px;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 259px;
     height: 60px;
     font-size: 16px;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  &:hover {
+    background-image: linear-gradient(to right, #ff7f00, #ff9d00);
+  }
+}
+
+.feedback__name:focus~.feedback__block-svg .feedback__label-icn {
+  opacity: 1;
+  fill: $orange;
+}
+
+.feedback__error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  font-size: 14px;
+  background-color: red;
+  padding: 10px;
+}
+
+.has-error {
+  display: flex;
+=======
+>>>>>>> week_3
   &:hover{
     background-image: linear-gradient(to right, #ff7f00, #ff9d00);
   }
@@ -140,4 +364,8 @@
 .feedback__block:hover .feedback__label-icn{
   opacity: 1;
   fill: $orange;
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 }

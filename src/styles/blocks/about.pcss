@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.about {
+  position: relative;
+  background: url("../images/content/bg-numbers.png") 0 100% no-repeat;
+  z-index: 25;
+  min-height: 542px;
+  background-size: 100% 65%;
+
+  @include desktop {
+    background: url("../images/content/bg-numbers-desktop.png") 0 100% no-repeat;
+  }
+
+  @include tablets {
+    background: url("../images/content/bg-numbers-tablets.png") 0 100% no-repeat;
+  }
+
+  @include phones-small {
+    background: url("../images/content/bg-numbers-phones.png") 0 100% no-repeat;
+  }
+
+  &::after {
+=======
+>>>>>>> week_3
 .about{
   position: relative;
   background: url('../images/content/bg-numbers.png') 0 100% no-repeat;
@@ -14,12 +39,46 @@
      background: url('../images/content/bg-numbers-phones.png') 0 100% no-repeat;
   }
   &::after{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     content: "";
     z-index: 21;
     position: absolute;
     bottom: 60%;
     height: 100%;
     width: 100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    background-image: linear-gradient(0deg,#1b1f22 57%,rgba(27,31,34,0.7) 85%,rgba(27,31,34,0));
+
+    @include desktop-large {
+      bottom: 99%;
+      background-image: linear-gradient(0deg,#1b1f22 67%,rgba(27,31,34,0.7) 90%,rgba(27,31,34,0));
+    }
+
+    @include laptop {
+      bottom: 45%;
+    }
+  }
+
+  @include desktop-large {
+    background-size: 100% 100%;
+  }
+
+  @include desktop {
+    min-height: 542px;
+  }
+
+  @include tablets {
+    min-height: 466px;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
     background-image: linear-gradient(0deg,#1b1f22 57%,rgba(27,31,34,.7) 85%,rgba(27,31,34,0));
     @include desktop-large{
       bottom: 99%;
@@ -39,15 +98,45 @@
     min-height: 466px;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     min-height: 874px;
     background-size: 100% 73%;
   }
 }
+<<<<<<< HEAD
 .about__wrap{
+=======
+<<<<<<< HEAD
+
+.about__wrap {
+=======
+.about__wrap{
+>>>>>>> master
+>>>>>>> week_3
   z-index: 30;
   display: flex;
   min-height: 328px;
   justify-content: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include desktop {
+    width: 100%;
+    align-items: center;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.about__master {
+=======
+>>>>>>> week_3
   @include desktop{
     width: 100%;
     align-items: center;
@@ -57,34 +146,103 @@
   }
 }
 .about__master{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 33%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include desktop {
+    align-items: initial;
+  }
+
+  @include small-desktops{
+    width: 45%;
+  }
+
+  @include landscape-phones{
+    width: 35%;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
   @include desktop{
     align-items: initial;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     align-items: center;
     width: 100%;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.about__avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include tablets {
+=======
+>>>>>>> week_3
 .about__avatar{
   width: 200px;
   height: 200px;
   border-radius:50%;
   overflow: hidden;
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 170px;
     height: 170px;
   }
 }
+<<<<<<< HEAD
 .about__avatar-pic{
+=======
+<<<<<<< HEAD
+
+.about__avatar-pic {
+=======
+.about__avatar-pic{
+>>>>>>> master
+>>>>>>> week_3
   display: block;
   max-height: inherit;
   object-fit: cover;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.about__list {
+  width: 280px;
+}
+
+.about__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__question {
+=======
+>>>>>>> week_3
 .about__list{
   width: 280px;
 }
@@ -93,10 +251,51 @@
   justify-content: space-between;
 }
 .about__question{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   font-size: 16px;
   opacity: 0.15;
   font-weight: 600;
   line-height: 1.88;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  color: $text-color;
+  flex: 1;
+
+  @include tablets {
+    font-size: 14px;
+  }
+}
+.about__reply {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.88;
+  color: $text-color;
+  flex: 1;
+
+  @include tablets {
+    font-size: 14px;
+  }
+}
+
+.about__desc {
+  padding-top: 80px;
+
+  @include tablets {
+    padding-top: 57px;
+  }
+
+  @include phones {
+    padding-top: 31px;
+  }
+}
+
+.about__desc-subtitle {
+=======
+>>>>>>> week_3
   color:$text-color;
   flex: 1;
   @include tablets{
@@ -123,15 +322,50 @@
   }
 }
 .about__desc-subtitle{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   font-size: 16px;
   font-weight: 600;
   line-height: 1.88;
   opacity: 0.5;
+<<<<<<< HEAD
   @include tablets{
+=======
+<<<<<<< HEAD
+
+  @include tablets {
+=======
+  @include tablets{
+>>>>>>> master
+>>>>>>> week_3
     font-size: 14px;
     line-height: 2.14;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.about__desc-title {
+  margin-top: 20px;
+  margin-bottom: 38px;
+
+  @include phones-small {
+    width: 50%;
+  }
+}
+
+.about__desc-text {
+  @include phones {
+    width: 70%;
+  }
+}
+
+.about__content {
+=======
+>>>>>>> week_3
 .about__desc-title{
   margin-top: 20px;
   margin-bottom: 38px;
@@ -145,10 +379,46 @@
   }
 }
 .about__content{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: flex;
   flex-direction: column;
   width: 40%;
   padding-left: 50px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include desktop {
+    padding-left: 0;
+    width: 50%;
+  }
+
+  @include tablets {
+    padding-left: 90px;
+    width: 100%;
+  }
+
+  @include phones {
+    padding-top: 51px;
+  }
+
+  @include phones-small {
+    padding-left: 0;
+  }
+  
+}
+
+.about__info-text {
+  position: relative;
+  padding-top: 90px;
+
+  &::before {
+    content: "*";
+=======
+>>>>>>> week_3
   @include desktop{
     padding-left: 0;
     width: 50%;
@@ -170,16 +440,50 @@
 
   &:before{
     content: '*';
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     position: absolute;
     font-style: normal;
     width: 22px;
     height: 22px;
     font-size: 48px;
+<<<<<<< HEAD
     color:$red;
+=======
+<<<<<<< HEAD
+    color: $red;
+=======
+    color:$red;
+>>>>>>> master
+>>>>>>> week_3
     opacity: 0.3;
     line-height: 1;
     transform: rotate(10deg);
     left: -50px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    @include phones-small {
+      left: -40px;
+    }
+  }
+
+  @include tablets {
+    padding-top: 46px;
+  }
+
+  @include phones {
+    width: 70%;
+  }
+
+  @include phones-small {
+    width: 80%;
+  }
+=======
+>>>>>>> week_3
     @include phones-small{
       left: -40px;
     }
@@ -194,5 +498,9 @@
     width: 80%;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 }
 

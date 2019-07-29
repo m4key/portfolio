@@ -4,6 +4,31 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "./scripts/skills";
+<<<<<<< HEAD
 import "./scripts/reviews";
 import "./scripts/parallax";
 import "./scripts/hamburger-menu";
+=======
+<<<<<<< HEAD
+import "./scripts/works";
+import "./scripts/reviews";
+import "./scripts/parallax";
+import "./scripts/hamburger-menu";
+import "./scripts/scroll";
+
+import Validate from "./scripts/form";
+
+const form=document.querySelector('.j-form');
+
+if (form){
+  const validate = new Validate({
+    element: '.j-form'
+  });
+  validate.init();
+}
+=======
+import "./scripts/reviews";
+import "./scripts/parallax";
+import "./scripts/hamburger-menu";
+>>>>>>> master
+>>>>>>> week_3

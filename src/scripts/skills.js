@@ -12,7 +12,14 @@ const talent = {
       const dashArray = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dasharray")
       );
+<<<<<<< HEAD
       console.log("dashArray");
+=======
+<<<<<<< HEAD
+=======
+      console.log("dashArray");
+>>>>>>> master
+>>>>>>> week_3
       const percent = (dashArray / 100) * (100 - this.talentPercent);
 
       circle.style.strokeDashoffset = percent;

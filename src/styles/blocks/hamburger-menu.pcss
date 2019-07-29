@@ -1,10 +1,34 @@
+<<<<<<< HEAD
 .hamburger-link{
+=======
+<<<<<<< HEAD
+.hamburger-link {
+=======
+.hamburger-link{
+>>>>>>> master
+>>>>>>> week_3
   display: none;
   width: 22px;
   height: 22px;
   cursor: pointer;
   align-items: center;
   z-index: 70;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include tablets {
+    display: flex;
+    position: absolute;
+    top: 77px;
+    right: 41px;
+  }
+  
+}
+
+.hamburger-link__button {
+=======
+>>>>>>> week_3
   @include tablets{
     display: flex;
     position: absolute;
@@ -14,18 +38,50 @@
   
 } 
 .hamburger-link__button{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   height: 4px;
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
+<<<<<<< HEAD
   &:after, &::before{
     content: '';
+=======
+<<<<<<< HEAD
+
+  &::after,
+  &::before {
+    content: "";
+=======
+  &:after, &::before{
+    content: '';
+>>>>>>> master
+>>>>>>> week_3
     display: block;
     position: absolute;
     height: 4px;
     width: 100%;
     background-color: #fff;
     border-radius: 4px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    &:hover {
+      background-color: $orange;
+    }
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+=======
+>>>>>>> week_3
     &:hover{
     background-color: $orange;
     }
@@ -34,10 +90,42 @@
     bottom: 0;
   }
   &::before{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     top: 0;
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.hamburger-link--active .hamburger-link__button {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(-45deg);
+    background-color: #2b3948;
+    transition: transform 0.3s;
+    top: 9px;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+    background-color: #2b3948;
+    transition: transform 0.3s;
+    bottom: 9px;
+  }
+}
+
+.header__social .hamburger-link--active {
+  display: none;
+}
+
+.popup-menu {
+=======
+>>>>>>> week_3
 .hamburger-link--active .hamburger-link__button{
   background-color: transparent;
   &::before{
@@ -57,6 +145,10 @@
   display: none;
 }
 .popup-menu{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: none;
   width: 100%;
   height: 100%;
@@ -64,28 +156,79 @@
   top: 0;
   left: 0;
   transform: translateX(100%);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  transition: all 0.5s;
+}
+
+.popup-menu--active {
+=======
+>>>>>>> week_3
   transition: all .5s;
 }
 
 .popup-menu--active{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: flex;
   opacity: 1;
   z-index: 55;
   transform: translateX(0);
+<<<<<<< HEAD
   transition: all .5s;
 }
 .popup-menu__container{
+=======
+<<<<<<< HEAD
+  transition: all 0.5s;
+}
+
+.popup-menu__container {
+=======
+  transition: all .5s;
+}
+.popup-menu__container{
+>>>>>>> master
+>>>>>>> week_3
   position: absolute;
   right: 0;
   top: 0;
   background-color: #fff;
   width: 40%;
   height: 100%;
+<<<<<<< HEAD
   padding-top:40% ;
+=======
+<<<<<<< HEAD
+  padding-top: 40%;
+=======
+  padding-top:40% ;
+>>>>>>> master
+>>>>>>> week_3
   padding-left: 10%;
   padding-right: 5%;
   z-index: 50;
   display: block;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  transition: all 0.5s;
+
+  @include phones {
+    width: 100%;
+  }
+
+  @include phones-small {
+    min-height: 970px;
+  }
+}
+
+.popup-menu__link {
+=======
+>>>>>>> week_3
   transition: all .5s;
   @include phones{
     width: 100%;
@@ -95,12 +238,30 @@
   }
 }
 .popup-menu__link{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
   line-height: 2.67;
   color: #2b3948;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  border-bottom: 2px solid transparent;
+  transition: 0.4s;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.popup__social {
+=======
+>>>>>>> week_3
   border-bottom: 2px solid transparent; 
   transition: .4s;
   &:hover{
@@ -108,5 +269,9 @@
   }
 }
 .popup__social{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   margin-top: 60px;
 }

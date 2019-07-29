@@ -1,3 +1,75 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+script(type="text/x-template")#slider-container
+  .slider
+    .slider__wrap
+      display(
+        :works="works"
+        :currentWork="currentWork"
+        :currentIndex="currentIndex"
+        @slide="handleSlide"
+        @hover="handleHover"
+      )
+      info(
+        :currentWork="currentWork"
+      )
+
+script(type="text/x-template")#slider-display
+  .slider__img(:data-slide="currentIndex + 1")
+    transition(name="slide-fade")
+      img(v-if="show" :src="currentWork.photo", alt="Главная картинка слайдера").slider__img-main
+    btns(
+      @slide="handleSlide"
+      :worksLength="works.length"
+      :currentWorkId="currentWork.id"
+    )
+    thumbs(
+      :works="works"
+      :currentWork="currentWork"
+      @slide="handleSlide"
+      @hover="handleHover"
+    )
+
+script(type="text/x-template")#slider-btns
+  .slider__button
+    button(type='button', @click="$emit('slide', 'next')" :class="{disabled: currentWorkId === worksLength}").slider__btn.slider__btn-next
+      +icon('short-arrow', 'slider-next__icn')
+    button(type='button', @click="$emit('slide', 'prev')" :class="{disabled: currentWorkId === 1}").slider__btn.slider__btn-prev
+      +icon('short-arrow', 'slider-prev__icn')
+
+script(type="text/x-template")#slider-thumbs
+  .slider__thumbs-content
+    ul.slider__img-list(
+      :style="{transform: `translateX(-${translate}%)`}"
+    )
+      li.slider__img-item(
+        v-for="work, index in works" :key="work.id"
+        :class="{active: currentWork.id === work.id}"
+      )
+        button(type="button" @mouseenter="$emit('hover', 'enter')", @mouseleave="$emit('hover', 'leave')", @click.prevent="$emit('slide', index)").slider__img-btn
+          img(:src="work.photo", alt="Картинка слайдера").slider__img-pic
+
+script(type="text/x-template")#slider-info
+  .slider__desc
+    .slider__desc-info
+      tags(
+        :tags="tagsArray"
+      )
+      .slider__desc-content
+        h3.section-title.section-title--black.section-title--small.slider__desc-title {{currentWork.title}}
+        .slider__desc-text.section-text.section-text--black
+          p {{currentWork.desc}}
+        a(:href="currentWork.link").slider__desc-link Посмотреть сайт
+          +icon('link', 'slider__desc-icn')
+    
+script(type="text/x-template")#slider-tags
+  ul.slider__skill-list
+    li.slider__skill-item(v-for="tag in tags")
+      .tag {{tag}}
+
+=======
+>>>>>>> week_3
 .slider
   .slider__wrap
     .slider__img
@@ -38,3 +110,7 @@
           a.slider__desc-link Посмотреть сайт
             +icon('link', 'slider__desc-icn')
           |
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3

@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.slider {
+  margin-top: 92px;
+  position: relative;
+
+  @include desktop {
+    margin-top: 62px;
+  }
+
+  @include tablets {
+    margin-top: 54px;
+  }
+
+  @include phones {
+    margin-top: 30px;
+  }
+}
+
+.slider__wrap {
+  display: flex;
+  width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.slider__img {
+=======
+>>>>>>> week_3
 .slider{
   margin-top: 92px;
   position: relative;
@@ -19,11 +51,173 @@
   }
 }
 .slider__img{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   position: relative;
   flex-shrink: 0;
   z-index: 5;
   width: 66%;
   height: 549px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include desktop {
+    width: 60%;
+    height: auto;
+  }
+
+  @include small-desktops{
+    width: 50%;
+  }
+
+  @include tablets {
+    width: 92.5%;
+  }
+
+  @include landscape-phones{
+    width: 88.5%;
+  }
+
+  @include phones {
+    width: 100%;
+    height: auto;
+  }
+
+  &::before {
+    content: attr(data-slide);
+    position: absolute;
+    z-index: -1;
+    color: $light-grey;
+    left: 93%;
+    bottom: 80px;
+    font-size: 400px;
+    font-weight: 800;
+    line-height: 473px;
+
+    @include desktop {
+      font-size: 300px;
+      bottom: 11px;
+    }
+    
+    @include small-desktops{
+      left: 89%;
+      font-size: 240px;
+      bottom: -28px;
+    }
+
+    @include tablets {
+      left: 92%;
+      bottom: 11px;
+    }
+
+    @include landscape-phones{
+      left: 94%;
+      bottom: -42px;
+      font-size: 188px;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.slider__thumbs-content{
+  overflow: hidden;
+  position: absolute;
+  bottom: 59px;
+  right: 0;
+
+  @include desktop {
+    bottom: 25px;
+    right: 0;
+  }
+  @include phones {
+    display: none;
+  }
+}
+
+.slider__img-list {
+  display: flex;
+  touch-action: pan-x;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.2, 0.88, 0.5, 1);
+  transition-duration: 900ms;
+}
+
+.slider__img-item {
+  width: 178px;
+  height: 100px;
+  box-sizing: content-box;
+  backface-visibility: hidden;
+  
+  &:hover {
+    filter: saturate(300%);
+    z-index: 10;
+  }
+
+  @include small-desktops{
+    width: 119px;
+    height: 84px;
+  }
+
+  @include landscape-phones{
+    width: 134px;
+    height: 93px;
+  }
+}
+
+.active {
+  border: 3px solid $orange;
+  z-index: 10;
+}
+
+.slider__img-main {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__img-btn {
+  border: transparent;
+  outline: transparent;
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.2);
+  }
+}
+
+.slider__img-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__desc {
+  flex-shrink: 0;
+  display: flex;
+  width: 40%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.slider__button {
+=======
+>>>>>>> week_3
   @include desktop{
     width: 66%;
     height: auto;
@@ -81,20 +275,105 @@
   }
 }
 .slider__button{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   position: absolute;
   display: flex;
   flex-direction: column;
   z-index: 10;
   right: -50px;
   bottom: 60px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include desktop {
+    bottom: 30px;
+  }
+
+  @include phones {
+=======
+>>>>>>> week_3
   @include desktop{
     bottom: 30px;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     bottom: 0;
     right: 0;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.slider__btn {
+  width: 50px;
+  height: 50px;
+  background-color: $dark-blue;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $orange;
+  }
+
+
+  @include small-desktops{
+    width: 50px;
+    height: 42px;
+  }
+
+  @include landscape-phones{
+    width: 50px;
+    height: 46px;
+  }
+
+}
+  
+.disabled {
+  background-color: #3d4143;
+}
+.disabled.slider__btn:hover{
+  background-color: #3d4143;
+}
+
+.slider-next__icn {
+  width: 8px;
+  height: 10px;
+  fill: $text-color;
+}
+
+.slider-prev__icn {
+  width: 8px;
+  height: 10px;
+  fill: $text-color;
+  transform: rotate(180deg);
+}
+
+.slider__desc-info {
+  margin-left: 160px;
+  z-index: 10;
+
+  @include desktop {
+    margin-left: 126px;
+  }
+
+  @include laptop{
+    margin-left: 110px;
+  }
+
+  @include small-desktops{
+    margin-left: 94px;
+  }
+  
+  @include tablets {
+=======
+>>>>>>> week_3
 .slider__btn{
   width: 50px;
   height: 50px;
@@ -143,10 +422,30 @@
     margin-left: 126px;
   }
   @include tablets{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     width: 100%;
     margin-left: 0;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.slider__skill-list {
+  display: flex;
+
+  @include tablets {
+    margin-top: 61px;
+    justify-content: center;
+  }
+}
+
+.slider__skill-item {
+=======
+>>>>>>> week_3
 .slider__skill-list{
   display: flex;
   @include tablets{
@@ -155,11 +454,34 @@
   }
 }
 .slider__skill-item{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   background-color: $skill-item-bg-color;
   margin-left: 15px;
   padding: 17px 22px 12px 20px;
   font-size: 15px;
   font-weight: 400;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  color: $dark-grey;
+  border-radius: 25px;
+  opacity: 0.7;
+
+  @include phones {
+    font-size: 13px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.slider__desc-content {
+=======
+>>>>>>> week_3
   color:$dark-grey;
   border-radius: 25px;
   opacity: 0.7;
@@ -171,24 +493,77 @@
   }
 }
 .slider__desc-content{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   margin-top: 50px;
   height: 295px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+<<<<<<< HEAD
   @include tablets{
+=======
+<<<<<<< HEAD
+
+  @include tablets {
+=======
+  @include tablets{
+>>>>>>> master
+>>>>>>> week_3
     margin-top: 28px;
     height: 176px;
     width: 100%;
     align-items: center;
   }
+<<<<<<< HEAD
   @include phones{
+=======
+<<<<<<< HEAD
+
+  @include phones {
+=======
+  @include phones{
+>>>>>>> master
+>>>>>>> week_3
     text-align: left;
     align-items: baseline;
     margin-left: 30px;
     width: 80%;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.slider__desc-title {
+  @include phones-small {
+    text-align: left;
+  }
+}
+
+.slider__desc-text {
+  @include tablets {
+    text-align: center;
+    width: 65%;
+  }
+
+  @include phones {
+    text-align: left;
+    padding-top: 21px;
+  }
+
+  @include phones-small {
+    width: 100%;
+  }
+}
+
+.slider__desc-link {
+  font-size: 18px;
+  color: $links-color;
+=======
+>>>>>>> week_3
 .slider__desc-title{
   @include phones-small{
     text-align: left;
@@ -210,11 +585,31 @@
 .slider__desc-link{
   font-size: 18px;
   color:$links-color;
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   font-weight: bold;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  transition: all 0.5s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include tablets {
+    justify-content: center;
+  }
+  
+  @include phones {
+=======
+>>>>>>> week_3
   transition:  all .5s;
   &:hover{
     text-decoration: underline; 
@@ -223,13 +618,42 @@
     justify-content: center;
   }
   @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     font-size: 14px;
     margin-top: 38px;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.slider__desc-icn {
+  width: 15px;
+  height: 15px;
+  fill: $links-color;
+  margin-right: 20px;
+}
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+=======
+>>>>>>> week_3
 .slider__desc-icn{
   width: 15px;
   height: 15px;
   fill:$links-color;
   margin-right: 20px;
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 }

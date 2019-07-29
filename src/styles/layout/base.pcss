@@ -2,6 +2,25 @@ html {
   @include desktop {
     font-size: 16px;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  @include phones-small {
+    font-size: 14px;
+  }
+}
+
+=======
+>>>>>>> week_3
   @include tablets {
     font-size: 15px;
   }
@@ -12,25 +31,55 @@ html {
     font-size: 14px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 body,
 html {
   height: 100%;
 }
 
 body {
+<<<<<<< HEAD
   font-family: 'Open Sans', Helvetica, sans-serif;
+=======
+<<<<<<< HEAD
+  font-family: "Open Sans", Helvetica, sans-serif;
+=======
+  font-family: 'Open Sans', Helvetica, sans-serif;
+>>>>>>> master
+>>>>>>> week_3
   font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.active-popup {
+  overflow: hidden;
+}
+
+.disable {
+  display: none;
+}
+
+=======
+>>>>>>> week_3
 .active-popup{
   overflow: hidden;
 }
 .disable{
   display: none;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -41,6 +90,22 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    max-width: 1080px;
+  }
+
+  @include tablets {
+    max-width: 689px;
+  }
+
+=======
+>>>>>>> week_3
   // width: 1490px;
   display: flex;
   flex-direction: column;
@@ -50,11 +115,35 @@ body {
   @include tablets{
     max-width: 689px;
   }
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   @include phones {
     width: 85%;
   }
   
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.section {
+  height: 100%;
+  position: relative;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: $text-color;
+
+  &--black {
+    color: $black;
+
+    @include phones {
+=======
+>>>>>>> week_3
 .section{
    //height: 100vh;
   //min-height: 650px;
@@ -68,10 +157,48 @@ body {
   &--black{
     color:$black;
     @include phones{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
       text-align: center;
       font-size: 24px;
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  &--big {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 0.83;
+
+    @include tablets {
+      font-size: 48px;
+    }
+
+    @include phones {
+      font-size: 36px;
+      line-height: 1.33;
+    }
+  }
+  
+  &--small {
+    font-size: 30px;
+  }
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+.section-text {
+=======
+>>>>>>> week_3
   &--big{
     font-size: 72px;
     font-weight: 800;
@@ -96,10 +223,35 @@ body {
   
 }
 .section-text{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
   font-size: 16px;
   opacity: 0.5;
   font-weight: 600;
   line-height: 1.88;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  color: $text-color;
+  
+  @include small-desktops{
+    font-size: 14px;
+  }
+
+  @include tablets {
+    line-height: 1.71;
+  }
+
+  &--italic {
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &--black {
+=======
+>>>>>>> week_3
   color:$text-color;
   @include tablets{
     font-size: 14px;
@@ -110,14 +262,46 @@ body {
     font-weight: normal;
   }
   &--black{
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     opacity: 0.7;
     color: $dark-blue;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
+>>>>>>> week_3
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.maincontent__bg-autumn {
+  background: url("~images/content/bg-autumn.jpg") center center / cover no-repeat;
+  min-height: 1375px;
+  position: relative;
+
+  @include desktop {
+    background: url("~images/content/bg-autumn-desktop.jpg") center center / cover no-repeat;
+  }
+
+  @include tablets {
+    min-height: 1065px;
+  }
+
+  &::after {
+    content: url("~images/content/foliage-one.png");
+=======
+>>>>>>> week_3
 .maincontent__bg-autumn{
   background: url('../images/content/bg-autumn.jpg') center center / cover no-repeat;
   min-height:1375px;
@@ -131,10 +315,40 @@ body {
 
   &:after{
     content:url('../images/content/foliage-one.png');
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
     position: absolute;
     bottom: 81%;
     right: 0;
     z-index: 10;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    @include desktop {
+      right: -125px;
+    }
+
+    @include tablets {
+      right: -237px;
+      bottom: 79%;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+.blocked {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  pointer-events: none;
+  user-select: none;
+}
+=======
+>>>>>>> week_3
     @include desktop{
       right: -125px;
     }
@@ -149,6 +363,10 @@ body {
 
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 button {
   border: 0;
   cursor: pointer;
@@ -179,10 +397,19 @@ p {
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> week_3
 button[type="button"] {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> week_3
 a {
   color: inherit;
   cursor: pointer;
@@ -194,6 +421,16 @@ img {
   max-height: 100%;
 }
 
+<<<<<<< HEAD
 circle{
   fill:transparent;
+=======
+<<<<<<< HEAD
+circle {
+  fill: transparent;
+=======
+circle{
+  fill:transparent;
+>>>>>>> master
+>>>>>>> week_3
 }

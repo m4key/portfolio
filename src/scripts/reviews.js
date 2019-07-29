@@ -17,6 +17,14 @@ new Vue({
   },
   data: {
     reviews: [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    buttonIndex: 0,
+    buttonClick: undefined,
+=======
+>>>>>>> master
+>>>>>>> week_3
     flickityOptions: {
       initialIndex: 0,
       prevNextButtons: false,
@@ -40,10 +48,36 @@ new Vue({
 
     next() {
       this.$refs.flickity.next();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if(window.innerWidth < 650) {
+        if(this.buttonIndex < this.reviews.length - 2) {
+          this.buttonIndex ++;
+          this.buttonClick = this.reviews.length - 2;
+        }
+      } else {
+        if(this.buttonIndex < this.reviews.length/2 - 1) {
+          this.buttonIndex ++;
+          this.buttonClick = this.reviews.length/2 - 1;
+        }
+      }
+=======
+>>>>>>> master
+>>>>>>> week_3
     },
     
     previous() {
       this.$refs.flickity.previous();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if(this.buttonIndex > 0) {
+        this.buttonIndex --;
+      }
+=======
+>>>>>>> master
+>>>>>>> week_3
     }
   },
   created() {
