@@ -95,13 +95,16 @@
 .slider__thumbs-content{
   overflow: hidden;
   position: absolute;
-  bottom: 59px;
+  bottom: 54px;
   right: 0;
 
   @include desktop {
-    bottom: 25px;
-    right: 0;
+    bottom: 24px;
   }
+  @include tablets {
+    bottom: 23px;
+  }
+
   @include phones {
     display: none;
   }

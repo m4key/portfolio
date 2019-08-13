@@ -1,29 +1,29 @@
 [
     {
         "id": 1,
-        "title": "Сайт школы образования",
-        "skills": "HTML, CSS, Javascript",
-        "photo": "work_one.jpg",
-        "link": "//google.com",
-        "desc": "Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессоных ночей!"
+        "title": "Интернет-магазин «Дикарь»",
+        "skills": "HTML, CSS, WordPress",
+        "photo": "magazin-dikar.jpg",
+        "link": "https://magazin-dikar.ru/",
+        "desc": "Сайт рыболовного интернет-магазина «Дикарь», первый рабочий проект, реализован на основе готового шаблона на WordPress"
 
     },
     {
         "id": 2,
-        "title": "Сайт школы образования",
-        "skills": "HTML, CSS, Vue.js",
-        "photo": "work_two.jpg",
-        "link": "//google.com",
-        "desc": "Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессоных ночей!"
+        "title": "Учебный проект №1",
+        "skills": "HTML, CSS",
+        "photo": "work_afrodita.jpg",
+        "link": "http://thebestgym.ru/main.html",
+        "desc": "Первый учебный проект Loftschool. Реализован на первом курсе Loftschool в рамках профессии «Веб-разработчик» "
 
     },
     {
         "id": 3,
-        "title": "Сайт школы образования",
-        "skills": "HTML, CSS, jQuery",
-        "photo": "work_three.jpg",
-        "link": "//google.com",
-        "desc": "Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессоных ночей!"
+        "title": "Учебный проект №2",
+        "skills": "Scss, JavaScript, Gulp",
+        "photo": "work_burger.jpg",
+        "link": "https://m4key.github.io/layout-burger/dist/",
+        "desc": "Второй учебный проект Loftschool. Реализован на первом курсе Loftschool в рамках профессии «Веб-разработчик» "
 
     }
 ]
